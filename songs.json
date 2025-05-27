@@ -1,0 +1,82 @@
+[
+  {
+    "song_id": 1,
+    "title": "Run Boy Run",
+    "artist": "Woodkid",
+    "bpm": 150,
+    "energy": "High",
+    "moods": ["Energetic", "Epic", "Driving", "Tense", "Dramatic"],
+    "themes": ["Perseverance", "Chase"],
+    "source_url": "https://open.spotify.com/track/32Kii3YmBxueK2U4S8F17D"
+  },
+  {
+    "song_id": 2,
+    "title": "Hall of Fame",
+    "artist": "The Script ft. will.i.am",
+    "bpm": 85,
+    "energy": "Medium",
+    "moods": ["Uplifting", "Triumphant", "Hopeful"],
+    "themes": ["Victory", "Achievement", "Collaborative"],
+    "source_url": "https://open.spotify.com/track/7wMq5n8mYSClrI5HebHgQL"
+  },
+  {
+    "song_id": 3,
+    "title": "Lofi Chillhop Beat",
+    "artist": "Chill Beats Records",
+    "bpm": 90,
+    "energy": "Low",
+    "moods": ["Chill", "Focused", "Relaxed", "Reflective"],
+    "themes": ["Study", "Focus", "Neutral"],
+    "source_url": null
+  },
+  {
+    "song_id": 4,
+    "title": "Centuries",
+    "artist": "Fall Out Boy",
+    "bpm": 176,
+    "energy": "High",
+    "moods": ["Energetic", "Anthemic", "Triumphant", "Powerful", "Dramatic"],
+    "themes": ["Victory", "Legacy", "Epic"],
+    "source_url": "https://open.spotify.com/track/04aAxqtGp5pv12UXAg4pkq"
+  },
+  {
+    "song_id": 5,
+    "title": "The Score",
+    "artist": "Unstoppable",
+    "bpm": 160,
+    "energy": "High",
+    "moods": ["Energetic", "Determined", "Uplifting", "Clutch"],
+    "themes": ["Victory", "Perseverance"],
+    "source_url": "https://open.spotify.com/track/2J2Z1SkPfIfISd9Y3T7c4L"
+  },
+  {
+    "song_id": 6,
+    "title": "Weightless",
+    "artist": "Marconi Union",
+    "bpm": 60,
+    "energy": "Low",
+    "moods": ["Relaxed", "Calm", "Reflective", "Neutral"],
+    "themes": ["Chill", "Focus"],
+    "source_url": "https://open.spotify.com/track/6kkwzB6hXLIONkEk9JciA6"
+  },
+  {
+    "song_id": 7,
+    "title": "Can't Stop The Feeling!",
+    "artist": "Justin Timberlake",
+    "bpm": 113,
+    "energy": "High",
+    "moods": ["Happy", "Uplifting", "Energetic"],
+    "themes": ["Celebration", "Party", "Collaborative"],
+    "source_url": "https://open.spotify.com/track/6JV2JOEocMgcZxYSZelKcc"
+  },
+  {
+    "song_id": 8,
+    "title": "Interstellar Main Theme (Epic Version)",
+    "artist": "Hans Zimmer (Cover by various artists)",
+    "bpm": 70,
+    "energy": "Medium",
+    "moods": ["Epic", "Dramatic", "Suspenseful", "Tense", "Reflective"],
+    "themes": ["Space", "Journey", "Focus"],
+    "source_url": null
+  }
+]
