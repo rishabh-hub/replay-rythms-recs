@@ -1,82 +1,712 @@
 [
   {
     "song_id": 1,
-    "title": "Run Boy Run",
-    "artist": "Woodkid",
-    "bpm": 150,
-    "energy": "High",
-    "moods": ["Energetic", "Epic", "Driving", "Tense", "Dramatic"],
-    "themes": ["Perseverance", "Chase"],
-    "source_url": "https://open.spotify.com/track/0boS4e6uXwp3zAvz1mLxZS"
+    "title": "Shape of You",
+    "artist": "Ed Sheeran",
+    "bpm": 96,
+    "energy": "Low",
+    "moods": ["Romantic", "Chill", "Dance"],
+    "themes": ["Love", "Dance"],
+    "source_url": "https://open.spotify.com/search/Shape%20of%20You%20Ed%20Sheeran"
   },
   {
     "song_id": 2,
-    "title": "Hall of Fame",
-    "artist": "The Script ft. will.i.am",
-    "bpm": 85,
-    "energy": "Medium",
-    "moods": ["Uplifting", "Triumphant", "Hopeful"],
-    "themes": ["Victory", "Achievement", "Collaborative"],
-    "source_url": "https://open.spotify.com/track/7wMq5n8mYSClrI5HebHgQL"
+    "title": "Blinding Lights",
+    "artist": "The Weeknd",
+    "bpm": 171,
+    "energy": "High",
+    "moods": ["Energetic", "Retro", "Uplifting"],
+    "themes": ["Love", "Nightlife"],
+    "source_url": "https://open.spotify.com/search/Blinding%20Lights%20The%20Weeknd"
   },
   {
     "song_id": 3,
-    "title": "Lofi Chillhop Beat",
-    "artist": "Chill Beats Records",
-    "bpm": 90,
+    "title": "Despacito",
+    "artist": "Luis Fonsi & Daddy Yankee",
+    "bpm": 89,
     "energy": "Low",
-    "moods": ["Chill", "Focused", "Relaxed", "Reflective"],
-    "themes": ["Study", "Focus", "Neutral"],
-    "source_url": null
+    "moods": ["Party", "Uplifting"],
+    "themes": ["Party", "Latin"],
+    "source_url": "https://open.spotify.com/search/Despacito%20Luis%20Fonsi%20Daddy%20Yankee"
   },
   {
     "song_id": 4,
-    "title": "Centuries",
-    "artist": "Fall Out Boy",
-    "bpm": 176,
-    "energy": "High",
-    "moods": ["Energetic", "Anthemic", "Triumphant", "Powerful", "Dramatic"],
-    "themes": ["Victory", "Legacy", "Epic"],
-    "source_url": "https://open.spotify.com/track/04aAxqtGp5pv12UXAg4pkq"
+    "title": "Uptown Funk",
+    "artist": "Mark Ronson ft. Bruno Mars",
+    "bpm": 115,
+    "energy": "Medium",
+    "moods": ["Energetic", "Party", "Funky"],
+    "themes": ["Party", "Celebration"],
+    "source_url": "https://open.spotify.com/search/Uptown%20Funk%20Mark%20Ronson%20Bruno%20Mars"
   },
   {
     "song_id": 5,
-    "title": "The Score",
-    "artist": "Unstoppable",
+    "title": "Happy",
+    "artist": "Pharrell Williams",
     "bpm": 160,
     "energy": "High",
-    "moods": ["Energetic", "Determined", "Uplifting", "Clutch"],
-    "themes": ["Victory", "Perseverance"],
-    "source_url": "https://open.spotify.com/track/6rrKbzJGGDlSZgLphopS49"
+    "moods": ["Happy", "Uplifting", "Feel-good"],
+    "themes": ["Celebration", "Party"],
+    "source_url": "https://open.spotify.com/search/Happy%20Pharrell%20Williams"
   },
   {
     "song_id": 6,
-    "title": "Weightless",
-    "artist": "Marconi Union",
-    "bpm": 60,
-    "energy": "Low",
-    "moods": ["Relaxed", "Calm", "Reflective", "Neutral"],
-    "themes": ["Chill", "Focus"],
-    "source_url": "https://open.spotify.com/track/6kkwzB6hXLIONkEk9JciA6"
+    "title": "Bad Guy",
+    "artist": "Billie Eilish",
+    "bpm": 135,
+    "energy": "Medium",
+    "moods": ["Dark", "Mysterious", "Edgy"],
+    "themes": ["Attitude", "Rebellion"],
+    "source_url": "https://open.spotify.com/search/Bad%20Guy%20Billie%20Eilish"
   },
   {
     "song_id": 7,
-    "title": "Can't Stop The Feeling!",
-    "artist": "Justin Timberlake",
-    "bpm": 113,
-    "energy": "High",
-    "moods": ["Happy", "Uplifting", "Energetic"],
-    "themes": ["Celebration", "Party", "Collaborative"],
-    "source_url": "https://open.spotify.com/track/6JV2JOEocMgcZxYSZelKcc"
+    "title": "Dance Monkey",
+    "artist": "Tones and I",
+    "bpm": 98,
+    "energy": "Low",
+    "moods": ["Whimsical", "Playful"],
+    "themes": ["Party", "Fun"],
+    "source_url": "https://open.spotify.com/search/Dance%20Monkey%20Tones%20and%20I"
   },
   {
     "song_id": 8,
-    "title": "Interstellar Main Theme (Epic Version)",
-    "artist": "Hans Zimmer (Cover by various artists)",
-    "bpm": 70,
+    "title": "Señorita",
+    "artist": "Shawn Mendes & Camila Cabello",
+    "bpm": 117,
     "energy": "Medium",
-    "moods": ["Epic", "Dramatic", "Suspenseful", "Tense", "Reflective"],
-    "themes": ["Space", "Journey", "Focus"],
-    "source_url": null
+    "moods": ["Sensual", "Romantic"],
+    "themes": ["Love", "Romance"],
+    "source_url": "https://open.spotify.com/search/Se%C3%B1orita%20Shawn%20Mendes%20Camila%20Cabello"
+  },
+  {
+    "song_id": 9,
+    "title": "Lean On",
+    "artist": "Major Lazer & DJ Snake",
+    "bpm": 100,
+    "energy": "Low",
+    "moods": ["Chill", "Dance"],
+    "themes": ["Dance", "Collaboration"],
+    "source_url": "https://open.spotify.com/search/Lean%20On%20Major%20Lazer%20DJ%20Snake"
+  },
+  {
+    "song_id": 10,
+    "title": "Thunder",
+    "artist": "Imagine Dragons",
+    "bpm": 87,
+    "energy": "Low",
+    "moods": ["Powerful", "Epic"],
+    "themes": ["Motivation", "Overcoming"],
+    "source_url": "https://open.spotify.com/search/Thunder%20Imagine%20Dragons"
+  },
+  {
+    "song_id": 11,
+    "title": "Old Town Road",
+    "artist": "Lil Nas X",
+    "bpm": 136,
+    "energy": "Medium",
+    "moods": ["Playful", "Energetic"],
+    "themes": ["Country", "Fusion"],
+    "source_url": "https://open.spotify.com/search/Old%20Town%20Road%20Lil%20Nas%20X"
+  },
+  {
+    "song_id": 12,
+    "title": "Poker Face",
+    "artist": "Lady Gaga",
+    "bpm": 120,
+    "energy": "Medium",
+    "moods": ["Confident", "Party"],
+    "themes": ["Party", "Confidence"],
+    "source_url": "https://open.spotify.com/search/Poker%20Face%20Lady%20Gaga"
+  },
+  {
+    "song_id": 13,
+    "title": "Rolling in the Deep",
+    "artist": "Adele",
+    "bpm": 105,
+    "energy": "Low",
+    "moods": ["Powerful", "Emotional"],
+    "themes": ["Heartbreak", "Empowerment"],
+    "source_url": "https://open.spotify.com/search/Rolling%20in%20the%20Deep%20Adele"
+  },
+  {
+    "song_id": 14,
+    "title": "Havana",
+    "artist": "Camila Cabello",
+    "bpm": 105,
+    "energy": "Low",
+    "moods": ["Sensual", "Playful"],
+    "themes": ["Love", "Latin"],
+    "source_url": "https://open.spotify.com/search/Havana%20Camila%20Cabello"
+  },
+  {
+    "song_id": 15,
+    "title": "Wake Me Up",
+    "artist": "Avicii",
+    "bpm": 124,
+    "energy": "Medium",
+    "moods": ["Uplifting", "Inspirational"],
+    "themes": ["Journey", "Life"],
+    "source_url": "https://open.spotify.com/search/Wake%20Me%20Up%20Avicii"
+  },
+  {
+    "song_id": 16,
+    "title": "Crazy",
+    "artist": "Gnarls Barkley",
+    "bpm": 112,
+    "energy": "Medium",
+    "moods": ["Soulful", "Melancholic"],
+    "themes": ["Reflection", "Emotion"],
+    "source_url": "https://open.spotify.com/search/Crazy%20Gnarls%20Barkley"
+  },
+  {
+    "song_id": 17,
+    "title": "Can't Stop",
+    "artist": "Red Hot Chili Peppers",
+    "bpm": 116,
+    "energy": "Medium",
+    "moods": ["Energetic", "Funky"],
+    "themes": ["Rebellion", "Freedom"],
+    "source_url": "https://open.spotify.com/search/Cant%20Stop%20Red%20Hot%20Chili%20Peppers"
+  },
+  {
+    "song_id": 18,
+    "title": "Smells Like Teen Spirit",
+    "artist": "Nirvana",
+    "bpm": 117,
+    "energy": "Medium",
+    "moods": ["Angsty", "Raw"],
+    "themes": ["Rebellion", "Youth"],
+    "source_url": "https://open.spotify.com/search/Smells%20Like%20Teen%20Spirit%20Nirvana"
+  },
+  {
+    "song_id": 19,
+    "title": "Billie Jean",
+    "artist": "Michael Jackson",
+    "bpm": 117,
+    "energy": "Medium",
+    "moods": ["Groovy", "Mysterious"],
+    "themes": ["Love", "Betrayal"],
+    "source_url": "https://open.spotify.com/search/Billie%20Jean%20Michael%20Jackson"
+  },
+  {
+    "song_id": 20,
+    "title": "Someone Like You",
+    "artist": "Adele",
+    "bpm": 68,
+    "energy": "Low",
+    "moods": ["Melancholic", "Emotional"],
+    "themes": ["Heartbreak", "Longing"],
+    "source_url": "https://open.spotify.com/search/Someone%20Like%20You%20Adele"
+  },
+  {
+    "song_id": 21,
+    "title": "Taki Taki",
+    "artist": "DJ Snake ft. Selena Gomez, Ozuna & Cardi B",
+    "bpm": 128,
+    "energy": "Medium",
+    "moods": ["Party", "Energetic"],
+    "themes": ["Party", "Latin"],
+    "source_url": "https://open.spotify.com/search/Taki%20Taki%20DJ%20Snake"
+  },
+  {
+    "song_id": 22,
+    "title": "One Dance",
+    "artist": "Drake ft. Wizkid & Kyla",
+    "bpm": 104,
+    "energy": "Low",
+    "moods": ["Chill", "Dance"],
+    "themes": ["Dance", "Nightlife"],
+    "source_url": "https://open.spotify.com/search/One%20Dance%20Drake"
+  },
+  {
+    "song_id": 23,
+    "title": "Rockstar",
+    "artist": "Post Malone ft. 21 Savage",
+    "bpm": 160,
+    "energy": "High",
+    "moods": ["Laid-back", "Reflective"],
+    "themes": ["Success", "Lifestyle"],
+    "source_url": "https://open.spotify.com/search/Rockstar%20Post%20Malone"
+  },
+  {
+    "song_id": 24,
+    "title": "Sicko Mode",
+    "artist": "Travis Scott",
+    "bpm": 78,
+    "energy": "Low",
+    "moods": ["Hypnotic", "Dark"],
+    "themes": ["Party", "Intensity"],
+    "source_url": "https://open.spotify.com/search/Sicko%20Mode%20Travis%20Scott"
+  },
+  {
+    "song_id": 25,
+    "title": "God's Plan",
+    "artist": "Drake",
+    "bpm": 77,
+    "energy": "Low",
+    "moods": ["Uplifting", "Reflective"],
+    "themes": ["Gratitude", "Success"],
+    "source_url": "https://open.spotify.com/search/Gods%20Plan%20Drake"
+  },
+  {
+    "song_id": 26,
+    "title": "Levitating",
+    "artist": "Dua Lipa",
+    "bpm": 103,
+    "energy": "Low",
+    "moods": ["Uplifting", "Fun"],
+    "themes": ["Love", "Dance"],
+    "source_url": "https://open.spotify.com/search/Levitating%20Dua%20Lipa"
+  },
+  {
+    "song_id": 27,
+    "title": "Savage Love",
+    "artist": "Jawsh 685 & Jason Derulo",
+    "bpm": 150,
+    "energy": "High",
+    "moods": ["Energetic", "Playful"],
+    "themes": ["Love", "Dance"],
+    "source_url": "https://open.spotify.com/search/Savage%20Love%20Jawsh%20685"
+  },
+  {
+    "song_id": 28,
+    "title": "Memories",
+    "artist": "Maroon 5",
+    "bpm": 91,
+    "energy": "Low",
+    "moods": ["Nostalgic", "Reflective"],
+    "themes": ["Memory", "Love"],
+    "source_url": "https://open.spotify.com/search/Memories%20Maroon%205"
+  },
+  {
+    "song_id": 29,
+    "title": "Counting Stars",
+    "artist": "OneRepublic",
+    "bpm": 122,
+    "energy": "Medium",
+    "moods": ["Uplifting", "Optimistic"],
+    "themes": ["Hope", "Reflection"],
+    "source_url": "https://open.spotify.com/search/Counting%20Stars%20OneRepublic"
+  },
+  {
+    "song_id": 30,
+    "title": "Radioactive",
+    "artist": "Imagine Dragons",
+    "bpm": 136,
+    "energy": "Medium",
+    "moods": ["Epic", "Powerful"],
+    "themes": ["Rebellion", "Awakening"],
+    "source_url": "https://open.spotify.com/search/Radioactive%20Imagine%20Dragons"
+  },
+  {
+    "song_id": 31,
+    "title": "Uprising",
+    "artist": "Muse",
+    "bpm": 128,
+    "energy": "Medium",
+    "moods": ["Rebellious", "Energetic"],
+    "themes": ["Rebellion", "Power"],
+    "source_url": "https://open.spotify.com/search/Uprising%20Muse"
+  },
+  {
+    "song_id": 32,
+    "title": "Viva La Vida",
+    "artist": "Coldplay",
+    "bpm": 138,
+    "energy": "High",
+    "moods": ["Epic", "Uplifting"],
+    "themes": ["Legacy", "History"],
+    "source_url": "https://open.spotify.com/search/Viva%20La%20Vida%20Coldplay"
+  },
+  {
+    "song_id": 33,
+    "title": "Chandelier",
+    "artist": "Sia",
+    "bpm": 87,
+    "energy": "Low",
+    "moods": ["Emotional", "Powerful"],
+    "themes": ["Addiction", "Emotional Struggle"],
+    "source_url": "https://open.spotify.com/search/Chandelier%20Sia"
+  },
+  {
+    "song_id": 34,
+    "title": "Titanium",
+    "artist": "David Guetta ft. Sia",
+    "bpm": 126,
+    "energy": "Medium",
+    "moods": ["Empowering", "Epic"],
+    "themes": ["Strength", "Resilience"],
+    "source_url": "https://open.spotify.com/search/Titanium%20David%20Guetta%20Sia"
+  },
+  {
+    "song_id": 35,
+    "title": "Clocks",
+    "artist": "Coldplay",
+    "bpm": 131,
+    "energy": "Medium",
+    "moods": ["Hypnotic", "Reflective"],
+    "themes": ["Time", "Reflection"],
+    "source_url": "https://open.spotify.com/search/Clocks%20Coldplay"
+  },
+  {
+    "song_id": 36,
+    "title": "Shallow",
+    "artist": "Lady Gaga & Bradley Cooper",
+    "bpm": 96,
+    "energy": "Low",
+    "moods": ["Emotional", "Romantic"],
+    "themes": ["Love", "Reflection"],
+    "source_url": "https://open.spotify.com/search/Shallow%20Lady%20Gaga%20Bradley%20Cooper"
+  },
+  {
+    "song_id": 37,
+    "title": "Starboy",
+    "artist": "The Weeknd ft. Daft Punk",
+    "bpm": 93,
+    "energy": "Low",
+    "moods": ["Cool", "Dark"],
+    "themes": ["Fame", "Wealth"],
+    "source_url": "https://open.spotify.com/search/Starboy%20The%20Weeknd"
+  },
+  {
+    "song_id": 38,
+    "title": "Paper Planes",
+    "artist": "M.I.A.",
+    "bpm": 86,
+    "energy": "Low",
+    "moods": ["Rebellious", "Playful"],
+    "themes": ["Globalization", "Politics"],
+    "source_url": "https://open.spotify.com/search/Paper%20Planes%20M.I.A."
+  },
+  {
+    "song_id": 39,
+    "title": "Bad Romance",
+    "artist": "Lady Gaga",
+    "bpm": 119,
+    "energy": "Medium",
+    "moods": ["Dramatic", "Intense"],
+    "themes": ["Love", "Obsession"],
+    "source_url": "https://open.spotify.com/search/Bad%20Romance%20Lady%20Gaga"
+  },
+  {
+    "song_id": 40,
+    "title": "Firework",
+    "artist": "Katy Perry",
+    "bpm": 124,
+    "energy": "Medium",
+    "moods": ["Uplifting", "Inspirational"],
+    "themes": ["Empowerment", "Self-expression"],
+    "source_url": "https://open.spotify.com/search/Firework%20Katy%20Perry"
+  },
+  {
+    "song_id": 41,
+    "title": "Born This Way",
+    "artist": "Lady Gaga",
+    "bpm": 124,
+    "energy": "Medium",
+    "moods": ["Empowering", "Pride"],
+    "themes": ["Self-expression", "Acceptance"],
+    "source_url": "https://open.spotify.com/search/Born%20This%20Way%20Lady%20Gaga"
+  },
+  {
+    "song_id": 42,
+    "title": "Hello",
+    "artist": "Adele",
+    "bpm": 79,
+    "energy": "Low",
+    "moods": ["Emotional", "Melancholic"],
+    "themes": ["Forgiveness", "Reflection"],
+    "source_url": "https://open.spotify.com/search/Hello%20Adele"
+  },
+  {
+    "song_id": 43,
+    "title": "Stay",
+    "artist": "Rihanna ft. Mikky Ekko",
+    "bpm": 112,
+    "energy": "Medium",
+    "moods": ["Emotional", "Romantic"],
+    "themes": ["Love", "Vulnerability"],
+    "source_url": "https://open.spotify.com/search/Stay%20Rihanna%20Mikky%20Ekko"
+  },
+  {
+    "song_id": 44,
+    "title": "Call Me Maybe",
+    "artist": "Carly Rae Jepsen",
+    "bpm": 120,
+    "energy": "Medium",
+    "moods": ["Playful", "Romantic"],
+    "themes": ["Love", "Flirtation"],
+    "source_url": "https://open.spotify.com/search/Call%20Me%20Maybe%20Carly%20Rae%20Jepsen"
+  },
+  {
+    "song_id": 45,
+    "title": "Just the Way You Are",
+    "artist": "Bruno Mars",
+    "bpm": 109,
+    "energy": "Low",
+    "moods": ["Romantic", "Uplifting"],
+    "themes": ["Love", "Appreciation"],
+    "source_url": "https://open.spotify.com/search/Just%20the%20Way%20You%20Are%20Bruno%20Mars"
+  },
+  {
+    "song_id": 46,
+    "title": "All of Me",
+    "artist": "John Legend",
+    "bpm": 120,
+    "energy": "Medium",
+    "moods": ["Romantic", "Emotional"],
+    "themes": ["Love", "Dedication"],
+    "source_url": "https://open.spotify.com/search/All%20of%20Me%20John%20Legend"
+  },
+  {
+    "song_id": 47,
+    "title": "What Do You Mean?",
+    "artist": "Justin Bieber",
+    "bpm": 125,
+    "energy": "Medium",
+    "moods": ["Upbeat", "Playful"],
+    "themes": ["Confusion", "Romance"],
+    "source_url": "https://open.spotify.com/search/What%20Do%20You%20Mean%20Justin%20Bieber"
+  },
+  {
+    "song_id": 48,
+    "title": "Get Lucky",
+    "artist": "Daft Punk ft. Pharrell Williams",
+    "bpm": 116,
+    "energy": "Medium",
+    "moods": ["Funky", "Uplifting"],
+    "themes": ["Party", "Luck"],
+    "source_url": "https://open.spotify.com/search/Get%20Lucky%20Daft%20Punk"
+  },
+  {
+    "song_id": 49,
+    "title": "24K Magic",
+    "artist": "Bruno Mars",
+    "bpm": 107,
+    "energy": "Low",
+    "moods": ["Funky", "Party"],
+    "themes": ["Wealth", "Celebration"],
+    "source_url": "https://open.spotify.com/search/24K%20Magic%20Bruno%20Mars"
+  },
+  {
+    "song_id": 50,
+    "title": "Feel It Still",
+    "artist": "Portugal. The Man",
+    "bpm": 79,
+    "energy": "Low",
+    "moods": ["Retro", "Playful"],
+    "themes": ["Rebellion", "Social Change"],
+    "source_url": "https://open.spotify.com/search/Feel%20It%20Still%20Portugal.%20The%20Man"
+  },
+  {
+    "song_id": 51,
+    "title": "Starships",
+    "artist": "Nicki Minaj",
+    "bpm": 125,
+    "energy": "Medium",
+    "moods": ["Party", "Empowering"],
+    "themes": ["Freedom", "Party"],
+    "source_url": "https://open.spotify.com/search/Starships%20Nicki%20Minaj"
+  },
+  {
+    "song_id": 52,
+    "title": "Waka Waka (This Time for Africa)",
+    "artist": "Shakira",
+    "bpm": 128,
+    "energy": "Medium",
+    "moods": ["Uplifting", "Energetic"],
+    "themes": ["Unity", "Celebration"],
+    "source_url": "https://open.spotify.com/search/Waka%20Waka%20Shakira"
+  },
+  {
+    "song_id": 53,
+    "title": "Dynamite",
+    "artist": "BTS",
+    "bpm": 114,
+    "energy": "Medium",
+    "moods": ["Happy", "Uplifting"],
+    "themes": ["Celebration", "Party"],
+    "source_url": "https://open.spotify.com/search/Dynamite%20BTS"
+  },
+  {
+    "song_id": 54,
+    "title": "Butter",
+    "artist": "BTS",
+    "bpm": 110,
+    "energy": "Low",
+    "moods": ["Smooth", "Upbeat"],
+    "themes": ["Love", "Dance"],
+    "source_url": "https://open.spotify.com/search/Butter%20BTS"
+  },
+  {
+    "song_id": 55,
+    "title": "Gangnam Style",
+    "artist": "PSY",
+    "bpm": 132,
+    "energy": "Medium",
+    "moods": ["Energetic", "Humorous"],
+    "themes": ["Party", "Satire"],
+    "source_url": "https://open.spotify.com/search/Gangnam%20Style%20PSY"
+  },
+  {
+    "song_id": 56,
+    "title": "Mi Gente",
+    "artist": "J Balvin & Willy William",
+    "bpm": 105,
+    "energy": "Low",
+    "moods": ["Party", "Energetic"],
+    "themes": ["Dance", "Latin"],
+    "source_url": "https://open.spotify.com/search/Mi%20Gente%20J%20Balvin"
+  },
+  {
+    "song_id": 57,
+    "title": "Hips Don't Lie",
+    "artist": "Shakira ft. Wyclef Jean",
+    "bpm": 100,
+    "energy": "Low",
+    "moods": ["Sensual", "Playful"],
+    "themes": ["Dance", "Latin"],
+    "source_url": "https://open.spotify.com/search/Hips%20Dont%20Lie%20Shakira"
+  },
+  {
+    "song_id": 58,
+    "title": "Cheap Thrills",
+    "artist": "Sia ft. Sean Paul",
+    "bpm": 90,
+    "energy": "Low",
+    "moods": ["Party", "Playful"],
+    "themes": ["Fun", "Party"],
+    "source_url": "https://open.spotify.com/search/Cheap%20Thrills%20Sia"
+  },
+  {
+    "song_id": 59,
+    "title": "Tik Tok",
+    "artist": "Kesha",
+    "bpm": 120,
+    "energy": "Medium",
+    "moods": ["Party", "Rebellious"],
+    "themes": ["Party", "Fun"],
+    "source_url": "https://open.spotify.com/search/Tik%20Tok%20Kesha"
+  },
+  {
+    "song_id": 60,
+    "title": "Roar",
+    "artist": "Katy Perry",
+    "bpm": 90,
+    "energy": "Low",
+    "moods": ["Empowering", "Uplifting"],
+    "themes": ["Empowerment", "Self-expression"],
+    "source_url": "https://open.spotify.com/search/Roar%20Katy%20Perry"
+  },
+  {
+    "song_id": 61,
+    "title": "Fireflies",
+    "artist": "Owl City",
+    "bpm": 90,
+    "energy": "Low",
+    "moods": ["Dreamy", "Reflective"],
+    "themes": ["Nostalgia", "Imagination"],
+    "source_url": "https://open.spotify.com/search/Fireflies%20Owl%20City"
+  },
+  {
+    "song_id": 62,
+    "title": "Pompeii",
+    "artist": "Bastille",
+    "bpm": 127,
+    "energy": "Medium",
+    "moods": ["Energetic", "Anthemic"],
+    "themes": ["History", "Reflection"],
+    "source_url": "https://open.spotify.com/search/Pompeii%20Bastille"
+  },
+  {
+    "song_id": 63,
+    "title": "Let Her Go",
+    "artist": "Passenger",
+    "bpm": 75,
+    "energy": "Low",
+    "moods": ["Melancholic", "Reflective"],
+    "themes": ["Heartbreak", "Regret"],
+    "source_url": "https://open.spotify.com/search/Let%20Her%20Go%20Passenger"
+  },
+  {
+    "song_id": 64,
+    "title": "Take Me to Church",
+    "artist": "Hozier",
+    "bpm": 129,
+    "energy": "Medium",
+    "moods": ["Soulful", "Spiritual"],
+    "themes": ["Critique", "Religion"],
+    "source_url": "https://open.spotify.com/search/Take%20Me%20to%20Church%20Hozier"
+  },
+  {
+    "song_id": 65,
+    "title": "Stressed Out",
+    "artist": "Twenty One Pilots",
+    "bpm": 85,
+    "energy": "Low",
+    "moods": ["Nostalgic", "Anxious"],
+    "themes": ["Adulthood", "Anxiety"],
+    "source_url": "https://open.spotify.com/search/Stressed%20Out%20Twenty%20One%20Pilots"
+  },
+  {
+    "song_id": 66,
+    "title": "Heathens",
+    "artist": "Twenty One Pilots",
+    "bpm": 90,
+    "energy": "Low",
+    "moods": ["Dark", "Brooding"],
+    "themes": ["Danger", "Isolation"],
+    "source_url": "https://open.spotify.com/search/Heathens%20Twenty%20One%20Pilots"
+  },
+  {
+    "song_id": 67,
+    "title": "Sunflower",
+    "artist": "Post Malone & Swae Lee",
+    "bpm": 90,
+    "energy": "Low",
+    "moods": ["Chill", "Mellow"],
+    "themes": ["Love", "Friendship"],
+    "source_url": "https://open.spotify.com/search/Sunflower%20Post%20Malone"
+  },
+  {
+    "song_id": 68,
+    "title": "Sucker",
+    "artist": "Jonas Brothers",
+    "bpm": 138,
+    "energy": "High",
+    "moods": ["Energetic", "Happy"],
+    "themes": ["Love", "Celebration"],
+    "source_url": "https://open.spotify.com/search/Sucker%20Jonas%20Brothers"
+  },
+  {
+    "song_id": 69,
+    "title": "Girls Like You",
+    "artist": "Maroon 5 ft. Cardi B",
+    "bpm": 125,
+    "energy": "Medium",
+    "moods": ["Romantic", "Uplifting"],
+    "themes": ["Love", "Celebration"],
+    "source_url": "https://open.spotify.com/search/Girls%20Like%20You%20Maroon%205"
+  },
+  {
+    "song_id": 70,
+    "title": "Dusk Till Dawn",
+    "artist": "Zayn & Sia",
+    "bpm": 90,
+    "energy": "Low",
+    "moods": ["Emotional", "Powerful"],
+    "themes": ["Love", "Devotion"],
+    "source_url": "https://open.spotify.com/search/Dusk%20Till%20Dawn%20Zayn%20Sia"
+  },
+  {
+    "song_id": 71,
+    "title": "Hallelujah",
+    "artist": "Leonard Cohen",
+    "bpm": 56,
+    "energy": "Low",
+    "moods": ["Soulful", "Reflective"],
+    "themes": ["Spiritual", "Reflection"],
+    "source_url": "https://open.spotify.com/search/Hallelujah%20Leonard%20Cohen"
   }
 ]

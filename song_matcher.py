@@ -1,100 +1,156 @@
 import re # For parsing BPM range
 
-def parse_bpm_range(bpm_string):
+def parse_bpm_range(bpm_value):
     """
-    Parses a BPM string like "Medium (110-140)" into (min_bpm, max_bpm).
-    Returns (None, None) if parsing fails.
+    Turn a string like "High (140-180)" or a two‐element list [x,y] into numeric min/max.
+    Returns (min_bpm, max_bpm) or (None, None) if unknown.
     """
-    if not bpm_string:
-        return None, None
-    match = re.search(r'\((\d+)-(\d+)\)', bpm_string)
-    if match:
-        return int(match.group(1)), int(match.group(2))
-    
-    # Fallback for simple BPM categories if not a range string
-    # This part depends on how you define BPMs in desired_song_profile vs. song DB
-    # For now, we assume desired_song_profile always gives a range string if it gives a BPM.
-    # If it's just "High", "Medium", "Low", you'd need another mapping here.
-    # Our rule_engine.py currently outputs "High (140-180)", etc.
-    
-    print(f"Warning: Could not parse BPM range from string: {bpm_string}")
+    if isinstance(bpm_value, str):
+        m = re.search(r'\((\d+)-(\d+)\)', bpm_value)
+        if m:
+            return int(m.group(1)), int(m.group(2))
+    elif isinstance(bpm_value, (list, tuple)) and len(bpm_value) == 2:
+        return bpm_value[0], bpm_value[1]
     return None, None
+
+
+# def calculate_match_score(song, desired_profile):
+#     """
+#     Calculates a match score for a single song against the desired profile.
+#     """
+#     score = 0
+#     matched_criteria = []
+
+#     # 1. BPM Matching
+#     min_bpm, max_bpm = parse_bpm_range(desired_profile.get("bpm"))
+#     if min_bpm is not None and max_bpm is not None:
+#         if min_bpm <= song.get("bpm", -1) <= max_bpm:
+#             score += 50  # Major points for BPM match
+#             matched_criteria.append(f"BPM ({song.get('bpm')}) in range [{min_bpm}-{max_bpm}]")
+#         # else:
+#             # Optional: Penalize or give fewer points for being slightly outside? For V1, keep it simple.
+#             # pass 
+    
+#     # 2. Energy Matching
+#     desired_energy = desired_profile.get("energy")
+#     if desired_energy and song.get("energy") == desired_energy:
+#         score += 30
+#         matched_criteria.append(f"Energy ({song.get('energy')})")
+
+#     # 3. Mood Matching
+#     # Moods in desired_profile are what we *want*. Song moods are what the song *has*.
+#     desired_moods = set(desired_profile.get("moods") or []) # Ensure it's a list, then set
+#     song_moods = set(song.get("moods") or [])
+#     common_moods = desired_moods.intersection(song_moods)
+#     if common_moods:
+#         score += len(common_moods) * 15 # Points per common mood
+#         matched_criteria.append(f"Moods ({', '.join(common_moods)})")
+
+#     # 4. Theme Matching
+#     desired_themes = set(desired_profile.get("themes") or [])
+#     song_themes = set(song.get("themes") or [])
+#     common_themes = desired_themes.intersection(song_themes)
+#     if common_themes:
+#         score += len(common_themes) * 10 # Points per common theme
+#         matched_criteria.append(f"Themes ({', '.join(common_themes)})")
+        
+#     return score, matched_criteria
 
 
 def calculate_match_score(song, desired_profile):
     """
-    Calculates a match score for a single song against the desired profile.
+    Scores a song against desired_profile:
+      - BPM match: +50
+      - Energy match: +30
+      - +15 per matching mood
+      - +10 per matching theme
     """
     score = 0
-    matched_criteria = []
+    matched = []
 
-    # 1. BPM Matching
+    # BPM
     min_bpm, max_bpm = parse_bpm_range(desired_profile.get("bpm"))
     if min_bpm is not None and max_bpm is not None:
-        if min_bpm <= song.get("bpm", -1) <= max_bpm:
-            score += 50  # Major points for BPM match
-            matched_criteria.append(f"BPM ({song.get('bpm')}) in range [{min_bpm}-{max_bpm}]")
-        # else:
-            # Optional: Penalize or give fewer points for being slightly outside? For V1, keep it simple.
-            # pass 
-    
-    # 2. Energy Matching
-    desired_energy = desired_profile.get("energy")
-    if desired_energy and song.get("energy") == desired_energy:
+        sb = song.get("bpm", 0)
+        if min_bpm <= sb <= max_bpm:
+            score += 50
+            matched.append(f"BPM {sb} in [{min_bpm}-{max_bpm}]")
+
+    # Energy
+    de = desired_profile.get("energy")
+    if de and song.get("energy") == de:
         score += 30
-        matched_criteria.append(f"Energy ({song.get('energy')})")
+        matched.append(f"Energy {de}")
 
-    # 3. Mood Matching
-    # Moods in desired_profile are what we *want*. Song moods are what the song *has*.
-    desired_moods = set(desired_profile.get("moods") or []) # Ensure it's a list, then set
-    song_moods = set(song.get("moods") or [])
-    common_moods = desired_moods.intersection(song_moods)
-    if common_moods:
-        score += len(common_moods) * 15 # Points per common mood
-        matched_criteria.append(f"Moods ({', '.join(common_moods)})")
+    # Moods
+    desired_moods = set(desired_profile.get("moods") or [])
+    song_moods    = set(song.get("moods")    or [])
+    common = desired_moods & song_moods
+    if common:
+        score += 15 * len(common)
+        matched.append(f"Moods {', '.join(common)}")
 
-    # 4. Theme Matching
+    # Themes
     desired_themes = set(desired_profile.get("themes") or [])
-    song_themes = set(song.get("themes") or [])
-    common_themes = desired_themes.intersection(song_themes)
-    if common_themes:
-        score += len(common_themes) * 10 # Points per common theme
-        matched_criteria.append(f"Themes ({', '.join(common_themes)})")
-        
-    return score, matched_criteria
+    song_themes    = set(song.get("themes")    or [])
+    common_t = desired_themes & song_themes
+    if common_t:
+        score += 10 * len(common_t)
+        matched.append(f"Themes {', '.join(common_t)}")
+
+    return score, matched
 
 
 def find_matching_songs(song_database, desired_profile, top_n=3):
     """
-    Finds songs in the database that match the desired_profile.
-
-    Args:
-        song_database (list): List of song dictionaries.
-        desired_profile (dict): The profile generated by rule_engine.py.
-        top_n (int): Number of top matching songs to return.
-
-    Returns:
-        list: A list of the top_n matching song dictionaries, sorted by score.
-              Each song dict in the returned list will have an added 'match_score'
-              and 'matched_criteria' key.
+    Returns the top_n songs (with added 'match_score' and 'matched_criteria') sorted by descending score.
     """
-    if not song_database:
-        print("Song database is empty. Cannot find matches.")
-        return []
-    if not desired_profile:
-        print("Desired song profile is empty. Cannot find matches.")
+    if not song_database or not desired_profile:
         return []
 
-    scored_songs = []
+    scored = []
     for song in song_database:
-        score, criteria = calculate_match_score(song, desired_profile)
-        if score > 0: # Only consider songs that matched something
-            song_copy = song.copy() # Avoid modifying original DB in memory
-            song_copy['match_score'] = score
-            song_copy['matched_criteria_details'] = criteria # For debugging/info
-            scored_songs.append(song_copy)
+        pts, crit = calculate_match_score(song, desired_profile)
+        if pts > 0:
+            s = song.copy()
+            s["match_score"] = pts
+            s["matched_criteria"] = crit
+            scored.append(s)
 
-    # Sort songs by score in descending order
-    scored_songs.sort(key=lambda s: s['match_score'], reverse=True)
+    scored.sort(key=lambda x: x["match_score"], reverse=True)
+    return scored[:top_n]
+
+# def find_matching_songs(song_database, desired_profile, top_n=3):
+#     """
+#     Finds songs in the database that match the desired_profile.
+
+#     Args:
+#         song_database (list): List of song dictionaries.
+#         desired_profile (dict): The profile generated by rule_engine.py.
+#         top_n (int): Number of top matching songs to return.
+
+#     Returns:
+#         list: A list of the top_n matching song dictionaries, sorted by score.
+#               Each song dict in the returned list will have an added 'match_score'
+#               and 'matched_criteria' key.
+#     """
+#     if not song_database:
+#         print("Song database is empty. Cannot find matches.")
+#         return []
+#     if not desired_profile:
+#         print("Desired song profile is empty. Cannot find matches.")
+#         return []
+
+#     scored_songs = []
+#     for song in song_database:
+#         score, criteria = calculate_match_score(song, desired_profile)
+#         if score > 0: # Only consider songs that matched something
+#             song_copy = song.copy() # Avoid modifying original DB in memory
+#             song_copy['match_score'] = score
+#             song_copy['matched_criteria_details'] = criteria # For debugging/info
+#             scored_songs.append(song_copy)
+
+#     # Sort songs by score in descending order
+#     scored_songs.sort(key=lambda s: s['match_score'], reverse=True)
     
-    return scored_songs[:top_n]
+#     return scored_songs[:top_n]
