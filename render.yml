@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: song-recommendation-engine
+    runtime: docker
+    plan: starter # Change to 'standard' or higher for production
+    region: oregon # Change to your preferred region
+    branch: main # Change to your deployment branch
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: FLASK_ENV
+        value: production
+      - key: PORT
+        value: 8000
+    healthCheckPath: /health
+    autoDeploy: true
+    # Optional: Custom domain
+    # domains:
+    #   - your-custom-domain.com
