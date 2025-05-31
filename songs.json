@@ -419,14 +419,14 @@
   },
   {
     "song_id": 39,
-    "title": "Bad Romance",
-    "artist": "Lady Gaga",
-    "bpm": 119,
+    "title": "Happy Now",
+    "artist": "Kygo",
+    "bpm": 118,
     "energy": "Medium",
-    "moods": ["Dramatic", "Intense"],
-    "themes": ["Love", "Obsession"],
-    "source_url": "https://open.spotify/track/0SiywuOBRcynK0uKGWdCnn",
-    "track_id": "0SiywuOBRcynK0uKGWdCnn"
+    "moods": ["Uplifting", "Feel-good"],
+    "themes": ["Acceptance", "Freedom", "Awakening"],
+    "source_url": "https://open.spotify.com/album/6nAjd2MlBY1f1mNu6BsWLO",
+    "track_id": "6nAjd2MlBY1f1mNu6BsWLO"
   },
   {
     "song_id": 40,
@@ -738,14 +738,14 @@
   },
   {
     "song_id": 68,
-    "title": "Sucker",
-    "artist": "Jonas Brothers",
-    "bpm": 138,
+    "title": "Eye of the Tiger",
+    "artist": "Survivor",
+    "bpm": 109,
     "energy": "High",
-    "moods": ["Energetic", "Happy"],
-    "themes": ["Love", "Celebration"],
-    "source_url": "https://open.spotify/track/22vgEDb5hykfaTwLuskFGD",
-    "track_id": "22vgEDb5hykfaTwLuskFGD"
+    "moods": ["Energetic", "Motivational"],
+    "themes": ["Victory", "Perseverance"],
+    "source_url": "https://open.spotify.com/track/2KH16WveTQWT6KOG9Rg6e2",
+    "track_id": "2KH16WveTQWT6KOG9Rg6e2"
   },
   {
     "song_id": 69,
