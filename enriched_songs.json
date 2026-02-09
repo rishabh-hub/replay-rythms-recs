@@ -1,0 +1,4596 @@
+[
+  {
+    "song_id": 1,
+    "title": "Shape of You",
+    "artist": "Ed Sheeran",
+    "bpm": 96,
+    "energy": "Low",
+    "moods": [
+      "Romantic",
+      "Chill",
+      "Dance"
+    ],
+    "themes": [
+      "Love",
+      "Dance"
+    ],
+    "source_url": "https://open.spotify/track/7qiZfU4dY1lWllzX7mPBI3",
+    "track_id": "7qiZfU4dY1lWllzX7mPBI3",
+    "lastfm_tags": [
+      {
+        "name": "pop",
+        "count": 100
+      },
+      {
+        "name": "2017",
+        "count": 40
+      },
+      {
+        "name": "dancehall",
+        "count": 21
+      },
+      {
+        "name": "ed sheeran",
+        "count": 12
+      },
+      {
+        "name": "2010s",
+        "count": 4
+      },
+      {
+        "name": "dance",
+        "count": 4
+      },
+      {
+        "name": "best of 2017",
+        "count": 4
+      },
+      {
+        "name": "tropical house",
+        "count": 1
+      },
+      {
+        "name": "sia",
+        "count": 1
+      },
+      {
+        "name": "electronic",
+        "count": 1
+      }
+    ],
+    "llm_energy": "Medium",
+    "llm_moods": [
+      "Playful",
+      "Confident",
+      "Uplifting",
+      "Hypnotic",
+      "Energetic"
+    ],
+    "llm_themes": [
+      "Celebration",
+      "Journey",
+      "Glory"
+    ],
+    "llm_vibe": "‘Shape of You’ feels like the contagious buzz of a carefree night out, where flirtation and rhythm blend into an irresistible groove that makes listeners want to move and smile effortlessly.",
+    "llm_game_moments": [
+      "Pulling off a slick dribble goal after weaving through defenders",
+      "Celebrating a clutch goal scored in the final moments to seal the win",
+      "A fast-paced kickoff leading to an unexpected quick strike",
+      "Coordinating smooth passing plays with teammates to dominate the match"
+    ]
+  },
+  {
+    "song_id": 2,
+    "title": "Blinding Lights",
+    "artist": "The Weeknd",
+    "bpm": 171,
+    "energy": "High",
+    "moods": [
+      "Energetic",
+      "Retro",
+      "Uplifting"
+    ],
+    "themes": [
+      "Love",
+      "Nightlife"
+    ],
+    "source_url": "https://open.spotify/track/0VjIjW4GlUZAMYd2vXMi3b",
+    "track_id": "0VjIjW4GlUZAMYd2vXMi3b",
+    "lastfm_tags": [
+      {
+        "name": "synthwave",
+        "count": 100
+      },
+      {
+        "name": "synthpop",
+        "count": 94
+      },
+      {
+        "name": "pop",
+        "count": 51
+      },
+      {
+        "name": "2019",
+        "count": 37
+      },
+      {
+        "name": "electropop",
+        "count": 12
+      },
+      {
+        "name": "the weeknd",
+        "count": 12
+      },
+      {
+        "name": "2010s",
+        "count": 12
+      },
+      {
+        "name": "-1001740215468",
+        "count": 3
+      },
+      {
+        "name": "synth-pop",
+        "count": 2
+      },
+      {
+        "name": "2020s",
+        "count": 1
+      }
+    ],
+    "llm_energy": "High",
+    "llm_moods": [
+      "Energetic",
+      "Nostalgic",
+      "Euphoric",
+      "Uplifting",
+      "Dreamy"
+    ],
+    "llm_themes": [
+      "Victory",
+      "Comeback",
+      "Speed Rush",
+      "Glory"
+    ],
+    "llm_vibe": "This song feels like a neon-lit rush of adrenaline and nostalgia, perfectly capturing the exhilaration of chasing a last-minute win under city lights.",
+    "llm_game_moments": [
+      "Scoring a double-tap aerial goal",
+      "Winning a 1v3 clutch",
+      "Coming back from 0-3 down",
+      "Nail-biting overtime sudden death"
+    ]
+  },
+  {
+    "song_id": 3,
+    "title": "Despacito",
+    "artist": "Luis Fonsi & Daddy Yankee",
+    "bpm": 89,
+    "energy": "Low",
+    "moods": [
+      "Party",
+      "Uplifting"
+    ],
+    "themes": [
+      "Party",
+      "Latin"
+    ],
+    "source_url": "https://open.spotify/track/6habFhsOp2NvshLv26DqMb",
+    "track_id": "6habFhsOp2NvshLv26DqMb",
+    "lastfm_tags": [],
+    "llm_energy": "High",
+    "llm_moods": [
+      "Energetic",
+      "Playful",
+      "Uplifting",
+      "Confident",
+      "Exhilarant"
+    ],
+    "llm_themes": [
+      "Celebration",
+      "Victory",
+      "Glory",
+      "Teamwork"
+    ],
+    "llm_vibe": "Despacito feels like a vibrant, sun-soaked celebration that fills listeners with contagious energy and irresistible rhythm, making every moment feel like a joyful victory dance.",
+    "llm_game_moments": [
+      "Scoring a smooth, coordinated team goal after a series of perfect passes",
+      "Celebrating a flashy aerial goal that turns the tide of the match",
+      "Dominating the opponent with stylish control and speed",
+      "Winning a close game with an upbeat and confident comeback"
+    ]
+  },
+  {
+    "song_id": 4,
+    "title": "Uptown Funk",
+    "artist": "Mark Ronson ft. Bruno Mars",
+    "bpm": 115,
+    "energy": "Medium",
+    "moods": [
+      "Energetic",
+      "Party",
+      "Funky"
+    ],
+    "themes": [
+      "Party",
+      "Celebration"
+    ],
+    "source_url": "https://open.spotify.com/track/32OlwWuMpZ6b0aN2RZOeMS",
+    "track_id": "32OlwWuMpZ6b0aN2RZOeMS",
+    "lastfm_tags": [],
+    "llm_energy": "High",
+    "llm_moods": [
+      "Energetic",
+      "Confident",
+      "Playful",
+      "Uplifting",
+      "Anthemic"
+    ],
+    "llm_themes": [
+      "Celebration",
+      "Victory",
+      "Domination",
+      "Glory"
+    ],
+    "llm_vibe": "This song feels like an unstoppable burst of swagger and fun, instantly lifting spirits and commanding the dance floor with unapologetic confidence and infectious groove.",
+    "llm_game_moments": [
+      "Celebrating a stylish ceiling shot goal",
+      "Winning a fast-paced 3v3 kickoff sprint",
+      "Dominating with a consecutive multi-goal spree",
+      "Pulling off a flashy freestyle dribble to seal the game"
+    ]
+  },
+  {
+    "song_id": 5,
+    "title": "Happy",
+    "artist": "Pharrell Williams",
+    "bpm": 160,
+    "energy": "High",
+    "moods": [
+      "Happy",
+      "Uplifting",
+      "Feel-good"
+    ],
+    "themes": [
+      "Celebration",
+      "Party"
+    ],
+    "source_url": "https://open.spotify.com/track/60nZcImufyMA1MKQY3dcCH",
+    "track_id": "60nZcImufyMA1MKQY3dcCH",
+    "lastfm_tags": [],
+    "llm_energy": "High",
+    "llm_moods": [
+      "Uplifting",
+      "Energetic",
+      "Playful",
+      "Euphoric",
+      "Confident"
+    ],
+    "llm_themes": [
+      "Celebration",
+      "Victory",
+      "Glory"
+    ],
+    "llm_vibe": "This song feels like an irresistible, sunshiny burst of joy that instantly lifts your spirits and makes it impossible not to smile and move along.",
+    "llm_game_moments": [
+      "Celebrating a last-second winning goal",
+      "Pulling off a flashy aerial goal in style",
+      "Winning a close match with teammates cheering",
+      "Basking in the glory after a dominant 5-0 victory"
+    ]
+  },
+  {
+    "song_id": 6,
+    "title": "Bad Guy",
+    "artist": "Billie Eilish",
+    "bpm": 135,
+    "energy": "Medium",
+    "moods": [
+      "Dark",
+      "Mysterious",
+      "Edgy"
+    ],
+    "themes": [
+      "Attitude",
+      "Rebellion"
+    ],
+    "source_url": "https://open.spotify/track/2Fxmhks0bxGSBdJ92vM42m",
+    "track_id": "2Fxmhks0bxGSBdJ92vM42m",
+    "lastfm_tags": [
+      {
+        "name": "electropop",
+        "count": 100
+      },
+      {
+        "name": "dance-pop",
+        "count": 72
+      },
+      {
+        "name": "pop",
+        "count": 40
+      },
+      {
+        "name": "trap",
+        "count": 23
+      },
+      {
+        "name": "2019",
+        "count": 9
+      },
+      {
+        "name": "indie pop",
+        "count": 9
+      },
+      {
+        "name": "2010s",
+        "count": 7
+      },
+      {
+        "name": "alternative",
+        "count": 1
+      },
+      {
+        "name": "indie",
+        "count": 1
+      },
+      {
+        "name": "alternative pop",
+        "count": 1
+      }
+    ],
+    "llm_energy": "Medium",
+    "llm_moods": [
+      "Playful",
+      "Defiant",
+      "Confident",
+      "Dark",
+      "Hypnotic"
+    ],
+    "llm_themes": [
+      "Rivalry",
+      "Domination",
+      "Solo Carry"
+    ],
+    "llm_vibe": "Bad Guy feels like a mischievous smirk incarnate, wrapping listeners in a cool, sly confidence that pulses with edgy defiance and cheeky swagger.",
+    "llm_game_moments": [
+      "Pulling off a solo dribble through multiple defenders",
+      "Celebrating a cheeky bump that disrupts the opponent's play",
+      "Dominating with a stylish, unexpected flick shot",
+      "Winning a 1v1 in a tense moment with a confident fake"
+    ]
+  },
+  {
+    "song_id": 7,
+    "title": "Dance Monkey",
+    "artist": "Tones and I",
+    "bpm": 98,
+    "energy": "Low",
+    "moods": [
+      "Whimsical",
+      "Playful"
+    ],
+    "themes": [
+      "Party",
+      "Fun"
+    ],
+    "source_url": "https://open.spotify/track/2XU0oxnq2qxCpomAAuJY8K",
+    "track_id": "2XU0oxnq2qxCpomAAuJY8K",
+    "lastfm_tags": [],
+    "llm_energy": "High",
+    "llm_moods": [
+      "Playful",
+      "Energetic",
+      "Hypnotic",
+      "Uplifting",
+      "Confident"
+    ],
+    "llm_themes": [
+      "Journey",
+      "Solo Carry",
+      "Redemption",
+      "Glory"
+    ],
+    "llm_vibe": "This song feels like a quirky, unstoppable burst of joy and confidence that drags you into a contagious groove, making you feel both uniquely empowered and irresistibly playful.",
+    "llm_game_moments": [
+      "Pulling off a flashy solo dribble to break through defenders",
+      "Winning a 1v1 duel with a cheeky fake",
+      "Celebrating a clutch goal right after a challenging save",
+      "Showing off with a stylish freestyle goal at full boost"
+    ]
+  },
+  {
+    "song_id": 8,
+    "title": "Señorita",
+    "artist": "Shawn Mendes & Camila Cabello",
+    "bpm": 117,
+    "energy": "Medium",
+    "moods": [
+      "Sensual",
+      "Romantic"
+    ],
+    "themes": [
+      "Love",
+      "Romance"
+    ],
+    "source_url": "https://open.spotify/track/0TK2YIli7K1leLovkQiNik",
+    "track_id": "0TK2YIli7K1leLovkQiNik",
+    "lastfm_tags": [],
+    "llm_energy": "Medium",
+    "llm_moods": [
+      "Playful",
+      "Sensual",
+      "Dreamy",
+      "Confident",
+      "Nostalgic"
+    ],
+    "llm_themes": [
+      "Journey",
+      "Celebration",
+      "Teamwork"
+    ],
+    "llm_vibe": "Señorita feels like a sultry, playful dance of flirtation and longing, evoking the warm rush of summer nights filled with irresistible chemistry and the thrill of new romance.",
+    "llm_game_moments": [
+      "Smooth passing play with teammates that feels almost like a dance",
+      "Scoring a stylish corner aerial with effortless coordination",
+      "Winning a close game with confident, fluid teamwork",
+      "Nail-biting overtime sudden death where chemistry between players shines"
+    ]
+  },
+  {
+    "song_id": 9,
+    "title": "Lean On",
+    "artist": "Major Lazer & DJ Snake",
+    "bpm": 100,
+    "energy": "Low",
+    "moods": [
+      "Chill",
+      "Dance"
+    ],
+    "themes": [
+      "Dance",
+      "Collaboration"
+    ],
+    "source_url": "https://open.spotify/track/01aTsQoKoeXofSTvKuunzv",
+    "track_id": "01aTsQoKoeXofSTvKuunzv",
+    "lastfm_tags": [
+      {
+        "name": "moombahton",
+        "count": 100
+      },
+      {
+        "name": "pop",
+        "count": 56
+      },
+      {
+        "name": "electronic",
+        "count": 37
+      },
+      {
+        "name": "dance",
+        "count": 37
+      },
+      {
+        "name": "dancehall",
+        "count": 19
+      },
+      {
+        "name": "mo",
+        "count": 19
+      },
+      {
+        "name": "house",
+        "count": 8
+      },
+      {
+        "name": "twerk",
+        "count": 2
+      },
+      {
+        "name": "dj snake",
+        "count": 2
+      },
+      {
+        "name": "victoria silvstedt",
+        "count": 1
+      }
+    ],
+    "llm_energy": "High",
+    "llm_moods": [
+      "Energetic",
+      "Playful",
+      "Uplifting",
+      "Euphoric",
+      "Confident"
+    ],
+    "llm_themes": [
+      "Celebration",
+      "Teamwork",
+      "Speed Rush",
+      "Victory"
+    ],
+    "llm_vibe": "Lean On charges listeners with a vibrant, danceable pulse that feels like a carefree celebration under neon lights, inviting endless connection and unstoppable momentum.",
+    "llm_game_moments": [
+      "Smooth passing play with teammates leading to a stylish goal",
+      "Winning a 2v1 clutch in the final seconds",
+      "Pulling off a high-speed dribble through defenders",
+      "Scoring a goal after a perfectly timed aerial assist"
+    ]
+  },
+  {
+    "song_id": 10,
+    "title": "Thunder",
+    "artist": "Imagine Dragons",
+    "bpm": 87,
+    "energy": "Low",
+    "moods": [
+      "Powerful",
+      "Epic"
+    ],
+    "themes": [
+      "Motivation",
+      "Overcoming"
+    ],
+    "source_url": "https://open.spotify/track/1zB4vmk8tFRmM9UULNzbLB",
+    "track_id": "1zB4vmk8tFRmM9UULNzbLB",
+    "lastfm_tags": [
+      {
+        "name": "indie pop",
+        "count": 100
+      },
+      {
+        "name": "pop",
+        "count": 51
+      },
+      {
+        "name": "alternative",
+        "count": 22
+      },
+      {
+        "name": "rock",
+        "count": 12
+      },
+      {
+        "name": "2010s",
+        "count": 6
+      },
+      {
+        "name": "electropop",
+        "count": 6
+      },
+      {
+        "name": "indie",
+        "count": 6
+      },
+      {
+        "name": "2017",
+        "count": 2
+      },
+      {
+        "name": "riverdale",
+        "count": 2
+      },
+      {
+        "name": "imagine dragons",
+        "count": 2
+      }
+    ],
+    "llm_energy": "High",
+    "llm_moods": [
+      "Empowering",
+      "Energetic",
+      "Defiant",
+      "Triumphant",
+      "Confident"
+    ],
+    "llm_themes": [
+      "Comeback",
+      "Underdog",
+      "Victory",
+      "Redemption"
+    ],
+    "llm_vibe": "This song feels like breaking free from limitations and proudly owning your rise against all odds, sparking a fiery sense of unstoppable confidence and boldness.",
+    "llm_game_moments": [
+      "Winning a 1v3 clutch with a last-second aerial goal",
+      "Coming back from 0-3 down to take the lead",
+      "Celebrating a decisive goal after a long build-up play",
+      "Pulling off a solo carry to dominate the opponent"
+    ]
+  },
+  {
+    "song_id": 11,
+    "title": "Old Town Road",
+    "artist": "Lil Nas X",
+    "bpm": 136,
+    "energy": "Medium",
+    "moods": [
+      "Playful",
+      "Energetic"
+    ],
+    "themes": [
+      "Country",
+      "Fusion"
+    ],
+    "source_url": "https://open.spotify/track/0F7FA14euOIX8KcbEturGH",
+    "track_id": "0F7FA14euOIX8KcbEturGH",
+    "lastfm_tags": [],
+    "llm_energy": "Medium",
+    "llm_moods": [
+      "Playful",
+      "Confident",
+      "Defiant",
+      "Nostalgic",
+      "Empowering"
+    ],
+    "llm_themes": [
+      "Underdog",
+      "Journey",
+      "Rebellion",
+      "Victory"
+    ],
+    "llm_vibe": "Old Town Road feels like a cheeky, confident ride blending country swagger with modern beats, giving listeners a playful yet empowering sense of breaking rules and forging their own path.",
+    "llm_game_moments": [
+      "Pulling off a surprise solo carry from midfield to score",
+      "Winning a close 1v1 duel with a last-second flick",
+      "Celebrating an unexpected comeback after being down by two goals",
+      "Landing a slick freestyle dribble goal that leaves opponents stunned"
+    ]
+  },
+  {
+    "song_id": 12,
+    "title": "Poker Face",
+    "artist": "Lady Gaga",
+    "bpm": 120,
+    "energy": "Medium",
+    "moods": [
+      "Confident",
+      "Party"
+    ],
+    "themes": [
+      "Party",
+      "Confidence"
+    ],
+    "source_url": "https://open.spotify/track/1QV6tiMFM6fSOKOGLMHYYg",
+    "track_id": "1QV6tiMFM6fSOKOGLMHYYg",
+    "lastfm_tags": [
+      {
+        "name": "pop",
+        "count": 100
+      },
+      {
+        "name": "dance",
+        "count": 96
+      },
+      {
+        "name": "lady gaga",
+        "count": 42
+      },
+      {
+        "name": "electronic",
+        "count": 34
+      },
+      {
+        "name": "party",
+        "count": 12
+      },
+      {
+        "name": "female vocalists",
+        "count": 8
+      },
+      {
+        "name": "electropop",
+        "count": 4
+      },
+      {
+        "name": "poker face",
+        "count": 1
+      },
+      {
+        "name": "sexy",
+        "count": 1
+      },
+      {
+        "name": "catchy",
+        "count": 1
+      }
+    ],
+    "llm_energy": "High",
+    "llm_moods": [
+      "Energetic",
+      "Playful",
+      "Confident",
+      "Empowering",
+      "Anthemic"
+    ],
+    "llm_themes": [
+      "Victory",
+      "Celebration",
+      "Rivalry",
+      "Glory"
+    ],
+    "llm_vibe": "Poker Face bursts with infectious energy and a confident swagger that makes listeners feel unstoppable, like they’re bluffing their way to victory in a high-stakes game.",
+    "llm_game_moments": [
+      "Winning a 1v3 clutch with bold moves",
+      "Nail-biting overtime sudden death where every touch counts",
+      "Dominating the opponent with stylish, assertive plays",
+      "Landing a perfectly timed fake-out dribble to confuse defenders"
+    ]
+  },
+  {
+    "song_id": 13,
+    "title": "Rolling in the Deep",
+    "artist": "Adele",
+    "bpm": 105,
+    "energy": "Low",
+    "moods": [
+      "Powerful",
+      "Emotional"
+    ],
+    "themes": [
+      "Heartbreak",
+      "Empowerment"
+    ],
+    "source_url": "https://open.spotify/track/4OSBTYWVwsQhGLF9NHvIbR",
+    "track_id": "4OSBTYWVwsQhGLF9NHvIbR",
+    "lastfm_tags": [
+      {
+        "name": "soul",
+        "count": 100
+      },
+      {
+        "name": "pop",
+        "count": 76
+      },
+      {
+        "name": "female vocalists",
+        "count": 47
+      },
+      {
+        "name": "adele",
+        "count": 38
+      },
+      {
+        "name": "british",
+        "count": 17
+      },
+      {
+        "name": "love at first listen",
+        "count": 4
+      },
+      {
+        "name": "2011",
+        "count": 3
+      },
+      {
+        "name": "singer-songwriter",
+        "count": 1
+      },
+      {
+        "name": "blues",
+        "count": 1
+      },
+      {
+        "name": "brilliant",
+        "count": 1
+      }
+    ],
+    "llm_energy": "High",
+    "llm_moods": [
+      "Empowering",
+      "Dramatic",
+      "Defiant",
+      "Heartbreak",
+      "Triumphant"
+    ],
+    "llm_themes": [
+      "Resilience",
+      "Redemption",
+      "Heartbreak Loss",
+      "Comeback"
+    ],
+    "llm_vibe": "This song feels like a fiery declaration of strength after betrayal, charging listeners with a mix of raw emotion and fierce empowerment.",
+    "llm_game_moments": [
+      "Winning a 1v3 clutch with confidence",
+      "Coming back from 0-3 down to steal the game",
+      "Making a game-saving save in the last second with determination",
+      "Nail-biting overtime sudden death where every touch counts"
+    ]
+  },
+  {
+    "song_id": 14,
+    "title": "Havana",
+    "artist": "Camila Cabello",
+    "bpm": 105,
+    "energy": "Low",
+    "moods": [
+      "Sensual",
+      "Playful"
+    ],
+    "themes": [
+      "Love",
+      "Latin"
+    ],
+    "source_url": "https://open.spotify/track/1rfofaqEpACxVEHIZBJe6W",
+    "track_id": "1rfofaqEpACxVEHIZBJe6W",
+    "lastfm_tags": [],
+    "llm_energy": "Medium",
+    "llm_moods": [
+      "Playful",
+      "Nostalgic",
+      "Confident",
+      "Dreamy",
+      "Bittersweet"
+    ],
+    "llm_themes": [
+      "Journey",
+      "Redemption",
+      "Solo Carry"
+    ],
+    "llm_vibe": "Havana envelopes listeners in a sultry, playful mood that feels like a confident stroll through memories of bittersweet romance and personal journeys.",
+    "llm_game_moments": [
+      "Pulling off a slick solo dribble goal with style",
+      "Slow-motion aerial setup that feels smooth and effortless",
+      "Calmly controlling the ball after a tight 1v1 duel",
+      "Celebrating a close game win where you outplayed the opponent with finesse"
+    ]
+  },
+  {
+    "song_id": 15,
+    "title": "Wake Me Up",
+    "artist": "Avicii",
+    "bpm": 124,
+    "energy": "Medium",
+    "moods": [
+      "Uplifting",
+      "Inspirational"
+    ],
+    "themes": [
+      "Journey",
+      "Life"
+    ],
+    "source_url": "https://open.spotify/track/0nrRP2bk19rLc0orkWPQk2",
+    "track_id": "0nrRP2bk19rLc0orkWPQk2",
+    "lastfm_tags": [
+      {
+        "name": "electronic",
+        "count": 100
+      },
+      {
+        "name": "dance",
+        "count": 100
+      },
+      {
+        "name": "2013",
+        "count": 41
+      },
+      {
+        "name": "pop",
+        "count": 27
+      },
+      {
+        "name": "avicii",
+        "count": 13
+      },
+      {
+        "name": "house",
+        "count": 8
+      },
+      {
+        "name": "summer 2013",
+        "count": 4
+      },
+      {
+        "name": "edm",
+        "count": 1
+      },
+      {
+        "name": "progressive house",
+        "count": 1
+      },
+      {
+        "name": "country",
+        "count": 1
+      }
+    ],
+    "llm_energy": "High",
+    "llm_moods": [
+      "Uplifting",
+      "Reflective",
+      "Euphoric",
+      "Nostalgic",
+      "Empowering"
+    ],
+    "llm_themes": [
+      "Journey",
+      "Resilience",
+      "Redemption",
+      "Glory"
+    ],
+    "llm_vibe": "Wake Me Up feels like a powerful anthem for personal growth and awakening, stirring a mix of hope and bittersweet reflection that lifts listeners into an exhilarating emotional journey.",
+    "llm_game_moments": [
+      "Coming back from a significant score deficit, like 0-3 down",
+      "Winning a 1v3 clutch that feels like a breakthrough moment",
+      "Nail-biting overtime sudden death after a long, exhausting match",
+      "Smooth passing play with teammates that builds momentum and cohesion"
+    ]
+  },
+  {
+    "song_id": 16,
+    "title": "Crazy",
+    "artist": "Gnarls Barkley",
+    "bpm": 112,
+    "energy": "Medium",
+    "moods": [
+      "Soulful",
+      "Melancholic"
+    ],
+    "themes": [
+      "Reflection",
+      "Emotion"
+    ],
+    "source_url": "https://open.spotify/track/1vxw6aYJls2oq3gW0DujAo",
+    "track_id": "1vxw6aYJls2oq3gW0DujAo",
+    "lastfm_tags": [
+      {
+        "name": "soul",
+        "count": 100
+      },
+      {
+        "name": "funk",
+        "count": 88
+      },
+      {
+        "name": "hip-hop",
+        "count": 41
+      },
+      {
+        "name": "pop",
+        "count": 37
+      },
+      {
+        "name": "crazy",
+        "count": 9
+      },
+      {
+        "name": "00s",
+        "count": 6
+      },
+      {
+        "name": "gnarls barkley",
+        "count": 6
+      },
+      {
+        "name": "alternative",
+        "count": 2
+      },
+      {
+        "name": "2006",
+        "count": 1
+      },
+      {
+        "name": "dance",
+        "count": 1
+      }
+    ],
+    "llm_energy": "Medium",
+    "llm_moods": [
+      "Reflective",
+      "Confident",
+      "Bittersweet",
+      "Hypnotic",
+      "Dramatic"
+    ],
+    "llm_themes": [
+      "Journey",
+      "Redemption",
+      "Resilience",
+      "Comeback"
+    ],
+    "llm_vibe": "This song feels like a soulful reflection on the brink of losing control, blending eerie smoothness with steady determination that pulls listeners into a deep, hypnotic contemplation of their inner struggles and triumphs.",
+    "llm_game_moments": [
+      "Coming back from a significant score deficit against tough opponents",
+      "Making a clutch, unexpected solo carry to turn the game around",
+      "Nail-biting overtime sudden death where calm focus is key",
+      "Pulling off a stylish freestyle dribble goal that leaves opponents stunned"
+    ]
+  },
+  {
+    "song_id": 17,
+    "title": "Can't Stop",
+    "artist": "Red Hot Chili Peppers",
+    "bpm": 116,
+    "energy": "Medium",
+    "moods": [
+      "Energetic",
+      "Funky"
+    ],
+    "themes": [
+      "Rebellion",
+      "Freedom"
+    ],
+    "source_url": "https://open.spotify/track/3ZOEytgrvLwQaqXreDs2Jx",
+    "track_id": "3ZOEytgrvLwQaqXreDs2Jx",
+    "lastfm_tags": [
+      {
+        "name": "rock",
+        "count": 100
+      },
+      {
+        "name": "alternative rock",
+        "count": 81
+      },
+      {
+        "name": "funk",
+        "count": 45
+      },
+      {
+        "name": "alternative",
+        "count": 35
+      },
+      {
+        "name": "red hot chili peppers",
+        "count": 13
+      },
+      {
+        "name": "funk rock",
+        "count": 12
+      },
+      {
+        "name": "00s",
+        "count": 3
+      },
+      {
+        "name": "american",
+        "count": 1
+      },
+      {
+        "name": "rhcp",
+        "count": 1
+      },
+      {
+        "name": "hard rock",
+        "count": 1
+      }
+    ],
+    "llm_energy": "High",
+    "llm_moods": [
+      "Energetic",
+      "Defiant",
+      "Confident",
+      "Exhilarant",
+      "Playful"
+    ],
+    "llm_themes": [
+      "Domination",
+      "Victory",
+      "Speed Rush",
+      "Glory"
+    ],
+    "llm_vibe": "This song feels like an unstoppable burst of raw, confident energy with a rebellious edge that fuels a rush of joy and fierce determination.",
+    "llm_game_moments": [
+      "Scoring a blazing speed rush goal on the breakaway",
+      "Pulling off a clutch aerial double tap to secure victory",
+      "Dominating a fast-paced 5-goal lead blowout",
+      "Nail-biting last second save leading to a game-winning counterattack"
+    ]
+  },
+  {
+    "song_id": 18,
+    "title": "Smells Like Teen Spirit",
+    "artist": "Nirvana",
+    "bpm": 117,
+    "energy": "Medium",
+    "moods": [
+      "Angsty",
+      "Raw"
+    ],
+    "themes": [
+      "Rebellion",
+      "Youth"
+    ],
+    "source_url": "https://open.spotify/track/4CeeEOM32jQcH3eN9Q2dGj",
+    "track_id": "4CeeEOM32jQcH3eN9Q2dGj",
+    "lastfm_tags": [
+      {
+        "name": "grunge",
+        "count": 100
+      },
+      {
+        "name": "rock",
+        "count": 70
+      },
+      {
+        "name": "alternative",
+        "count": 34
+      },
+      {
+        "name": "90s",
+        "count": 31
+      },
+      {
+        "name": "nirvana",
+        "count": 13
+      },
+      {
+        "name": "alternative rock",
+        "count": 8
+      },
+      {
+        "name": "anthem",
+        "count": 3
+      },
+      {
+        "name": "punk",
+        "count": 1
+      },
+      {
+        "name": "classic rock",
+        "count": 1
+      },
+      {
+        "name": "hard rock",
+        "count": 1
+      }
+    ],
+    "llm_energy": "High",
+    "llm_moods": [
+      "Defiant",
+      "Energetic",
+      "Nostalgic",
+      "Aggressive",
+      "Anthemic"
+    ],
+    "llm_themes": [
+      "Rebellion",
+      "Glory",
+      "Underdog",
+      "Domination"
+    ],
+    "llm_vibe": "This song feels like an explosive rush of teenage angst and raw power, igniting a rebellious spirit that thrives on chaos and unfiltered emotion.",
+    "llm_game_moments": [
+      "Winning a 1v3 clutch with aggressive plays",
+      "Scoring a freestyle dribble goal that defies expectations",
+      "Making a game-changing demolition mid-match",
+      "Coming back from behind in a high-stakes overtime thriller"
+    ]
+  },
+  {
+    "song_id": 19,
+    "title": "Billie Jean",
+    "artist": "Michael Jackson",
+    "bpm": 117,
+    "energy": "Medium",
+    "moods": [
+      "Groovy",
+      "Mysterious"
+    ],
+    "themes": [
+      "Love",
+      "Betrayal"
+    ],
+    "source_url": "https://open.spotify/track/7J1uxwnxfQLu4APicE5Rnj",
+    "track_id": "7J1uxwnxfQLu4APicE5Rnj",
+    "lastfm_tags": [
+      {
+        "name": "pop",
+        "count": 100
+      },
+      {
+        "name": "80s",
+        "count": 83
+      },
+      {
+        "name": "michael jackson",
+        "count": 41
+      },
+      {
+        "name": "dance",
+        "count": 35
+      },
+      {
+        "name": "disco",
+        "count": 10
+      },
+      {
+        "name": "funk",
+        "count": 5
+      },
+      {
+        "name": "king of pop",
+        "count": 4
+      },
+      {
+        "name": "soul",
+        "count": 1
+      },
+      {
+        "name": "billie jean",
+        "count": 1
+      },
+      {
+        "name": "rnb",
+        "count": 1
+      }
+    ],
+    "llm_energy": "Medium",
+    "llm_moods": [
+      "Hypnotic",
+      "Suspenseful",
+      "Confident",
+      "Dramatic",
+      "Reflective"
+    ],
+    "llm_themes": [
+      "Rivalry",
+      "Journey",
+      "Close Game",
+      "Redemption"
+    ],
+    "llm_vibe": "‘Billie Jean’ wraps listeners in a sleek, hypnotic groove that simmers with tension and confidence, evoking the feeling of navigating a high-stakes mystery where every move counts.",
+    "llm_game_moments": [
+      "Nail-biting overtime sudden death where focus and precision are critical",
+      "Coming back from 0-2 down with methodical, calculated plays",
+      "Making a game-saving save in the last second while the crowd holds its breath",
+      "Executing a smooth passing play under pressure, showcasing team synergy and poise"
+    ]
+  },
+  {
+    "song_id": 20,
+    "title": "Someone Like You",
+    "artist": "Adele",
+    "bpm": 68,
+    "energy": "Low",
+    "moods": [
+      "Melancholic",
+      "Emotional"
+    ],
+    "themes": [
+      "Heartbreak",
+      "Longing"
+    ],
+    "source_url": "https://open.spotify/track/3bNv3VuUOKgrf5hu3YcuRo",
+    "track_id": "3bNv3VuUOKgrf5hu3YcuRo",
+    "lastfm_tags": [
+      {
+        "name": "soul",
+        "count": 100
+      },
+      {
+        "name": "adele",
+        "count": 70
+      },
+      {
+        "name": "piano",
+        "count": 39
+      },
+      {
+        "name": "british",
+        "count": 37
+      },
+      {
+        "name": "pop",
+        "count": 14
+      },
+      {
+        "name": "female vocals",
+        "count": 14
+      },
+      {
+        "name": "female vocalists",
+        "count": 10
+      },
+      {
+        "name": "beautiful",
+        "count": 2
+      },
+      {
+        "name": "sad",
+        "count": 1
+      },
+      {
+        "name": "love",
+        "count": 1
+      }
+    ],
+    "llm_energy": "Low",
+    "llm_moods": [
+      "Heartbreak",
+      "Reflective",
+      "Bittersweet",
+      "Nostalgic"
+    ],
+    "llm_themes": [
+      "Heartbreak Loss",
+      "Journey",
+      "Redemption"
+    ],
+    "llm_vibe": "This song feels like a tender moment of quiet reflection and bittersweet acceptance after loss, evoking deep emotions of past love and longing.",
+    "llm_game_moments": [
+      "Reflecting silently on a narrow loss after a hard-fought match",
+      "Taking a break after a tough defeat to gather composure",
+      "Replaying a beautifully executed but ultimately unsuccessful solo carry",
+      "Pausing to appreciate a teammate’s effort despite falling behind"
+    ]
+  },
+  {
+    "song_id": 21,
+    "title": "Taki Taki",
+    "artist": "DJ Snake ft. Selena Gomez, Ozuna & Cardi B",
+    "bpm": 128,
+    "energy": "Medium",
+    "moods": [
+      "Party",
+      "Energetic"
+    ],
+    "themes": [
+      "Party",
+      "Latin"
+    ],
+    "source_url": "https://open.spotify.com/track/20uYAdCEoIkSZStIfPW1TB",
+    "track_id": "20uYAdCEoIkSZStIfPW1TB",
+    "lastfm_tags": [],
+    "llm_energy": "High",
+    "llm_moods": [
+      "Energetic",
+      "Confident",
+      "Playful",
+      "Empowering",
+      "Exhilarant"
+    ],
+    "llm_themes": [
+      "Celebration",
+      "Domination",
+      "Glory",
+      "Speed Rush"
+    ],
+    "llm_vibe": "Taki Taki feels like a fiery, unstoppable dance party that fills listeners with contagious confidence and makes every moment feel like a bold, exhilarating celebration.",
+    "llm_game_moments": [
+      "Scoring a high-speed aerial goal after a slick dribble",
+      "Pulling off a clutch solo carry through defenders",
+      "Celebrating a blowout win with flashy moves",
+      "Dominating possession and speed rushing down the field"
+    ]
+  },
+  {
+    "song_id": 22,
+    "title": "One Dance",
+    "artist": "Drake ft. Wizkid & Kyla",
+    "bpm": 104,
+    "energy": "Low",
+    "moods": [
+      "Chill",
+      "Dance"
+    ],
+    "themes": [
+      "Dance",
+      "Nightlife"
+    ],
+    "source_url": "https://open.spotify.com/track/1zi7xx7UVEFkmKfv06H8x0",
+    "track_id": "1zi7xx7UVEFkmKfv06H8x0",
+    "lastfm_tags": [],
+    "llm_energy": "Medium",
+    "llm_moods": [
+      "Hypnotic",
+      "Playful",
+      "Nostalgic",
+      "Dreamy",
+      "Confident"
+    ],
+    "llm_themes": [
+      "Celebration",
+      "Glory",
+      "Journey"
+    ],
+    "llm_vibe": "One Dance feels like a smooth, sun-soaked night out where every beat invites you to move effortlessly and savor moments of carefree celebration and confident allure.",
+    "llm_game_moments": [
+      "Pulling off a slick free play dribble to sneak a goal past defenders",
+      "Executing a smooth passing play with teammates to secure a lead",
+      "Celebrating after a stylish aerial shot that feels effortless",
+      "Cruising through mid-game rhythm, keeping control with relaxed confidence"
+    ]
+  },
+  {
+    "song_id": 23,
+    "title": "Rockstar",
+    "artist": "Post Malone ft. 21 Savage",
+    "bpm": 160,
+    "energy": "High",
+    "moods": [
+      "Laid-back",
+      "Reflective"
+    ],
+    "themes": [
+      "Success",
+      "Lifestyle"
+    ],
+    "source_url": "https://open.spotify.com/track/3UROnFSuu2qVr9bNw26KET",
+    "track_id": "3UROnFSuu2qVr9bNw26KET",
+    "lastfm_tags": [],
+    "llm_energy": "Medium",
+    "llm_moods": [
+      "Confident",
+      "Dark",
+      "Gritty",
+      "Defiant",
+      "Brooding"
+    ],
+    "llm_themes": [
+      "Domination",
+      "Solo Carry",
+      "Rivalry",
+      "Glory"
+    ],
+    "llm_vibe": "Rockstar feels like stepping into a world of streetwise bravado and unapologetic confidence, where power and grit mix with a dark swagger that resonates deeply with anyone chasing status and respect.",
+    "llm_game_moments": [
+      "Winning a 1v3 clutch",
+      "Scoring a freestyle dribble goal",
+      "Dominating the opponent 5-0 with relentless pressure",
+      "Pulling off a no-scope shot from midfield"
+    ]
+  },
+  {
+    "song_id": 24,
+    "title": "Sicko Mode",
+    "artist": "Travis Scott",
+    "bpm": 78,
+    "energy": "Low",
+    "moods": [
+      "Hypnotic",
+      "Dark"
+    ],
+    "themes": [
+      "Party",
+      "Intensity"
+    ],
+    "source_url": "https://open.spotify/track/2xLMifQCjDGFmkHkpNLD9h",
+    "track_id": "2xLMifQCjDGFmkHkpNLD9h",
+    "lastfm_tags": [
+      {
+        "name": "trap",
+        "count": 100
+      },
+      {
+        "name": "rap",
+        "count": 69
+      },
+      {
+        "name": "drake",
+        "count": 29
+      },
+      {
+        "name": "2018",
+        "count": 17
+      },
+      {
+        "name": "southern hip hop",
+        "count": 4
+      },
+      {
+        "name": "hip-hop",
+        "count": 4
+      },
+      {
+        "name": "experimental hip-hop",
+        "count": 4
+      },
+      {
+        "name": "pop rap",
+        "count": 1
+      },
+      {
+        "name": "travis scott",
+        "count": 1
+      },
+      {
+        "name": "experimental hip hop",
+        "count": 1
+      }
+    ],
+    "llm_energy": "High",
+    "llm_moods": [
+      "Energetic",
+      "Confident",
+      "Dramatic",
+      "Triumphant",
+      "Intense"
+    ],
+    "llm_themes": [
+      "Domination",
+      "Victory",
+      "Glory",
+      "Comeback"
+    ],
+    "llm_vibe": "Sicko Mode feels like an adrenaline-fueled ride through a flashy, unstoppable winning streak, shifting gears unpredictably but always keeping listeners hyped and invincible.",
+    "llm_game_moments": [
+      "Pulling off a monster kickoff that immediately leads to a goal",
+      "Making a clutch 1v2 solo carry to secure a lead",
+      "Scoring a jaw-dropping double-jump aerial goal",
+      "Celebrating a last-second overtime winner after a hard-fought comeback"
+    ]
+  },
+  {
+    "song_id": 25,
+    "title": "God's Plan",
+    "artist": "Drake",
+    "bpm": 77,
+    "energy": "Low",
+    "moods": [
+      "Uplifting",
+      "Reflective"
+    ],
+    "themes": [
+      "Gratitude",
+      "Success"
+    ],
+    "source_url": "https://open.spotify/track/6DCZcSspjsKoFjzjrWoCdn",
+    "track_id": "6DCZcSspjsKoFjzjrWoCdn",
+    "lastfm_tags": [
+      {
+        "name": "2018",
+        "count": 100
+      },
+      {
+        "name": "rap",
+        "count": 64
+      },
+      {
+        "name": "hip-hop",
+        "count": 42
+      },
+      {
+        "name": "2010s",
+        "count": 24
+      },
+      {
+        "name": "drake",
+        "count": 5
+      },
+      {
+        "name": "canadian",
+        "count": 5
+      },
+      {
+        "name": "dios plan",
+        "count": 5
+      },
+      {
+        "name": "e minor",
+        "count": 1
+      },
+      {
+        "name": "white rapper",
+        "count": 1
+      },
+      {
+        "name": "rnb",
+        "count": 1
+      }
+    ],
+    "llm_energy": "Medium",
+    "llm_moods": [
+      "Uplifting",
+      "Confident",
+      "Empowering",
+      "Reflective",
+      "Triumphant"
+    ],
+    "llm_themes": [
+      "Victory",
+      "Celebration",
+      "Journey",
+      "Resilience"
+    ],
+    "llm_vibe": "God's Plan feels like a warm, confident embrace that lifts listeners with a message of overcoming struggles and celebrating success with a generous heart.",
+    "llm_game_moments": [
+      "Securing a clutch goal after a tough defensive stand",
+      "Completing a smooth passing play that leads to a game-winning goal",
+      "Winning a close game with seconds left on the clock",
+      "Bouncing back from a rough start to dominate the opponent"
+    ]
+  },
+  {
+    "song_id": 26,
+    "title": "Levitating",
+    "artist": "Dua Lipa",
+    "bpm": 103,
+    "energy": "Low",
+    "moods": [
+      "Uplifting",
+      "Fun"
+    ],
+    "themes": [
+      "Love",
+      "Dance"
+    ],
+    "source_url": "https://open.spotify/track/39LLxExYz6ewLAcYrzQQyP",
+    "track_id": "39LLxExYz6ewLAcYrzQQyP",
+    "lastfm_tags": [
+      {
+        "name": "pop",
+        "count": 100
+      },
+      {
+        "name": "dance-pop",
+        "count": 59
+      },
+      {
+        "name": "nu-disco",
+        "count": 35
+      },
+      {
+        "name": "disco",
+        "count": 25
+      },
+      {
+        "name": "electropop",
+        "count": 6
+      },
+      {
+        "name": "funktronica",
+        "count": 5
+      },
+      {
+        "name": "dance",
+        "count": 5
+      },
+      {
+        "name": "disco rap",
+        "count": 1
+      },
+      {
+        "name": "dua lipa",
+        "count": 1
+      },
+      {
+        "name": "2020",
+        "count": 1
+      }
+    ],
+    "llm_energy": "High",
+    "llm_moods": [
+      "Energetic",
+      "Uplifting",
+      "Playful",
+      "Confident",
+      "Euphoric"
+    ],
+    "llm_themes": [
+      "Celebration",
+      "Victory",
+      "Glory",
+      "Teamwork"
+    ],
+    "llm_vibe": "Levitating feels like an irresistible burst of joyful energy that lifts listeners into a carefree, vibrant dance party where confidence and celebration reign supreme.",
+    "llm_game_moments": [
+      "Scoring a double-tap aerial goal with style",
+      "Winning a 3v3 match in dominant fashion",
+      "Executing a smooth passing play with teammates leading to a goal",
+      "Pulling off an impressive kickoff goal that sets the tone for the game"
+    ]
+  },
+  {
+    "song_id": 27,
+    "title": "Savage Love",
+    "artist": "Jawsh 685 & Jason Derulo",
+    "bpm": 150,
+    "energy": "High",
+    "moods": [
+      "Energetic",
+      "Playful"
+    ],
+    "themes": [
+      "Love",
+      "Dance"
+    ],
+    "source_url": "https://open.spotify/track/4TgxFMOn5yoESW6zCidCXL",
+    "track_id": "4TgxFMOn5yoESW6zCidCXL",
+    "lastfm_tags": [],
+    "llm_energy": "High",
+    "llm_moods": [
+      "Energetic",
+      "Playful",
+      "Confident",
+      "Uplifting",
+      "Exhilarant"
+    ],
+    "llm_themes": [
+      "Victory",
+      "Celebration",
+      "Speed Rush",
+      "Glory"
+    ],
+    "llm_vibe": "Savage Love pulses with infectious, sun-soaked confidence that makes listeners feel unstoppable and ready to celebrate every moment like a victory on the field.",
+    "llm_game_moments": [
+      "Scoring a fast-paced aerial goal after a quick counterattack",
+      "Pulling off a stylish freestyling dribble goal",
+      "Celebrating a clutch last-second goal to seal the win",
+      "Speed-rushing down the field to dominate the opponent’s defense"
+    ]
+  },
+  {
+    "song_id": 28,
+    "title": "Memories",
+    "artist": "Maroon 5",
+    "bpm": 91,
+    "energy": "Low",
+    "moods": [
+      "Nostalgic",
+      "Reflective"
+    ],
+    "themes": [
+      "Memory",
+      "Love"
+    ],
+    "source_url": "https://open.spotify/track/4cktbXiXOapiLBMprHFErI",
+    "track_id": "4cktbXiXOapiLBMprHFErI",
+    "lastfm_tags": [
+      {
+        "name": "pop",
+        "count": 100
+      },
+      {
+        "name": "2010s",
+        "count": 33
+      },
+      {
+        "name": "pop rock",
+        "count": 12
+      },
+      {
+        "name": "rock",
+        "count": 12
+      },
+      {
+        "name": "maroon 5",
+        "count": 6
+      },
+      {
+        "name": "alternative",
+        "count": 3
+      },
+      {
+        "name": "indie",
+        "count": 3
+      },
+      {
+        "name": "2019",
+        "count": 1
+      },
+      {
+        "name": "alternative rock",
+        "count": 1
+      },
+      {
+        "name": "indie rock",
+        "count": 1
+      }
+    ],
+    "llm_energy": "Low",
+    "llm_moods": [
+      "Reflective",
+      "Nostalgic",
+      "Bittersweet",
+      "Melancholy"
+    ],
+    "llm_themes": [
+      "Journey",
+      "Resilience",
+      "Heartbreak Loss"
+    ],
+    "llm_vibe": "‘Memories’ feels like a tender pause filled with longing and warmth, evoking bittersweet reflections on past moments and the people no longer present.",
+    "llm_game_moments": [
+      "After a tough match reflecting on close losses",
+      "Watching a slow-motion replay of a beautifully executed pass",
+      "Post-game debrief moments with teammates remembering clutch plays",
+      "Calmly celebrating a hard-fought win with friends"
+    ]
+  },
+  {
+    "song_id": 29,
+    "title": "Counting Stars",
+    "artist": "OneRepublic",
+    "bpm": 122,
+    "energy": "Medium",
+    "moods": [
+      "Uplifting",
+      "Optimistic"
+    ],
+    "themes": [
+      "Hope",
+      "Reflection"
+    ],
+    "source_url": "https://open.spotify/track/2tpWsVSb9UEmDRxAl1zhX1",
+    "track_id": "2tpWsVSb9UEmDRxAl1zhX1",
+    "lastfm_tags": [
+      {
+        "name": "pop rock",
+        "count": 100
+      },
+      {
+        "name": "rock",
+        "count": 85
+      },
+      {
+        "name": "pop",
+        "count": 52
+      },
+      {
+        "name": "love at first listen",
+        "count": 24
+      },
+      {
+        "name": "kick",
+        "count": 10
+      },
+      {
+        "name": "alternative",
+        "count": 7
+      },
+      {
+        "name": "melancholic",
+        "count": 7
+      },
+      {
+        "name": "onerepublic",
+        "count": 2
+      },
+      {
+        "name": "2013",
+        "count": 2
+      },
+      {
+        "name": "one republic",
+        "count": 1
+      }
+    ],
+    "llm_energy": "High",
+    "llm_moods": [
+      "Uplifting",
+      "Reflective",
+      "Energetic",
+      "Euphoric",
+      "Empowering"
+    ],
+    "llm_themes": [
+      "Journey",
+      "Resilience",
+      "Victory",
+      "Redemption"
+    ],
+    "llm_vibe": "Like an anthem for chasing dreams against all odds, this song feels like a hopeful rush of determination that lifts listeners out of daily struggles and into a world where success and self-belief are within reach.",
+    "llm_game_moments": [
+      "Coming back from a 0-3 deficit with rapid boosts and clutch plays",
+      "Scoring a high-flying aerial goal that swings momentum",
+      "Executing a smooth, coordinated passing play leading to a buzzer-beater",
+      "Winning a tense 3v3 overtime with a last-second goal"
+    ]
+  },
+  {
+    "song_id": 30,
+    "title": "Radioactive",
+    "artist": "Imagine Dragons",
+    "bpm": 136,
+    "energy": "Medium",
+    "moods": [
+      "Epic",
+      "Powerful"
+    ],
+    "themes": [
+      "Rebellion",
+      "Awakening"
+    ],
+    "source_url": "https://open.spotify/track/62yJjFtgkhUrXktIoSjgP2",
+    "track_id": "62yJjFtgkhUrXktIoSjgP2",
+    "lastfm_tags": [
+      {
+        "name": "indie",
+        "count": 100
+      },
+      {
+        "name": "alternative",
+        "count": 96
+      },
+      {
+        "name": "rock",
+        "count": 59
+      },
+      {
+        "name": "indie rock",
+        "count": 37
+      },
+      {
+        "name": "american",
+        "count": 12
+      },
+      {
+        "name": "alternative rock",
+        "count": 10
+      },
+      {
+        "name": "imagine dragons",
+        "count": 9
+      },
+      {
+        "name": "song is win",
+        "count": 2
+      },
+      {
+        "name": "kick",
+        "count": 2
+      },
+      {
+        "name": "dubstep",
+        "count": 1
+      }
+    ],
+    "llm_energy": "High",
+    "llm_moods": [
+      "Energetic",
+      "Defiant",
+      "Dramatic",
+      "Empowering",
+      "Intense"
+    ],
+    "llm_themes": [
+      "Resilience",
+      "Comeback",
+      "Glory",
+      "Solo Carry"
+    ],
+    "llm_vibe": "Like stepping into a post-apocalyptic world with a surge of unstoppable power, this song makes listeners feel charged up, defiant, and ready to break through any barrier.",
+    "llm_game_moments": [
+      "Winning a 1v3 clutch with aggressive plays",
+      "Coming back from 0-3 down to seize victory",
+      "Scoring a double-tap aerial goal that turns the tide",
+      "Nail-biting overtime sudden death goal"
+    ]
+  },
+  {
+    "song_id": 31,
+    "title": "Uprising",
+    "artist": "Muse",
+    "bpm": 128,
+    "energy": "Medium",
+    "moods": [
+      "Rebellious",
+      "Energetic"
+    ],
+    "themes": [
+      "Rebellion",
+      "Power"
+    ],
+    "source_url": "https://open.spotify/track/4VqPOruhp5EdPBeR92t6lQ",
+    "track_id": "4VqPOruhp5EdPBeR92t6lQ",
+    "lastfm_tags": [
+      {
+        "name": "alternative rock",
+        "count": 100
+      },
+      {
+        "name": "rock",
+        "count": 82
+      },
+      {
+        "name": "alternative",
+        "count": 43
+      },
+      {
+        "name": "british",
+        "count": 35
+      },
+      {
+        "name": "muse",
+        "count": 15
+      },
+      {
+        "name": "progressive rock",
+        "count": 6
+      },
+      {
+        "name": "2009",
+        "count": 4
+      },
+      {
+        "name": "fucking awesome",
+        "count": 1
+      },
+      {
+        "name": "male vocalists",
+        "count": 1
+      },
+      {
+        "name": "indie",
+        "count": 1
+      }
+    ],
+    "llm_energy": "High",
+    "llm_moods": [
+      "Defiant",
+      "Empowering",
+      "Energetic",
+      "Anthemic",
+      "Focused"
+    ],
+    "llm_themes": [
+      "Resilience",
+      "Underdog",
+      "Redemption",
+      "Victory"
+    ],
+    "llm_vibe": "This song feels like a rallying cry for standing up against oppression, igniting a surge of rebellious energy and unstoppable determination in its listeners.",
+    "llm_game_moments": [
+      "Winning a 1v3 clutch against all odds",
+      "Coming back from 0-3 down to tie the game",
+      "Making a game-saving save in the last second",
+      "Nail-biting overtime sudden death victory"
+    ]
+  },
+  {
+    "song_id": 32,
+    "title": "Viva La Vida",
+    "artist": "Coldplay",
+    "bpm": 138,
+    "energy": "High",
+    "moods": [
+      "Epic",
+      "Uplifting"
+    ],
+    "themes": [
+      "Legacy",
+      "History"
+    ],
+    "source_url": "https://open.spotify/track/1mea3bSkSGXuIRvnydlB5b",
+    "track_id": "1mea3bSkSGXuIRvnydlB5b",
+    "lastfm_tags": [
+      {
+        "name": "alternative",
+        "count": 100
+      },
+      {
+        "name": "rock",
+        "count": 62
+      },
+      {
+        "name": "coldplay",
+        "count": 40
+      },
+      {
+        "name": "alternative rock",
+        "count": 32
+      },
+      {
+        "name": "viva la vida",
+        "count": 10
+      },
+      {
+        "name": "british",
+        "count": 8
+      },
+      {
+        "name": "britpop",
+        "count": 6
+      },
+      {
+        "name": "pop",
+        "count": 2
+      },
+      {
+        "name": "indie",
+        "count": 1
+      },
+      {
+        "name": "beautiful",
+        "count": 1
+      }
+    ],
+    "llm_energy": "Medium",
+    "llm_moods": [
+      "Reflective",
+      "Uplifting",
+      "Bittersweet",
+      "Anthemic"
+    ],
+    "llm_themes": [
+      "Redemption",
+      "Journey",
+      "Glory"
+    ],
+    "llm_vibe": "Viva La Vida wraps listeners in a nostalgic yet triumphant embrace, evoking the bittersweet feeling of rising from downfall to glory with a grand, almost cinematic sweep.",
+    "llm_game_moments": [
+      "Coming back from 0-3 down with coordinated team plays",
+      "Winning a tense 3v3 overtime sudden death",
+      "Celebrating a last minute winning goal after a long defensive stand",
+      "Executing a smooth passing play that turns the tide of the match"
+    ]
+  },
+  {
+    "song_id": 33,
+    "title": "Chandelier",
+    "artist": "Sia",
+    "bpm": 87,
+    "energy": "Low",
+    "moods": [
+      "Emotional",
+      "Powerful"
+    ],
+    "themes": [
+      "Addiction",
+      "Emotional Struggle"
+    ],
+    "source_url": "https://open.spotify/track/4VrWlk8IQxevMvERoX08iC",
+    "track_id": "4VrWlk8IQxevMvERoX08iC",
+    "lastfm_tags": [
+      {
+        "name": "pop",
+        "count": 100
+      },
+      {
+        "name": "best of 2014",
+        "count": 45
+      },
+      {
+        "name": "australian",
+        "count": 24
+      },
+      {
+        "name": "power ballad",
+        "count": 21
+      },
+      {
+        "name": "indie",
+        "count": 9
+      },
+      {
+        "name": "2014",
+        "count": 8
+      },
+      {
+        "name": "female vocalists",
+        "count": 6
+      },
+      {
+        "name": "love at first listen",
+        "count": 2
+      },
+      {
+        "name": "sia",
+        "count": 2
+      },
+      {
+        "name": "2010s",
+        "count": 1
+      }
+    ],
+    "llm_energy": "High",
+    "llm_moods": [
+      "Dramatic",
+      "Heartbreak",
+      "Empowering",
+      "Intense",
+      "Bittersweet"
+    ],
+    "llm_themes": [
+      "Resilience",
+      "Solo Carry",
+      "Redemption",
+      "Journey"
+    ],
+    "llm_vibe": "This song feels like a powerful emotional whirlwind—both vulnerable and fierce—capturing the raw struggle of fighting inner demons while summoning strength to rise again.",
+    "llm_game_moments": [
+      "Pulling off an impossible solo carry against all odds",
+      "Making a last-second save to keep the team's hopes alive",
+      "Winning a nail-biting overtime sudden death after a comeback",
+      "Executing a clutch aerial goal when the pressure is at its peak"
+    ]
+  },
+  {
+    "song_id": 34,
+    "title": "Titanium",
+    "artist": "David Guetta ft. Sia",
+    "bpm": 126,
+    "energy": "Medium",
+    "moods": [
+      "Empowering",
+      "Epic"
+    ],
+    "themes": [
+      "Strength",
+      "Resilience"
+    ],
+    "source_url": "https://open.spotify.com/track/4drgH8MGED51vOGSJZKUZy",
+    "track_id": "4drgH8MGED51vOGSJZKUZy",
+    "lastfm_tags": [],
+    "llm_energy": "High",
+    "llm_moods": [
+      "Empowering",
+      "Triumphant",
+      "Defiant",
+      "Uplifting",
+      "Energetic",
+      "Anthemic"
+    ],
+    "llm_themes": [
+      "Resilience",
+      "Victory",
+      "Redemption",
+      "Comeback"
+    ],
+    "llm_vibe": "Titanium feels like an unstoppable surge of strength and defiance, wrapping listeners in a powerful anthem of resilience that fuels them to overcome any challenge.",
+    "llm_game_moments": [
+      "Winning a 1v3 clutch with a last-second aerial shot",
+      "Coming back from 0-3 down to force overtime",
+      "Making a game-saving save in the last second",
+      "Scoring a double-tap aerial goal to seal victory"
+    ]
+  },
+  {
+    "song_id": 35,
+    "title": "Clocks",
+    "artist": "Coldplay",
+    "bpm": 131,
+    "energy": "Medium",
+    "moods": [
+      "Hypnotic",
+      "Reflective"
+    ],
+    "themes": [
+      "Time",
+      "Reflection"
+    ],
+    "source_url": "https://open.spotify/track/0BCPKOYdS2jbQ8iyB56Zns",
+    "track_id": "0BCPKOYdS2jbQ8iyB56Zns",
+    "lastfm_tags": [
+      {
+        "name": "rock",
+        "count": 100
+      },
+      {
+        "name": "alternative",
+        "count": 89
+      },
+      {
+        "name": "coldplay",
+        "count": 55
+      },
+      {
+        "name": "alternative rock",
+        "count": 51
+      },
+      {
+        "name": "britpop",
+        "count": 23
+      },
+      {
+        "name": "british",
+        "count": 10
+      },
+      {
+        "name": "piano",
+        "count": 7
+      },
+      {
+        "name": "pop",
+        "count": 2
+      },
+      {
+        "name": "indie",
+        "count": 2
+      },
+      {
+        "name": "00s",
+        "count": 2
+      }
+    ],
+    "llm_energy": "Medium",
+    "llm_moods": [
+      "Reflective",
+      "Dreamy",
+      "Uplifting",
+      "Hypnotic",
+      "Bittersweet"
+    ],
+    "llm_themes": [
+      "Journey",
+      "Redemption",
+      "Resilience",
+      "Close Game"
+    ],
+    "llm_vibe": "Clocks feels like an ethereal rush of time slipping through your fingers, evoking a poignant sense of urgency mixed with hopeful introspection.",
+    "llm_game_moments": [
+      "Coming back from 0-3 down with coordinated team plays",
+      "Nail-biting overtime sudden death where every second counts",
+      "Making a calm, clutch save that turns the tide",
+      "Executing a perfectly timed aerial reset to score a pivotal goal"
+    ]
+  },
+  {
+    "song_id": 36,
+    "title": "Shallow",
+    "artist": "Lady Gaga & Bradley Cooper",
+    "bpm": 96,
+    "energy": "Low",
+    "moods": [
+      "Emotional",
+      "Romantic"
+    ],
+    "themes": [
+      "Love",
+      "Reflection"
+    ],
+    "source_url": "https://open.spotify/track/2VxeLyX666F8uXCJ0dZF8B",
+    "track_id": "2VxeLyX666F8uXCJ0dZF8B",
+    "lastfm_tags": [],
+    "llm_energy": "Medium",
+    "llm_moods": [
+      "Reflective",
+      "Dramatic",
+      "Bittersweet",
+      "Empowering",
+      "Melancholy"
+    ],
+    "llm_themes": [
+      "Journey",
+      "Redemption",
+      "Heartbreak Loss"
+    ],
+    "llm_vibe": "This song feels like standing on the edge of vulnerability and strength, encapsulating raw emotion and a yearning for deeper connection amid personal struggle.",
+    "llm_game_moments": [
+      "Nail-biting overtime sudden death reflecting emotional tension",
+      "Coming back from 0-3 down mirroring a difficult but hopeful journey",
+      "Making a game-saving save in the last second expressing resilience",
+      "Winning a 1v3 clutch underscoring a personal redemption moment"
+    ]
+  },
+  {
+    "song_id": 37,
+    "title": "Starboy",
+    "artist": "The Weeknd ft. Daft Punk",
+    "bpm": 93,
+    "energy": "Low",
+    "moods": [
+      "Cool",
+      "Dark"
+    ],
+    "themes": [
+      "Fame",
+      "Wealth"
+    ],
+    "source_url": "https://open.spotify.com/track/76yLBykniz0SSNv0jj17M2",
+    "track_id": "76yLBykniz0SSNv0jj17M2",
+    "lastfm_tags": [],
+    "llm_energy": "Medium",
+    "llm_moods": [
+      "Confident",
+      "Dramatic",
+      "Hypnotic",
+      "Reflective",
+      "Empowering"
+    ],
+    "llm_themes": [
+      "Domination",
+      "Glory",
+      "Journey",
+      "Redemption"
+    ],
+    "llm_vibe": "Starboy feels like stepping into a sleek, high-stakes lifestyle where you’re both celebrating your rise to power and reckoning with the costs of fame—a hypnotic, confident anthem that pulses with stylish bravado and introspective cool.",
+    "llm_game_moments": [
+      "Scoring a stylish aerial goal that seals your dominance",
+      "Winning a 1v3 clutch with calm precision",
+      "Smooth passing plays executed with flawless teamwork and swagger",
+      "Breaking the tie in the final moments of a high-pressure game"
+    ]
+  },
+  {
+    "song_id": 38,
+    "title": "Paper Planes",
+    "artist": "M.I.A.",
+    "bpm": 86,
+    "energy": "Low",
+    "moods": [
+      "Rebellious",
+      "Playful"
+    ],
+    "themes": [
+      "Globalization",
+      "Politics"
+    ],
+    "source_url": "https://open.spotify/track/1ixbwbeBi5ufN4noUKmW5a",
+    "track_id": "1ixbwbeBi5ufN4noUKmW5a",
+    "lastfm_tags": [
+      {
+        "name": "hip-hop",
+        "count": 100
+      },
+      {
+        "name": "electronic",
+        "count": 79
+      },
+      {
+        "name": "female vocalists",
+        "count": 45
+      },
+      {
+        "name": "dance",
+        "count": 34
+      },
+      {
+        "name": "british",
+        "count": 14
+      },
+      {
+        "name": "indie",
+        "count": 7
+      },
+      {
+        "name": "hip hop",
+        "count": 7
+      },
+      {
+        "name": "soundtrack",
+        "count": 2
+      },
+      {
+        "name": "mia",
+        "count": 2
+      },
+      {
+        "name": "00s",
+        "count": 2
+      }
+    ],
+    "llm_energy": "Medium",
+    "llm_moods": [
+      "Defiant",
+      "Playful",
+      "Hypnotic",
+      "Confident",
+      "Gritty"
+    ],
+    "llm_themes": [
+      "Underdog",
+      "Rebellion",
+      "Resilience",
+      "Solo Carry"
+    ],
+    "llm_vibe": "It feels like a rebellious anthem blending cheeky confidence with a gritty undercurrent, making listeners feel simultaneously empowered and laid-back in a world they’re cleverly challenging.",
+    "llm_game_moments": [
+      "Pulling off a sneaky, unexpected goal that flips the momentum",
+      "Winning a 1v1 dribble battle with style",
+      "Clutching a last-second goal against the odds",
+      "Carrying the team solo with creative and unpredictable plays"
+    ]
+  },
+  {
+    "song_id": 39,
+    "title": "Happy Now",
+    "artist": "Kygo",
+    "bpm": 118,
+    "energy": "Medium",
+    "moods": [
+      "Uplifting",
+      "Feel-good"
+    ],
+    "themes": [
+      "Acceptance",
+      "Freedom",
+      "Awakening"
+    ],
+    "source_url": "https://open.spotify.com/album/6nAjd2MlBY1f1mNu6BsWLO",
+    "track_id": "6nAjd2MlBY1f1mNu6BsWLO",
+    "lastfm_tags": [],
+    "llm_energy": "Medium",
+    "llm_moods": [
+      "Reflective",
+      "Bittersweet",
+      "Uplifting",
+      "Dreamy"
+    ],
+    "llm_themes": [
+      "Heartbreak Loss",
+      "Journey",
+      "Resilience"
+    ],
+    "llm_vibe": "This song feels like a poignant yet hopeful moment of acceptance, where bittersweet memories blend with a sense of moving forward despite lingering sadness.",
+    "llm_game_moments": [
+      "Coming back from 0-3 down with calculated plays",
+      "Making a clutch last-second save while reflecting on the game’s narrative",
+      "Executing a smooth passing play with teammates to regain momentum",
+      "Nail-biting overtime sudden death where emotions run high"
+    ]
+  },
+  {
+    "song_id": 40,
+    "title": "Firework",
+    "artist": "Katy Perry",
+    "bpm": 124,
+    "energy": "Medium",
+    "moods": [
+      "Uplifting",
+      "Inspirational"
+    ],
+    "themes": [
+      "Empowerment",
+      "Self-expression"
+    ],
+    "source_url": "https://open.spotify/track/3lXbHd0EoryoQh3vpevNEP",
+    "track_id": "3lXbHd0EoryoQh3vpevNEP",
+    "lastfm_tags": [
+      {
+        "name": "pop",
+        "count": 100
+      },
+      {
+        "name": "katy perry",
+        "count": 55
+      },
+      {
+        "name": "female vocalists",
+        "count": 30
+      },
+      {
+        "name": "dance",
+        "count": 19
+      },
+      {
+        "name": "firework",
+        "count": 9
+      },
+      {
+        "name": "love at first listen",
+        "count": 3
+      },
+      {
+        "name": "2010",
+        "count": 3
+      },
+      {
+        "name": "electropop",
+        "count": 1
+      },
+      {
+        "name": "epic",
+        "count": 1
+      },
+      {
+        "name": "dance-pop",
+        "count": 1
+      }
+    ],
+    "llm_energy": "High",
+    "llm_moods": [
+      "Uplifting",
+      "Empowering",
+      "Anthemic",
+      "Exhilarant",
+      "Triumphant"
+    ],
+    "llm_themes": [
+      "Resilience",
+      "Victory",
+      "Comeback",
+      "Glory"
+    ],
+    "llm_vibe": "Firework feels like an electrifying explosion of self-belief and unstoppable energy that lifts listeners from doubt to dazzling confidence.",
+    "llm_game_moments": [
+      "Coming back from 0-3 down with a last-second tying goal",
+      "Winning a 1v3 clutch that seals the game",
+      "Scoring a double-tap aerial goal right after a tough defensive stand",
+      "Nail-biting overtime sudden death where a player finally breaks through"
+    ]
+  },
+  {
+    "song_id": 41,
+    "title": "Born This Way",
+    "artist": "Lady Gaga",
+    "bpm": 124,
+    "energy": "Medium",
+    "moods": [
+      "Empowering",
+      "Pride"
+    ],
+    "themes": [
+      "Self-expression",
+      "Acceptance"
+    ],
+    "source_url": "https://open.spotify/track/30XU4suKzCeoCK9YFzdufg",
+    "track_id": "30XU4suKzCeoCK9YFzdufg",
+    "lastfm_tags": [
+      {
+        "name": "pop",
+        "count": 100
+      },
+      {
+        "name": "dance",
+        "count": 66
+      },
+      {
+        "name": "lady gaga",
+        "count": 40
+      },
+      {
+        "name": "epic",
+        "count": 28
+      },
+      {
+        "name": "born this way",
+        "count": 13
+      },
+      {
+        "name": "2011",
+        "count": 8
+      },
+      {
+        "name": "female vocalists",
+        "count": 7
+      },
+      {
+        "name": "electronic",
+        "count": 2
+      },
+      {
+        "name": "express yourself",
+        "count": 2
+      },
+      {
+        "name": "electropop",
+        "count": 2
+      }
+    ],
+    "llm_energy": "High",
+    "llm_moods": [
+      "Empowering",
+      "Uplifting",
+      "Anthemic",
+      "Confident",
+      "Defiant"
+    ],
+    "llm_themes": [
+      "Victory",
+      "Resilience",
+      "Comeback",
+      "Celebration"
+    ],
+    "llm_vibe": "Born This Way feels like a bold anthem of self-acceptance and unstoppable confidence, rallying listeners to embrace their true selves with fierce pride and joy.",
+    "llm_game_moments": [
+      "Winning a 1v3 clutch",
+      "Coming back from 0-3 down",
+      "Smooth passing play with teammates",
+      "Nail-biting overtime sudden death"
+    ]
+  },
+  {
+    "song_id": 42,
+    "title": "Hello",
+    "artist": "Adele",
+    "bpm": 79,
+    "energy": "Low",
+    "moods": [
+      "Emotional",
+      "Melancholic"
+    ],
+    "themes": [
+      "Forgiveness",
+      "Reflection"
+    ],
+    "source_url": "https://open.spotify/track/1Yk0cQdMLx5RzzFTYwmuld",
+    "track_id": "1Yk0cQdMLx5RzzFTYwmuld",
+    "lastfm_tags": [
+      {
+        "name": "soul",
+        "count": 100
+      },
+      {
+        "name": "pop",
+        "count": 89
+      },
+      {
+        "name": "2015",
+        "count": 37
+      },
+      {
+        "name": "british",
+        "count": 23
+      },
+      {
+        "name": "female vocalists",
+        "count": 9
+      },
+      {
+        "name": "ballad",
+        "count": 5
+      },
+      {
+        "name": "adele",
+        "count": 3
+      },
+      {
+        "name": "2010s",
+        "count": 1
+      },
+      {
+        "name": "love at first listen",
+        "count": 1
+      },
+      {
+        "name": "2015 single",
+        "count": 1
+      }
+    ],
+    "llm_energy": "Low",
+    "llm_moods": [
+      "Reflective",
+      "Bittersweet",
+      "Melancholy",
+      "Nostalgic"
+    ],
+    "llm_themes": [
+      "Heartbreak Loss",
+      "Redemption",
+      "Journey"
+    ],
+    "llm_vibe": "Adele's 'Hello' feels like a deeply introspective conversation with a past self or lost connection, stirring a complex mix of longing and regret that wraps listeners in a soulful embrace.",
+    "llm_game_moments": [
+      "Reflecting on a comeback attempt that just missed",
+      "Pausing after a heartbreaking last-second loss",
+      "Replaying a solo carry that fell short",
+      "Savoring the emotions of a close, intense match’s aftermath"
+    ]
+  },
+  {
+    "song_id": 43,
+    "title": "Stay",
+    "artist": "Rihanna ft. Mikky Ekko",
+    "bpm": 112,
+    "energy": "Medium",
+    "moods": [
+      "Emotional",
+      "Romantic"
+    ],
+    "themes": [
+      "Love",
+      "Vulnerability"
+    ],
+    "source_url": "https://open.spotify/track/2JwS47l2MKrOji0ufc6Je0",
+    "track_id": "2JwS47l2MKrOji0ufc6Je0",
+    "lastfm_tags": [
+      {
+        "name": "pop",
+        "count": 100
+      },
+      {
+        "name": "rnb",
+        "count": 88
+      },
+      {
+        "name": "rihanna",
+        "count": 20
+      },
+      {
+        "name": "love",
+        "count": 7
+      },
+      {
+        "name": "mikky ekko",
+        "count": 3
+      },
+      {
+        "name": "piano",
+        "count": 2
+      },
+      {
+        "name": "female vocalists",
+        "count": 2
+      },
+      {
+        "name": "ballad",
+        "count": 1
+      },
+      {
+        "name": "adult contemporary",
+        "count": 1
+      },
+      {
+        "name": "pop soul",
+        "count": 1
+      }
+    ],
+    "llm_energy": "Low",
+    "llm_moods": [
+      "Melancholy",
+      "Reflective",
+      "Bittersweet",
+      "Dreamy",
+      "Heartbreak"
+    ],
+    "llm_themes": [
+      "Heartbreak Loss",
+      "Close Game",
+      "Redemption"
+    ],
+    "llm_vibe": "This song feels like an intimate, vulnerable moment where emotions hang in the balance, pulling listeners into a quiet but intense space of longing and introspection.",
+    "llm_game_moments": [
+      "Reflecting after a narrow overtime loss despite best efforts",
+      "The quiet tension during a close defensive stand that almost turns the game",
+      "That moment of bittersweet realization in a 1v1 clutch where you fall just short",
+      "Pausing to breathe and regroup after a hard-fought match where everything felt on the line"
+    ]
+  },
+  {
+    "song_id": 44,
+    "title": "Call Me Maybe",
+    "artist": "Carly Rae Jepsen",
+    "bpm": 120,
+    "energy": "Medium",
+    "moods": [
+      "Playful",
+      "Romantic"
+    ],
+    "themes": [
+      "Love",
+      "Flirtation"
+    ],
+    "source_url": "https://open.spotify/track/20I6sIOMTCkB6w7ryavxtO",
+    "track_id": "20I6sIOMTCkB6w7ryavxtO",
+    "lastfm_tags": [
+      {
+        "name": "pop",
+        "count": 100
+      },
+      {
+        "name": "dance",
+        "count": 49
+      },
+      {
+        "name": "female vocalists",
+        "count": 20
+      },
+      {
+        "name": "canadian",
+        "count": 17
+      },
+      {
+        "name": "carly rae jepsen",
+        "count": 8
+      },
+      {
+        "name": "teen pop",
+        "count": 8
+      },
+      {
+        "name": "catchy",
+        "count": 6
+      },
+      {
+        "name": "call me maybe",
+        "count": 1
+      },
+      {
+        "name": "2012",
+        "count": 1
+      },
+      {
+        "name": "upbeat",
+        "count": 1
+      }
+    ],
+    "llm_energy": "High",
+    "llm_moods": [
+      "Playful",
+      "Uplifting",
+      "Energetic",
+      "Confident",
+      "Exhilarant"
+    ],
+    "llm_themes": [
+      "Victory",
+      "Celebration",
+      "Glory",
+      "Comeback"
+    ],
+    "llm_vibe": "This song feels like a bright, bubbly burst of youthful excitement and hopeful flirtation, filling listeners with a carefree sense of joy and the thrill of new possibilities.",
+    "llm_game_moments": [
+      "Scoring a cheeky, unexpected kickoff goal",
+      "Winning a close 3v3 game with a stylish, last-second shot",
+      "Pulling off a quick, playful passing sequence that leads to a goal",
+      "Celebrating a comeback with a final, confident goal after trailing early"
+    ]
+  },
+  {
+    "song_id": 45,
+    "title": "Just the Way You Are",
+    "artist": "Bruno Mars",
+    "bpm": 109,
+    "energy": "Low",
+    "moods": [
+      "Romantic",
+      "Uplifting"
+    ],
+    "themes": [
+      "Love",
+      "Appreciation"
+    ],
+    "source_url": "https://open.spotify/track/7BqBn9nzAq8spo5e7cZ0dJ",
+    "track_id": "7BqBn9nzAq8spo5e7cZ0dJ",
+    "lastfm_tags": [
+      {
+        "name": "pop",
+        "count": 100
+      },
+      {
+        "name": "bruno mars",
+        "count": 57
+      },
+      {
+        "name": "rnb",
+        "count": 35
+      },
+      {
+        "name": "love",
+        "count": 21
+      },
+      {
+        "name": "male vocalists",
+        "count": 8
+      },
+      {
+        "name": "2010",
+        "count": 6
+      },
+      {
+        "name": "r&b",
+        "count": 5
+      },
+      {
+        "name": "romantic",
+        "count": 1
+      },
+      {
+        "name": "american",
+        "count": 1
+      },
+      {
+        "name": "just the way you are",
+        "count": 1
+      }
+    ],
+    "llm_energy": "Medium",
+    "llm_moods": [
+      "Uplifting",
+      "Confident",
+      "Reflective",
+      "Playful",
+      "Serene"
+    ],
+    "llm_themes": [
+      "Celebration",
+      "Journey",
+      "Glory"
+    ],
+    "llm_vibe": "This song feels like a warm, heartfelt celebration of authenticity and unconditional acceptance, wrapping listeners in a comforting embrace of confidence and love.",
+    "llm_game_moments": [
+      "Celebrating a beautifully executed pass that leads to an easy goal",
+      "Enjoying a relaxed moment after securing a comfortable win",
+      "Sharing a team high-five after a seamless, coordinated aerial play",
+      "Reflecting contentedly on a clean, stylish goal from midfield dribble"
+    ]
+  },
+  {
+    "song_id": 46,
+    "title": "All of Me",
+    "artist": "John Legend",
+    "bpm": 120,
+    "energy": "Medium",
+    "moods": [
+      "Romantic",
+      "Emotional"
+    ],
+    "themes": [
+      "Love",
+      "Dedication"
+    ],
+    "source_url": "https://open.spotify/track/3U4isOIWM3VvDubwSI3y7a",
+    "track_id": "3U4isOIWM3VvDubwSI3y7a",
+    "lastfm_tags": [
+      {
+        "name": "rnb",
+        "count": 100
+      },
+      {
+        "name": "pop",
+        "count": 87
+      },
+      {
+        "name": "2014",
+        "count": 34
+      },
+      {
+        "name": "love",
+        "count": 32
+      },
+      {
+        "name": "soul",
+        "count": 16
+      },
+      {
+        "name": "r&b",
+        "count": 14
+      },
+      {
+        "name": "beautiful",
+        "count": 7
+      },
+      {
+        "name": "2013",
+        "count": 2
+      },
+      {
+        "name": "ballad",
+        "count": 2
+      },
+      {
+        "name": "piano",
+        "count": 1
+      }
+    ],
+    "llm_energy": "Low",
+    "llm_moods": [
+      "Reflective",
+      "Romantic",
+      "Serene",
+      "Bittersweet",
+      "Nostalgic"
+    ],
+    "llm_themes": [
+      "Journey",
+      "Redemption",
+      "Heartbreak Loss"
+    ],
+    "llm_vibe": "‘All of Me’ feels like a heartfelt, intimate confession that wraps listeners in a warm, tender embrace, evoking deep emotions of love and vulnerability.",
+    "llm_game_moments": [
+      "Reflecting quietly after a tough close game loss",
+      "Sharing a moment of camaraderie with teammates after a graceful comeback",
+      "Calmly reviewing a replay of a clutch solo play",
+      "Savoring a sweet, earned victory that feels deeply personal"
+    ]
+  },
+  {
+    "song_id": 47,
+    "title": "What Do You Mean?",
+    "artist": "Justin Bieber",
+    "bpm": 125,
+    "energy": "Medium",
+    "moods": [
+      "Upbeat",
+      "Playful"
+    ],
+    "themes": [
+      "Confusion",
+      "Romance"
+    ],
+    "source_url": "https://open.spotify/track/4B0JvthVoAAuygILe3n4Bs",
+    "track_id": "4B0JvthVoAAuygILe3n4Bs",
+    "lastfm_tags": [
+      {
+        "name": "pop",
+        "count": 100
+      },
+      {
+        "name": "2015",
+        "count": 51
+      },
+      {
+        "name": "tropical house",
+        "count": 33
+      },
+      {
+        "name": "canadian",
+        "count": 10
+      },
+      {
+        "name": "justin bieber",
+        "count": 5
+      },
+      {
+        "name": "dance",
+        "count": 5
+      },
+      {
+        "name": "electronic",
+        "count": 3
+      },
+      {
+        "name": "dance-pop",
+        "count": 1
+      },
+      {
+        "name": "rnb",
+        "count": 1
+      },
+      {
+        "name": "party",
+        "count": 1
+      }
+    ],
+    "llm_energy": "Medium",
+    "llm_moods": [
+      "Playful",
+      "Confident",
+      "Suspenseful",
+      "Focused",
+      "Dreamy"
+    ],
+    "llm_themes": [
+      "Rivalry",
+      "Close Game",
+      "Speed Rush",
+      "Journey"
+    ],
+    "llm_vibe": "This song feels like the anxious excitement of trying to communicate and connect, capturing moments of playful tension and the thrill of figuring things out just in time.",
+    "llm_game_moments": [
+      "Speedy kickoff leading to a quick, unexpected goal",
+      "Dodging opponents in a tight 1v1 duel",
+      "Building momentum with precise dribbles in a close match",
+      "Making a calculated pass that turns the tide in the final moments"
+    ]
+  },
+  {
+    "song_id": 48,
+    "title": "Get Lucky",
+    "artist": "Daft Punk ft. Pharrell Williams",
+    "bpm": 116,
+    "energy": "Medium",
+    "moods": [
+      "Funky",
+      "Uplifting"
+    ],
+    "themes": [
+      "Party",
+      "Luck"
+    ],
+    "source_url": "https://open.spotify.com/track/2olIQt0rL0hOHau1SJ4xf2",
+    "track_id": "2olIQt0rL0hOHau1SJ4xf2",
+    "lastfm_tags": [],
+    "llm_energy": "Medium",
+    "llm_moods": [
+      "Confident",
+      "Uplifting",
+      "Playful",
+      "Euphoric",
+      "Nostalgic"
+    ],
+    "llm_themes": [
+      "Celebration",
+      "Victory",
+      "Journey",
+      "Teamwork"
+    ],
+    "llm_vibe": "The song feels like a smooth, funky celebration of good times and effortless triumph, wrapping listeners in a warm, confident groove that makes everything feel possible.",
+    "llm_game_moments": [
+      "Winning a 2v2 match with coordinated passing plays",
+      "Celebrating a clutch kickoff goal after a tight rally",
+      "Pulling off a stylish freestyle dribble goal in casual play",
+      "Securing the final goal to clinch a close game victory"
+    ]
+  },
+  {
+    "song_id": 49,
+    "title": "24K Magic",
+    "artist": "Bruno Mars",
+    "bpm": 107,
+    "energy": "Low",
+    "moods": [
+      "Funky",
+      "Party"
+    ],
+    "themes": [
+      "Wealth",
+      "Celebration"
+    ],
+    "source_url": "https://open.spotify/track/6b8Be6ljOzmkOmFslEb23P",
+    "track_id": "6b8Be6ljOzmkOmFslEb23P",
+    "lastfm_tags": [
+      {
+        "name": "funk",
+        "count": 100
+      },
+      {
+        "name": "pop",
+        "count": 33
+      },
+      {
+        "name": "synth funk",
+        "count": 7
+      },
+      {
+        "name": "disco",
+        "count": 7
+      },
+      {
+        "name": "2016",
+        "count": 4
+      },
+      {
+        "name": "boogie",
+        "count": 2
+      },
+      {
+        "name": "rnb",
+        "count": 2
+      },
+      {
+        "name": "bomba",
+        "count": 1
+      },
+      {
+        "name": "2010s",
+        "count": 1
+      },
+      {
+        "name": "dance-pop",
+        "count": 1
+      }
+    ],
+    "llm_energy": "High",
+    "llm_moods": [
+      "Confident",
+      "Playful",
+      "Celebratory",
+      "Uplifting",
+      "Euphoric"
+    ],
+    "llm_themes": [
+      "Victory",
+      "Celebration",
+      "Domination",
+      "Glory"
+    ],
+    "llm_vibe": "Bruno Mars' '24K Magic' feels like stepping into a flashing neon-lit party where every move you make radiates unstoppable swagger and pure, unfiltered joy.",
+    "llm_game_moments": [
+      "Celebrating a stylish, ceiling shot goal after a flashy aerial",
+      "Dominating the opponent with a fast-paced scoring spree",
+      "Winning a high-energy 3v3 match with smooth team plays",
+      "Pulling off a clutch last-second goal to seal a blowout win"
+    ]
+  },
+  {
+    "song_id": 50,
+    "title": "Feel It Still",
+    "artist": "Portugal. The Man",
+    "bpm": 79,
+    "energy": "Low",
+    "moods": [
+      "Retro",
+      "Playful"
+    ],
+    "themes": [
+      "Rebellion",
+      "Social Change"
+    ],
+    "source_url": "https://open.spotify/track/6QgjcU0zLnzq5OrUoSZ3OK",
+    "track_id": "6QgjcU0zLnzq5OrUoSZ3OK",
+    "lastfm_tags": [
+      {
+        "name": "poptron",
+        "count": 100
+      },
+      {
+        "name": "pop",
+        "count": 26
+      },
+      {
+        "name": "indie",
+        "count": 10
+      },
+      {
+        "name": "funk",
+        "count": 7
+      },
+      {
+        "name": "psychedelic pop",
+        "count": 2
+      },
+      {
+        "name": "2010s",
+        "count": 2
+      },
+      {
+        "name": "2017",
+        "count": 1
+      },
+      {
+        "name": "party",
+        "count": 1
+      },
+      {
+        "name": "alternative",
+        "count": 1
+      },
+      {
+        "name": "indie rock",
+        "count": 1
+      }
+    ],
+    "llm_energy": "High",
+    "llm_moods": [
+      "Energetic",
+      "Playful",
+      "Uplifting",
+      "Confident",
+      "Nostalgic"
+    ],
+    "llm_themes": [
+      "Victory",
+      "Celebration",
+      "Comeback",
+      "Glory"
+    ],
+    "llm_vibe": "Feel It Still feels like a bright, catchy burst of rebellious joy that makes listeners want to move and seize the moment with unstoppable energy.",
+    "llm_game_moments": [
+      "Scoring a clutch goal off a fast break after a long defensive stand",
+      "Celebrating a hard-fought comeback from a multi-goal deficit",
+      "Pulling off a stylish double-tap aerial that shifts momentum",
+      "Winning a close game with a last-second goal and feeling unstoppable"
+    ]
+  },
+  {
+    "song_id": 51,
+    "title": "Starships",
+    "artist": "Nicki Minaj",
+    "bpm": 125,
+    "energy": "Medium",
+    "moods": [
+      "Party",
+      "Empowering"
+    ],
+    "themes": [
+      "Freedom",
+      "Party"
+    ],
+    "source_url": "https://open.spotify/track/2EBCVPNAG46nbgs6jXPGvv",
+    "track_id": "2EBCVPNAG46nbgs6jXPGvv",
+    "lastfm_tags": [
+      {
+        "name": "pop",
+        "count": 100
+      },
+      {
+        "name": "dance",
+        "count": 80
+      },
+      {
+        "name": "nicki minaj",
+        "count": 44
+      },
+      {
+        "name": "party",
+        "count": 29
+      },
+      {
+        "name": "love at first listen",
+        "count": 10
+      },
+      {
+        "name": "rap",
+        "count": 9
+      },
+      {
+        "name": "redone",
+        "count": 8
+      },
+      {
+        "name": "female vocalists",
+        "count": 2
+      },
+      {
+        "name": "summer",
+        "count": 2
+      },
+      {
+        "name": "hip hop",
+        "count": 2
+      }
+    ],
+    "llm_energy": "High",
+    "llm_moods": [
+      "Energetic",
+      "Playful",
+      "Euphoric",
+      "Confident",
+      "Anthemic"
+    ],
+    "llm_themes": [
+      "Celebration",
+      "Victory",
+      "Glory",
+      "Speed Rush"
+    ],
+    "llm_vibe": "Starships feels like an unstoppable burst of fun and freedom, igniting a euphoric party mood where anything is possible and the night is endless.",
+    "llm_game_moments": [
+      "Scoring a flashy aerial goal with style and flair",
+      "Pulling off a rapid series of skillful dribbles leading to a goal",
+      "Dominating the opponent with a fast-paced offensive rush",
+      "Celebrating a clutch overtime goal that secures the win"
+    ]
+  },
+  {
+    "song_id": 52,
+    "title": "Waka Waka (This Time for Africa)",
+    "artist": "Shakira",
+    "bpm": 128,
+    "energy": "Medium",
+    "moods": [
+      "Uplifting",
+      "Energetic"
+    ],
+    "themes": [
+      "Unity",
+      "Celebration"
+    ],
+    "source_url": "https://open.spotify/track/6bNB5gxFX6Q87DbQWb8OWZ",
+    "track_id": "6bNB5gxFX6Q87DbQWb8OWZ",
+    "lastfm_tags": [],
+    "llm_energy": "High",
+    "llm_moods": [
+      "Energetic",
+      "Uplifting",
+      "Anthemic",
+      "Empowering",
+      "Triumphant"
+    ],
+    "llm_themes": [
+      "Victory",
+      "Celebration",
+      "Teamwork",
+      "Glory"
+    ],
+    "llm_vibe": "This song bursts with a contagious, infectious energy that makes listeners feel like they're part of a united, jubilant celebration filled with unstoppable hope and exhilaration.",
+    "llm_game_moments": [
+      "Winning a 3v3 match with a final goal in the last seconds",
+      "Executing a perfectly coordinated team passing play leading to a goal",
+      "Scoring a game-winning aerial shot that seals the championship",
+      "Coming back from a large deficit to clinch a thrilling victory"
+    ]
+  },
+  {
+    "song_id": 53,
+    "title": "Dynamite",
+    "artist": "BTS",
+    "bpm": 114,
+    "energy": "Medium",
+    "moods": [
+      "Happy",
+      "Uplifting"
+    ],
+    "themes": [
+      "Celebration",
+      "Party"
+    ],
+    "source_url": "https://open.spotify/track/5QDLhrAOJJdNAmCTJ8xMyW",
+    "track_id": "5QDLhrAOJJdNAmCTJ8xMyW",
+    "lastfm_tags": [
+      {
+        "name": "pop",
+        "count": 100
+      },
+      {
+        "name": "bts",
+        "count": 79
+      },
+      {
+        "name": "disco",
+        "count": 41
+      },
+      {
+        "name": "kpop",
+        "count": 33
+      },
+      {
+        "name": "dynamite",
+        "count": 15
+      },
+      {
+        "name": "k-pop",
+        "count": 11
+      },
+      {
+        "name": "funk",
+        "count": 9
+      },
+      {
+        "name": "dance",
+        "count": 2
+      },
+      {
+        "name": "english",
+        "count": 1
+      },
+      {
+        "name": "2020",
+        "count": 1
+      }
+    ],
+    "llm_energy": "High",
+    "llm_moods": [
+      "Energetic",
+      "Uplifting",
+      "Playful",
+      "Euphoric",
+      "Confident"
+    ],
+    "llm_themes": [
+      "Celebration",
+      "Victory",
+      "Teamwork",
+      "Glory"
+    ],
+    "llm_vibe": "Dynamite feels like an infectious burst of joy that instantly lifts spirits and fills listeners with a vibrant, disco-fueled confidence and carefree celebration.",
+    "llm_game_moments": [
+      "Celebrating a last-second goal that wins the game",
+      "Dominating the opponent with a stylish freestyle dribble goal",
+      "Executing a flawless passing play with teammates leading to a goal",
+      "Winning a tight match with coordinated aerial teamwork"
+    ]
+  },
+  {
+    "song_id": 54,
+    "title": "Butter",
+    "artist": "BTS",
+    "bpm": 110,
+    "energy": "Low",
+    "moods": [
+      "Smooth",
+      "Upbeat"
+    ],
+    "themes": [
+      "Love",
+      "Dance"
+    ],
+    "source_url": "https://open.spotify/track/6jjYDGxVJsWS0a5wlVF5vS",
+    "track_id": "6jjYDGxVJsWS0a5wlVF5vS",
+    "lastfm_tags": [
+      {
+        "name": "bts",
+        "count": 100
+      },
+      {
+        "name": "butter",
+        "count": 75
+      },
+      {
+        "name": "pop",
+        "count": 36
+      },
+      {
+        "name": "k-pop",
+        "count": 21
+      },
+      {
+        "name": "soty",
+        "count": 6
+      },
+      {
+        "name": "bangtan",
+        "count": 6
+      },
+      {
+        "name": "kpop",
+        "count": 6
+      },
+      {
+        "name": "army",
+        "count": 1
+      },
+      {
+        "name": "hit",
+        "count": 1
+      },
+      {
+        "name": "dance pop",
+        "count": 1
+      }
+    ],
+    "llm_energy": "High",
+    "llm_moods": [
+      "Energetic",
+      "Confident",
+      "Playful",
+      "Uplifting",
+      "Euphoric"
+    ],
+    "llm_themes": [
+      "Celebration",
+      "Victory",
+      "Glory"
+    ],
+    "llm_vibe": "Butter feels like a smooth, irresistible burst of confidence and charm that instantly lifts your spirits and makes you want to celebrate every small win with flair.",
+    "llm_game_moments": [
+      "Scoring a slick ceiling shot goal",
+      "Winning a 3v3 match with a stylish final goal",
+      "Pulling off a clean, seamless passing play with teammates",
+      "Celebrating a dominant blowout win"
+    ]
+  },
+  {
+    "song_id": 55,
+    "title": "Gangnam Style",
+    "artist": "PSY",
+    "bpm": 132,
+    "energy": "Medium",
+    "moods": [
+      "Energetic",
+      "Humorous"
+    ],
+    "themes": [
+      "Party",
+      "Satire"
+    ],
+    "source_url": "https://open.spotify/track/03UrZgTINDqvnUMbbIMhql",
+    "track_id": "03UrZgTINDqvnUMbbIMhql",
+    "lastfm_tags": [],
+    "llm_energy": "High",
+    "llm_moods": [
+      "Energetic",
+      "Playful",
+      "Exhilarant",
+      "Confident",
+      "Uplifting"
+    ],
+    "llm_themes": [
+      "Celebration",
+      "Victory",
+      "Glory",
+      "Comeback"
+    ],
+    "llm_vibe": "This song feels like an infectious, joyous party anthem that instantly lifts spirits and invites everyone to let loose with catchy beats and a playful swagger.",
+    "llm_game_moments": [
+      "Scoring a flashy freestyle dribble goal",
+      "Winning a 2v3 clutch with stylish moves",
+      "Celebrating a last second goal after a tough comeback",
+      "Pulling off an unexpected aerial dunk to seal the game"
+    ]
+  },
+  {
+    "song_id": 56,
+    "title": "Mi Gente",
+    "artist": "J Balvin & Willy William",
+    "bpm": 105,
+    "energy": "Low",
+    "moods": [
+      "Party",
+      "Energetic"
+    ],
+    "themes": [
+      "Dance",
+      "Latin"
+    ],
+    "source_url": "https://open.spotify/track/4ipnJyDU3Lq15qBAYNqlqK",
+    "track_id": "4ipnJyDU3Lq15qBAYNqlqK",
+    "lastfm_tags": [],
+    "llm_energy": "High",
+    "llm_moods": [
+      "Energetic",
+      "Playful",
+      "Exhilarant",
+      "Confident",
+      "Uplifting"
+    ],
+    "llm_themes": [
+      "Celebration",
+      "Victory",
+      "Teamwork",
+      "Glory"
+    ],
+    "llm_vibe": "Mi Gente feels like an unstoppable global party anthem that instantly lifts spirits, invites movement, and celebrates unity through its vibrant, danceable beat and infectious energy.",
+    "llm_game_moments": [
+      "Scoring a slick team play goal with perfect passing",
+      "Dominating the opponent 6-0 with flashy moves",
+      "Winning a 2v1 clutch with crowd-pleasing style",
+      "Celebrating a clean sweep after an exciting comeback"
+    ]
+  },
+  {
+    "song_id": 57,
+    "title": "Hips Don't Lie",
+    "artist": "Shakira ft. Wyclef Jean",
+    "bpm": 100,
+    "energy": "Low",
+    "moods": [
+      "Sensual",
+      "Playful"
+    ],
+    "themes": [
+      "Dance",
+      "Latin"
+    ],
+    "source_url": "https://open.spotify.com/track/3ZFTkvIE7kyPt6Nu3PEa7V",
+    "track_id": "3ZFTkvIE7kyPt6Nu3PEa7V",
+    "lastfm_tags": [],
+    "llm_energy": "High",
+    "llm_moods": [
+      "Energetic",
+      "Playful",
+      "Confident",
+      "Exhilarant",
+      "Uplifting"
+    ],
+    "llm_themes": [
+      "Celebration",
+      "Glory",
+      "Teamwork",
+      "Victory"
+    ],
+    "llm_vibe": "A vibrant, irresistible fusion of rhythm and swagger that makes listeners feel unstoppable and ready to dance their way to a win.",
+    "llm_game_moments": [
+      "Celebrating a flawless kickoff goal with teammates",
+      "Pulling off a flashy freestyle dribble goal",
+      "Winning a clutch 2v1 scenario with confident passes",
+      "Dominating the opponent in a fast-paced speed rush"
+    ]
+  },
+  {
+    "song_id": 58,
+    "title": "Cheap Thrills",
+    "artist": "Sia ft. Sean Paul",
+    "bpm": 90,
+    "energy": "Low",
+    "moods": [
+      "Party",
+      "Playful"
+    ],
+    "themes": [
+      "Fun",
+      "Party"
+    ],
+    "source_url": "https://open.spotify.com/track/27SdWb2rFzO6GWiYDBTD9j",
+    "track_id": "27SdWb2rFzO6GWiYDBTD9j",
+    "lastfm_tags": [],
+    "llm_energy": "High",
+    "llm_moods": [
+      "Playful",
+      "Energetic",
+      "Confident",
+      "Uplifting",
+      "Exhilarant"
+    ],
+    "llm_themes": [
+      "Celebration",
+      "Victory",
+      "Teamwork",
+      "Glory"
+    ],
+    "llm_vibe": "This song feels like an infectious burst of carefree joy and celebration, inspiring listeners to let loose and revel in fun without needing anything fancy.",
+    "llm_game_moments": [
+      "Celebrating a clutch goal after a hectic passing play",
+      "Dominating the opponent with fast-paced team coordination",
+      "Pulling off a stylish freestyle dribble goal while vibing",
+      "Winning a close game in the final moments with confident teamwork"
+    ]
+  },
+  {
+    "song_id": 59,
+    "title": "Tik Tok",
+    "artist": "Kesha",
+    "bpm": 120,
+    "energy": "Medium",
+    "moods": [
+      "Party",
+      "Rebellious"
+    ],
+    "themes": [
+      "Party",
+      "Fun"
+    ],
+    "source_url": "https://open.spotify/track/0HPD5WQqrq7wPWR7P7Dw1i",
+    "track_id": "0HPD5WQqrq7wPWR7P7Dw1i",
+    "lastfm_tags": [],
+    "llm_energy": "High",
+    "llm_moods": [
+      "Playful",
+      "Confident",
+      "Energetic",
+      "Empowering",
+      "Celebratory"
+    ],
+    "llm_themes": [
+      "Celebration",
+      "Victory",
+      "Journey",
+      "Glory"
+    ],
+    "llm_vibe": "This song feels like the ultimate party anthem that fuels carefree confidence and a bold, unstoppable vibe where waking up and owning the day feels inevitable.",
+    "llm_game_moments": [
+      "Scoring the first goal to set the tone for a dominating game",
+      "Celebrating a quick back-to-back goal spree with teammates",
+      "Pulling off a flashy freestyle dribble goal that shows off personal swagger",
+      "Winning decisively right as the clock hits zero, prompting an instant victory celebration"
+    ]
+  },
+  {
+    "song_id": 60,
+    "title": "Roar",
+    "artist": "Katy Perry",
+    "bpm": 90,
+    "energy": "Low",
+    "moods": [
+      "Empowering",
+      "Uplifting"
+    ],
+    "themes": [
+      "Empowerment",
+      "Self-expression"
+    ],
+    "source_url": "https://open.spotify/track/27tNWlhdAryQY04Gb2ZhUI",
+    "track_id": "27tNWlhdAryQY04Gb2ZhUI",
+    "lastfm_tags": [
+      {
+        "name": "pop",
+        "count": 100
+      },
+      {
+        "name": "katy perry",
+        "count": 41
+      },
+      {
+        "name": "2013",
+        "count": 24
+      },
+      {
+        "name": "female vocalists",
+        "count": 18
+      },
+      {
+        "name": "roar",
+        "count": 8
+      },
+      {
+        "name": "power pop",
+        "count": 4
+      },
+      {
+        "name": "pop rock",
+        "count": 3
+      },
+      {
+        "name": "prism",
+        "count": 1
+      },
+      {
+        "name": "hit",
+        "count": 1
+      },
+      {
+        "name": "10s",
+        "count": 1
+      }
+    ],
+    "llm_energy": "High",
+    "llm_moods": [
+      "Empowering",
+      "Uplifting",
+      "Triumphant",
+      "Confident",
+      "Anthemic"
+    ],
+    "llm_themes": [
+      "Resilience",
+      "Victory",
+      "Comeback",
+      "Glory"
+    ],
+    "llm_vibe": "This song feels like a bold, uplifting roar of personal strength and victory, igniting a fire in listeners to overcome obstacles and claim their moment in the spotlight.",
+    "llm_game_moments": [
+      "Winning a 1v3 clutch",
+      "Coming back from 0-3 down",
+      "Making a game-saving save in the last second",
+      "Scoring a double-tap aerial goal"
+    ]
+  },
+  {
+    "song_id": 61,
+    "title": "Fireflies",
+    "artist": "Owl City",
+    "bpm": 90,
+    "energy": "Low",
+    "moods": [
+      "Dreamy",
+      "Reflective"
+    ],
+    "themes": [
+      "Nostalgia",
+      "Imagination"
+    ],
+    "source_url": "https://open.spotify/track/3DamFFqW32WihKkTVlwTYQ",
+    "track_id": "3DamFFqW32WihKkTVlwTYQ",
+    "lastfm_tags": [
+      {
+        "name": "electronic",
+        "count": 100
+      },
+      {
+        "name": "pop",
+        "count": 86
+      },
+      {
+        "name": "owl city",
+        "count": 26
+      },
+      {
+        "name": "catchy",
+        "count": 24
+      },
+      {
+        "name": "00s",
+        "count": 9
+      },
+      {
+        "name": "indie",
+        "count": 5
+      },
+      {
+        "name": "cute",
+        "count": 5
+      },
+      {
+        "name": "happy",
+        "count": 1
+      },
+      {
+        "name": "fireflies",
+        "count": 1
+      },
+      {
+        "name": "indie pop",
+        "count": 1
+      }
+    ],
+    "llm_energy": "Medium",
+    "llm_moods": [
+      "Dreamy",
+      "Nostalgic",
+      "Uplifting",
+      "Playful",
+      "Serene"
+    ],
+    "llm_themes": [
+      "Journey",
+      "Redemption",
+      "Glory"
+    ],
+    "llm_vibe": "Fireflies feels like a whimsical, glowing escape into a nostalgic dreamscape, where innocence and wonder light up the night with hopeful shimmer.",
+    "llm_game_moments": [
+      "Scoring a smooth aerial goal after a playful dribble",
+      "Winning a close game with a clutch last-second shot",
+      "Pulling off a creative freestyle goal that surprises opponents",
+      "Celebrating a team comeback with light-hearted passes and cheers"
+    ]
+  },
+  {
+    "song_id": 62,
+    "title": "Pompeii",
+    "artist": "Bastille",
+    "bpm": 127,
+    "energy": "Medium",
+    "moods": [
+      "Energetic",
+      "Anthemic"
+    ],
+    "themes": [
+      "History",
+      "Reflection"
+    ],
+    "source_url": "https://open.spotify/track/6fNhZRFEkBfgW39W3wKARJ",
+    "track_id": "6fNhZRFEkBfgW39W3wKARJ",
+    "lastfm_tags": [
+      {
+        "name": "indie",
+        "count": 100
+      },
+      {
+        "name": "pop",
+        "count": 79
+      },
+      {
+        "name": "british",
+        "count": 45
+      },
+      {
+        "name": "alternative",
+        "count": 43
+      },
+      {
+        "name": "2013",
+        "count": 10
+      },
+      {
+        "name": "indie pop",
+        "count": 8
+      },
+      {
+        "name": "2010s",
+        "count": 6
+      },
+      {
+        "name": "rock",
+        "count": 1
+      },
+      {
+        "name": "indie rock",
+        "count": 1
+      },
+      {
+        "name": "male vocalists",
+        "count": 1
+      }
+    ],
+    "llm_energy": "Medium",
+    "llm_moods": [
+      "Reflective",
+      "Uplifting",
+      "Nostalgic",
+      "Bittersweet",
+      "Anthemic"
+    ],
+    "llm_themes": [
+      "Journey",
+      "Resilience",
+      "Redemption",
+      "Comeback"
+    ],
+    "llm_vibe": "Pompeii feels like standing at a crossroads between past mistakes and hopeful new beginnings, with a driving yet contemplative energy that both uplifts and invites introspection.",
+    "llm_game_moments": [
+      "Coming back from a multi-goal deficit in the final moments",
+      "Reflecting on a hard-fought game replay while regrouping with teammates",
+      "Executing a clutch goal after a series of near-misses",
+      "Celebrating a bittersweet win where every point felt earned and meaningful"
+    ]
+  },
+  {
+    "song_id": 63,
+    "title": "Let Her Go",
+    "artist": "Passenger",
+    "bpm": 75,
+    "energy": "Low",
+    "moods": [
+      "Melancholic",
+      "Reflective"
+    ],
+    "themes": [
+      "Heartbreak",
+      "Regret"
+    ],
+    "source_url": "https://open.spotify/track/2pUpNOgJBIBCcjyQZQ00qU",
+    "track_id": "2pUpNOgJBIBCcjyQZQ00qU",
+    "lastfm_tags": [
+      {
+        "name": "folk",
+        "count": 100
+      },
+      {
+        "name": "acoustic",
+        "count": 94
+      },
+      {
+        "name": "british",
+        "count": 37
+      },
+      {
+        "name": "2012",
+        "count": 18
+      },
+      {
+        "name": "let her go",
+        "count": 8
+      },
+      {
+        "name": "pop",
+        "count": 6
+      },
+      {
+        "name": "singer-songwriter",
+        "count": 3
+      },
+      {
+        "name": "male vocalists",
+        "count": 1
+      },
+      {
+        "name": "2010s",
+        "count": 1
+      },
+      {
+        "name": "love it",
+        "count": 1
+      }
+    ],
+    "llm_energy": "Low",
+    "llm_moods": [
+      "Reflective",
+      "Melancholy",
+      "Bittersweet",
+      "Nostalgic",
+      "Wistful"
+    ],
+    "llm_themes": [
+      "Heartbreak Loss",
+      "Journey",
+      "Redemption"
+    ],
+    "llm_vibe": "Let Her Go feels like the quiet, painful realization that sometimes you only understand what you had once it’s gone—wrapped in soft acoustic melodies that tug gently at your heartstrings.",
+    "llm_game_moments": [
+      "Processing a narrow loss after a hard-fought close game",
+      "Reflecting on a missed last second save that changed the match outcome",
+      "Slowly winding down after an intense overtime thriller",
+      "Contemplating a comeback attempt that just fell short"
+    ]
+  },
+  {
+    "song_id": 64,
+    "title": "Take Me to Church",
+    "artist": "Hozier",
+    "bpm": 129,
+    "energy": "Medium",
+    "moods": [
+      "Soulful",
+      "Spiritual"
+    ],
+    "themes": [
+      "Critique",
+      "Religion"
+    ],
+    "source_url": "https://open.spotify/track/3dYD57lRAUcMHufyqn9GcI",
+    "track_id": "3dYD57lRAUcMHufyqn9GcI",
+    "lastfm_tags": [
+      {
+        "name": "indie",
+        "count": 100
+      },
+      {
+        "name": "soul",
+        "count": 87
+      },
+      {
+        "name": "kick",
+        "count": 27
+      },
+      {
+        "name": "favorite track right now",
+        "count": 19
+      },
+      {
+        "name": "indie rock",
+        "count": 8
+      },
+      {
+        "name": "hozier",
+        "count": 6
+      },
+      {
+        "name": "rock",
+        "count": 6
+      },
+      {
+        "name": "2013",
+        "count": 2
+      },
+      {
+        "name": "wsum 91.7 fm madison",
+        "count": 1
+      },
+      {
+        "name": "10s",
+        "count": 1
+      }
+    ],
+    "llm_energy": "Medium",
+    "llm_moods": [
+      "Reflective",
+      "Dramatic",
+      "Brooding",
+      "Empowering",
+      "Bittersweet"
+    ],
+    "llm_themes": [
+      "Resilience",
+      "Redemption",
+      "Journey",
+      "Heartbreak Loss"
+    ],
+    "llm_vibe": "‘Take Me to Church’ feels like a powerful, soul-stirring confession that drapes listeners in a dark yet hopeful atmosphere, urging them to confront inner struggles and find liberation through vulnerability.",
+    "llm_game_moments": [
+      "Coming back from a 0-3 down against a fierce opponent",
+      "Making a game-saving save in the last second that keeps hope alive",
+      "Nail-biting overtime sudden death where every touch feels weighted with meaning",
+      "Smooth passing play with teammates that breaks down a seemingly impenetrable defense"
+    ]
+  },
+  {
+    "song_id": 65,
+    "title": "Stressed Out",
+    "artist": "Twenty One Pilots",
+    "bpm": 85,
+    "energy": "Low",
+    "moods": [
+      "Nostalgic",
+      "Anxious"
+    ],
+    "themes": [
+      "Adulthood",
+      "Anxiety"
+    ],
+    "source_url": "https://open.spotify/track/3CRDbSIZ4r5MsZ0YwxuEkn",
+    "track_id": "3CRDbSIZ4r5MsZ0YwxuEkn",
+    "lastfm_tags": [
+      {
+        "name": "alternative",
+        "count": 100
+      },
+      {
+        "name": "indie",
+        "count": 92
+      },
+      {
+        "name": "alt-pop",
+        "count": 27
+      },
+      {
+        "name": "rock",
+        "count": 20
+      },
+      {
+        "name": "hip hop",
+        "count": 13
+      },
+      {
+        "name": "pop rap",
+        "count": 10
+      },
+      {
+        "name": "pop",
+        "count": 7
+      },
+      {
+        "name": "indie pop",
+        "count": 4
+      },
+      {
+        "name": "alternative pop",
+        "count": 2
+      },
+      {
+        "name": "rap",
+        "count": 2
+      }
+    ],
+    "llm_energy": "Medium",
+    "llm_moods": [
+      "Reflective",
+      "Nostalgic",
+      "Bittersweet",
+      "Melancholy",
+      "Empowering"
+    ],
+    "llm_themes": [
+      "Journey",
+      "Resilience",
+      "Redemption",
+      "Close Game"
+    ],
+    "llm_vibe": "With its introspective lyrics and catchy yet subdued beat, 'Stressed Out' feels like a late-night reflection on the pressures of growing up, hitting listeners with a blend of wistful nostalgia and quiet empowerment.",
+    "llm_game_moments": [
+      "Trying to maintain composure after falling behind early in a close game",
+      "Experiencing the tension and relief of a last-second save that keeps hope alive",
+      "Making steady, thoughtful plays during a tough, drawn-out defensive stand",
+      "Celebrating a small but meaningful comeback in the middle of a challenging match"
+    ]
+  },
+  {
+    "song_id": 66,
+    "title": "Heathens",
+    "artist": "Twenty One Pilots",
+    "bpm": 90,
+    "energy": "Low",
+    "moods": [
+      "Dark",
+      "Brooding"
+    ],
+    "themes": [
+      "Danger",
+      "Isolation"
+    ],
+    "source_url": "https://open.spotify/track/6i0V12jOa3mr6uu4WYhUBr",
+    "track_id": "6i0V12jOa3mr6uu4WYhUBr",
+    "lastfm_tags": [
+      {
+        "name": "alternative",
+        "count": 100
+      },
+      {
+        "name": "rock",
+        "count": 35
+      },
+      {
+        "name": "electronic",
+        "count": 23
+      },
+      {
+        "name": "pop",
+        "count": 17
+      },
+      {
+        "name": "2016",
+        "count": 8
+      },
+      {
+        "name": "love at first listen",
+        "count": 8
+      },
+      {
+        "name": "indie",
+        "count": 4
+      },
+      {
+        "name": "electropop",
+        "count": 1
+      },
+      {
+        "name": "best of 2016",
+        "count": 1
+      },
+      {
+        "name": "rap rock",
+        "count": 1
+      }
+    ],
+    "llm_energy": "Medium",
+    "llm_moods": [
+      "Tense",
+      "Brooding",
+      "Hypnotic",
+      "Dark",
+      "Reflective"
+    ],
+    "llm_themes": [
+      "Rivalry",
+      "Comeback",
+      "Redemption"
+    ],
+    "llm_vibe": "Heathens feels like stepping into a shadowy, suspense-filled moment where outsiders band together, blending a sense of dangerous intrigue with eerie calm before the storm.",
+    "llm_game_moments": [
+      "Nail-biting overtime sudden death",
+      "Coming back from 0-3 down",
+      "Making a game-saving save in the last second",
+      "Smooth passing play with teammates under pressure"
+    ]
+  },
+  {
+    "song_id": 67,
+    "title": "Sunflower",
+    "artist": "Post Malone & Swae Lee",
+    "bpm": 90,
+    "energy": "Low",
+    "moods": [
+      "Chill",
+      "Mellow"
+    ],
+    "themes": [
+      "Love",
+      "Friendship"
+    ],
+    "source_url": "https://open.spotify/track/3KkXRkHbMCARz0aVfEt68P",
+    "track_id": "3KkXRkHbMCARz0aVfEt68P",
+    "lastfm_tags": [],
+    "llm_energy": "Medium",
+    "llm_moods": [
+      "Dreamy",
+      "Uplifting",
+      "Playful",
+      "Nostalgic",
+      "Reflective"
+    ],
+    "llm_themes": [
+      "Journey",
+      "Teamwork",
+      "Resilience"
+    ],
+    "llm_vibe": "‘Sunflower’ feels like effortlessly cruising through moments of growth and connection, sparking warm, nostalgic confidence wrapped in lighthearted charm.",
+    "llm_game_moments": [
+      "Smooth passing play with teammates that feels effortless and flowing",
+      "Scoring a stylish aerial goal that showcases skill and grace",
+      "Winning a close 3v3 match with coordinated team effort",
+      "Pulling off a calm, clutch defensive save to maintain momentum"
+    ]
+  },
+  {
+    "song_id": 68,
+    "title": "Eye of the Tiger",
+    "artist": "Survivor",
+    "bpm": 109,
+    "energy": "High",
+    "moods": [
+      "Energetic",
+      "Motivational"
+    ],
+    "themes": [
+      "Victory",
+      "Perseverance"
+    ],
+    "source_url": "https://open.spotify.com/track/2KH16WveTQWT6KOG9Rg6e2",
+    "track_id": "2KH16WveTQWT6KOG9Rg6e2",
+    "lastfm_tags": [
+      {
+        "name": "80s",
+        "count": 100
+      },
+      {
+        "name": "rock",
+        "count": 80
+      },
+      {
+        "name": "classic rock",
+        "count": 50
+      },
+      {
+        "name": "soundtrack",
+        "count": 35
+      },
+      {
+        "name": "rocky",
+        "count": 9
+      },
+      {
+        "name": "hard rock",
+        "count": 7
+      },
+      {
+        "name": "survivor",
+        "count": 4
+      },
+      {
+        "name": "eye of the tiger",
+        "count": 1
+      },
+      {
+        "name": "pop",
+        "count": 1
+      },
+      {
+        "name": "supernatural",
+        "count": 1
+      }
+    ],
+    "llm_energy": "High",
+    "llm_moods": [
+      "Energetic",
+      "Triumphant",
+      "Focused",
+      "Empowering",
+      "Defiant"
+    ],
+    "llm_themes": [
+      "Resilience",
+      "Comeback",
+      "Victory",
+      "Glory"
+    ],
+    "llm_vibe": "This song feels like a surge of unstoppable determination and raw grit that pushes listeners to overcome any challenge with fierce confidence.",
+    "llm_game_moments": [
+      "Winning a 1v3 clutch",
+      "Coming back from 0-3 down",
+      "Nail-biting overtime sudden death",
+      "Making a game-saving save in the last second"
+    ]
+  },
+  {
+    "song_id": 69,
+    "title": "Girls Like You",
+    "artist": "Maroon 5 ft. Cardi B",
+    "bpm": 125,
+    "energy": "Medium",
+    "moods": [
+      "Romantic",
+      "Uplifting"
+    ],
+    "themes": [
+      "Love",
+      "Celebration"
+    ],
+    "source_url": "https://open.spotify.com/track/3YSbjMfXC5rL0EYhb5swIr",
+    "track_id": "3YSbjMfXC5rL0EYhb5swIr",
+    "lastfm_tags": [],
+    "llm_energy": "Medium",
+    "llm_moods": [
+      "Uplifting",
+      "Playful",
+      "Confident",
+      "Dreamy",
+      "Empowering"
+    ],
+    "llm_themes": [
+      "Celebration",
+      "Teamwork",
+      "Journey"
+    ],
+    "llm_vibe": "This song feels like a breezy, empowering anthem that uplifts listeners with a playful confidence perfect for celebrating shared victories and life's joyful moments.",
+    "llm_game_moments": [
+      "Smooth passing play with teammates",
+      "Coming back from 0-3 down",
+      "Winning a 2v3 clutch",
+      "Nail-biting overtime sudden death with a teammate assist"
+    ]
+  },
+  {
+    "song_id": 70,
+    "title": "Dusk Till Dawn",
+    "artist": "Zayn & Sia",
+    "bpm": 90,
+    "energy": "Low",
+    "moods": [
+      "Emotional",
+      "Powerful"
+    ],
+    "themes": [
+      "Love",
+      "Devotion"
+    ],
+    "source_url": "https://open.spotify/track/3e7sxremeOE3wTySiOhGiP",
+    "track_id": "3e7sxremeOE3wTySiOhGiP",
+    "lastfm_tags": [],
+    "llm_energy": "Medium",
+    "llm_moods": [
+      "Dramatic",
+      "Reflective",
+      "Empowering",
+      "Melancholy",
+      "Uplifting"
+    ],
+    "llm_themes": [
+      "Journey",
+      "Resilience",
+      "Redemption",
+      "Heartbreak Loss"
+    ],
+    "llm_vibe": "This song feels like an emotional and powerful ballad that carries listeners through a heartfelt journey of struggle and unwavering devotion, evoking a deep sense of hope against the odds.",
+    "llm_game_moments": [
+      "Coming back from 0-3 down",
+      "Making a game-saving save in the last second",
+      "Nail-biting overtime sudden death",
+      "Winning a 1v3 clutch"
+    ]
+  },
+  {
+    "song_id": 71,
+    "title": "Hallelujah",
+    "artist": "Leonard Cohen",
+    "bpm": 56,
+    "energy": "Low",
+    "moods": [
+      "Soulful",
+      "Reflective"
+    ],
+    "themes": [
+      "Spiritual",
+      "Reflection"
+    ],
+    "source_url": "https://open.spotify/track/7yzbimr8WVyAtBX3Eg6UL9",
+    "track_id": "7yzbimr8WVyAtBX3Eg6UL9",
+    "lastfm_tags": [],
+    "llm_energy": "Low",
+    "llm_moods": [
+      "Reflective",
+      "Melancholy",
+      "Bittersweet",
+      "Nostalgic",
+      "Serene"
+    ],
+    "llm_themes": [
+      "Journey",
+      "Heartbreak Loss",
+      "Redemption"
+    ],
+    "llm_vibe": "Hallelujah envelops listeners in a haunting, contemplative mood where vulnerability and quiet beauty intertwine, evoking a profound sense of introspective sorrow and fragile hope.",
+    "llm_game_moments": [
+      "Reflecting on a narrow loss after a hard-fought match",
+      "Replaying highlights of a beautifully executed but ultimately unsuccessful aerial shot",
+      "Watching a slow-motion replay of a last-second save that saved the team from defeat",
+      "Contemplating a comeback attempt that fell just short in overtime"
+    ]
+  }
+]
