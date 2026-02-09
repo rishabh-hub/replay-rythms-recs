@@ -49,7 +49,9 @@ def extract_player_and_game_data(replay_data, target_player_id):
         "player_team_stats": player_team_stats,
         "opponent_team_stats": opponent_team_stats,
         "game_duration": game_duration,
-        "game_overtime": replay_data.get("overtime", False) # Added for potential future use or context
+        "game_overtime": replay_data.get("overtime", False),
+        "overtime_seconds": replay_data.get("overtime_seconds", 0),
+        "map_name": replay_data.get("map_name", "Unknown"),
     }
 
 # Example Usage (assuming replay_data_sample is populated with your full sample):

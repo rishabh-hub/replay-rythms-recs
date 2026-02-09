@@ -12,13 +12,16 @@ from extract_data import extract_player_and_game_data
 from metrics import calculate_game_intensity, calculate_game_outcome, calculate_performance_score, calculate_teamwork_factor
 from rule_engine import determine_desired_song_attributes
 from threshold import (
-    categorize_game_closeness, 
-    categorize_intensity, 
-    categorize_performance, 
+    categorize_game_closeness,
+    categorize_intensity,
+    categorize_performance,
     categorize_teamwork,
 )
 from song_management import load_song_database
 from song_matcher import find_matching_songs
+from game_analyst import analyze_game, analyst_output_to_song_profile
+
+USE_AGENTIC = os.getenv("USE_AGENTIC", "false").lower() == "true"
 
 app = Flask(__name__)
 
@@ -104,40 +107,68 @@ def get_song_recommendation_profile(replay_data, target_player_id):
         app.logger.error(f"Error in get_song_recommendation_profile: {str(e)}")
         return None
 
+def get_agentic_recommendation_profile(replay_data, target_player_id):
+    """
+    Agentic pipeline: uses the Game Narrative Analyst LLM to read the story
+    of the game, then bridges the output to the old matcher format.
+    """
+    extracted_info = extract_player_and_game_data(replay_data, target_player_id)
+    if not extracted_info:
+        return None
+
+    game_reading = analyze_game(extracted_info)
+    desired_song_profile = analyst_output_to_song_profile(game_reading)
+
+    return {
+        "player_name": extracted_info["player_stats"].get("name"),
+        "game_reading": game_reading,
+        "desired_song_profile": desired_song_profile,
+    }
+
+
 def get_song_recommendations(replay_data, target_player_id, top_n=3):
     """
     Get song recommendations for a player based on replay data.
     Returns both the profile and recommendations.
+    Uses agentic LLM pipeline when USE_AGENTIC is true.
     """
     try:
-        # Get the profile
-        profile_info = get_song_recommendation_profile(replay_data, target_player_id)
-        
+        if USE_AGENTIC:
+            profile_info = get_agentic_recommendation_profile(replay_data, target_player_id)
+        else:
+            profile_info = get_song_recommendation_profile(replay_data, target_player_id)
+
         if not profile_info:
             return {
                 "success": False,
                 "error": f"Could not generate recommendation profile for player {target_player_id}."
             }
-        
-        # Load song database
-        song_db = load_song_database()
+
+        # Load song database (enriched when agentic)
+        song_db = load_song_database(agentic=USE_AGENTIC)
         if not song_db:
             return {
                 "success": False,
                 "error": "Failed to load song database."
             }
-        
+
         # Find matching songs
         desired_attributes_for_matching = profile_info["desired_song_profile"]
         recommended_songs = find_matching_songs(song_db, desired_attributes_for_matching, top_n=top_n)
-        
-        return {
+
+        result = {
             "success": True,
             "profile": profile_info,
             "recommendations": recommended_songs or [],
-            "player_id": target_player_id
+            "player_id": target_player_id,
         }
-        
+
+        # Include game_reading in output when agentic
+        if USE_AGENTIC and "game_reading" in profile_info:
+            result["game_reading"] = profile_info["game_reading"]
+
+        return result
+
     except Exception as e:
         app.logger.error(f"Error in get_song_recommendations: {str(e)}")
         return {

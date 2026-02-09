@@ -11,13 +11,16 @@ from extract_data import extract_player_and_game_data
 from metrics import calculate_game_intensity, calculate_game_outcome, calculate_performance_score, calculate_teamwork_factor
 from rule_engine import determine_desired_song_attributes
 from threshold import (
-    categorize_game_closeness, 
-    categorize_intensity, 
-    categorize_performance, 
+    categorize_game_closeness,
+    categorize_intensity,
+    categorize_performance,
     categorize_teamwork,
 )
 from song_management import load_song_database
 from song_matcher import find_matching_songs
+from game_analyst import analyze_game, analyst_output_to_song_profile
+
+USE_AGENTIC = os.getenv("USE_AGENTIC", "false").lower() == "true"
 
 # Your existing sample data (keeping it for backward compatibility)
 FULL_REPLAY_DATA_SAMPLE = {
@@ -98,41 +101,76 @@ def get_song_recommendation_profile(replay_data, target_player_id):
         "desired_song_profile": desired_attributes
     }
 
+def get_agentic_recommendation_profile(replay_data, target_player_id):
+    """
+    Agentic pipeline: uses the Game Narrative Analyst LLM to read the story
+    of the game, then bridges the output to the old matcher format.
+    """
+    extracted_info = extract_player_and_game_data(replay_data, target_player_id)
+    if not extracted_info:
+        return None
+
+    # LLM-powered game analysis (falls back to deterministic if LLM unavailable)
+    game_reading = analyze_game(extracted_info)
+
+    # Bridge narrative output to {bpm, energy, moods, themes} for song_matcher
+    desired_song_profile = analyst_output_to_song_profile(game_reading)
+
+    return {
+        "player_name": extracted_info["player_stats"].get("name"),
+        "game_reading": game_reading,
+        "desired_song_profile": desired_song_profile,
+    }
+
+
 # New function to get song recommendations (extracted from your main())
-def get_song_recommendations(replay_data, target_player_id, top_n=3):
+def get_song_recommendations(replay_data, target_player_id, top_n=3, agentic=None):
     """
     Get song recommendations for a player based on replay data.
     Returns both the profile and recommendations.
+
+    Args:
+        agentic: Override for USE_AGENTIC flag. If None, uses env var.
     """
+    use_agentic = agentic if agentic is not None else USE_AGENTIC
+
     try:
-        # Get the profile
-        profile_info = get_song_recommendation_profile(replay_data, target_player_id)
-        
+        if use_agentic:
+            profile_info = get_agentic_recommendation_profile(replay_data, target_player_id)
+        else:
+            profile_info = get_song_recommendation_profile(replay_data, target_player_id)
+
         if not profile_info:
             return {
                 "success": False,
                 "error": f"Could not generate recommendation profile for player {target_player_id}."
             }
-        
-        # Load song database
-        song_db = load_song_database()
+
+        # Load song database (enriched when agentic)
+        song_db = load_song_database(agentic=use_agentic)
         if not song_db:
             return {
                 "success": False,
                 "error": "Failed to load song database."
             }
-        
+
         # Find matching songs
         desired_attributes_for_matching = profile_info["desired_song_profile"]
         recommended_songs = find_matching_songs(song_db, desired_attributes_for_matching, top_n=top_n)
-        
-        return {
+
+        result = {
             "success": True,
             "profile": profile_info,
             "recommendations": recommended_songs or [],
-            "player_id": target_player_id
+            "player_id": target_player_id,
         }
-        
+
+        # Include game_reading in output when agentic
+        if use_agentic and "game_reading" in profile_info:
+            result["game_reading"] = profile_info["game_reading"]
+
+        return result
+
     except Exception as e:
         return {
             "success": False,
@@ -271,37 +309,52 @@ class handler(BaseHTTPRequestHandler):
 # Keep your original main() function for command-line usage
 def main():
     import argparse
-    
+
     parser = argparse.ArgumentParser(description="Get song recommendation profile based on game replay stats.")
     parser.add_argument("player_id", help="The ID of the player to analyze.")
     parser.add_argument("--replay_id", help="The ID of the replay (currently uses hardcoded sample data).", default="sample_replay")
     parser.add_argument("--top_n", type=int, default=3, help="Number of top song recommendations to show.")
+    parser.add_argument("--agentic", action="store_true", help="Use agentic LLM pipeline instead of deterministic rules.")
 
     args = parser.parse_args()
 
     target_player_id = args.player_id
-    replay_data_to_use = FULL_REPLAY_DATA_SAMPLE 
-    
-    print(f"Analyzing replay for player ID: {target_player_id} (using sample replay data)\n")
+    replay_data_to_use = FULL_REPLAY_DATA_SAMPLE
+    use_agentic = args.agentic or USE_AGENTIC
 
-    profile_info = get_song_recommendation_profile(replay_data_to_use, target_player_id)
+    mode_label = "AGENTIC" if use_agentic else "DETERMINISTIC"
+    print(f"Analyzing replay for player ID: {target_player_id} (mode: {mode_label})\n")
 
-    if not profile_info:
-      print(f"Could not generate recommendation profile for player {target_player_id}.")
-      return
-    
-    print("--- Desired Song Profile ---")
-    desired_attributes_for_matching = profile_info["desired_song_profile"]
-    print(json.dumps(profile_info, indent=2))
-    print("\n")
+    result = get_song_recommendations(replay_data_to_use, target_player_id, top_n=args.top_n, agentic=use_agentic)
 
-    song_db = load_song_database()
-    if not song_db:
-        print("Failed to load song database. Cannot provide recommendations.")
+    if not result.get("success"):
+        print(f"Error: {result.get('error')}")
         return
-    
+
+    profile_info = result["profile"]
+
+    # Show game reading when agentic
+    if use_agentic and "game_reading" in result:
+        reading = result["game_reading"]
+        print("--- Game Reading (AI Analysis) ---")
+        print(f"  Narrative: {reading.get('narrative', 'N/A')}")
+        print(f"  Archetype: {reading.get('player_archetype', 'N/A')}")
+        print(f"  Emotional Arc: {reading.get('emotional_arc', 'N/A')}")
+        if reading.get("key_observations"):
+            print("  Key Observations:")
+            for obs in reading["key_observations"]:
+                print(f"    - {obs}")
+        print(f"  Song Direction: {reading.get('song_search_direction', 'N/A')}")
+        if reading.get("_fallback"):
+            print("  (Used deterministic fallback — LLM was unavailable)")
+        print()
+
+    print("--- Desired Song Profile ---")
+    print(json.dumps(profile_info["desired_song_profile"], indent=2))
+    print()
+
+    recommended_songs = result.get("recommendations", [])
     print(f"--- Top {args.top_n} Song Recommendations ---")
-    recommended_songs = find_matching_songs(song_db, desired_attributes_for_matching, top_n=args.top_n)
 
     if recommended_songs:
         for i, song in enumerate(recommended_songs):
@@ -310,7 +363,8 @@ def main():
             print(f"   BPM: {song['bpm']}, Energy: {song['energy']}")
             print(f"   Moods: {', '.join(song.get('moods', []))}")
             print(f"   Themes: {', '.join(song.get('themes', []))}")
-            print(f"   Matched on: {', '.join(song.get('matched_criteria_details', []))}")
+            matched = song.get('matched_criteria') or song.get('matched_criteria_details') or []
+            print(f"   Matched on: {', '.join(matched)}")
             if song.get('source_url'):
                 print(f"   Listen: {song['source_url']}")
             print("-" * 10)
