@@ -9,8 +9,8 @@ narrative instead of mood labels.
 import json
 import os
 
-from openai import OpenAI
 from dotenv import load_dotenv
+from openai import OpenAI
 
 # Deterministic fallback imports
 from metrics import (
@@ -19,13 +19,13 @@ from metrics import (
     calculate_performance_score,
     calculate_teamwork_factor,
 )
+from rule_engine import determine_desired_song_attributes
 from threshold import (
     categorize_game_closeness,
     categorize_intensity,
     categorize_performance,
     categorize_teamwork,
 )
-from rule_engine import determine_desired_song_attributes
 
 load_dotenv()
 
@@ -113,7 +113,13 @@ Respond with this exact JSON structure:
   "song_search_direction": "2-3 sentence narrative description of what kind of song to find. Describe the STORY the song should tell, not mood labels."
 }}"""
 
-REQUIRED_FIELDS = ["narrative", "key_observations", "player_archetype", "emotional_arc", "song_search_direction"]
+REQUIRED_FIELDS = [
+    "narrative",
+    "key_observations",
+    "player_archetype",
+    "emotional_arc",
+    "song_search_direction",
+]
 
 
 def analyze_game(extracted_data: dict) -> dict:
@@ -158,7 +164,9 @@ def analyze_game(extracted_data: dict) -> dict:
         player_shooting_pct=player.get("shooting_percentage", 0),
         is_mvp="Yes" if player.get("mvp", False) else "No",
         total_distance=player.get("movement", {}).get("total_distance", 0),
-        supersonic_pct=round(player.get("movement", {}).get("time_supersonic_speed_percent", 0), 2),
+        supersonic_pct=round(
+            player.get("movement", {}).get("time_supersonic_speed_percent", 0), 2
+        ),
         team_name=team_name,
         team_goals=team_goals,
         team_saves=team.get("saves", 0),
@@ -225,7 +233,9 @@ def _fallback_analysis(extracted_data: dict) -> dict:
     intensity_cat = categorize_intensity(intensity_score)
     performance_cat = categorize_performance(performance_score)
     teamwork_cat = categorize_teamwork(teamwork_factor)
-    closeness_cat = categorize_game_closeness(outcome["abs_score_differential"], overtime)
+    closeness_cat = categorize_game_closeness(
+        outcome["abs_score_differential"], overtime
+    )
 
     desired = determine_desired_song_attributes(
         intensity_cat, performance_cat, teamwork_cat, outcome, closeness_cat
@@ -313,18 +323,47 @@ def analyst_output_to_song_profile(analysis: dict) -> dict:
 # Mood vocabulary from the existing song database
 MOOD_KEYWORDS = {
     "Triumphant": ["triumph", "victorious", "champion", "conquer", "glory", "crowned"],
-    "Energetic": ["energy", "intense", "explosive", "fire", "adrenaline", "relentless", "frenetic"],
+    "Energetic": [
+        "energy",
+        "intense",
+        "explosive",
+        "fire",
+        "adrenaline",
+        "relentless",
+        "frenetic",
+    ],
     "Uplifting": ["uplift", "inspiring", "hope", "rise", "soar", "overcome"],
     "Tense": ["tense", "pressure", "nerve", "edge", "wire", "nail-biting"],
     "Dramatic": ["dramatic", "epic", "climax", "stakes", "cinematic"],
     "Clutch": ["clutch", "last-second", "final moment", "overtime", "buzzer", "ice in"],
-    "Heartbreak": ["heartbreak", "heartbroken", "devastat", "so close", "agoniz", "cruel"],
-    "Reflective": ["reflect", "quiet", "subdued", "contemplat", "thoughtful", "passenger"],
+    "Heartbreak": [
+        "heartbreak",
+        "heartbroken",
+        "devastat",
+        "so close",
+        "agoniz",
+        "cruel",
+    ],
+    "Reflective": [
+        "reflect",
+        "quiet",
+        "subdued",
+        "contemplat",
+        "thoughtful",
+        "passenger",
+    ],
     "Focused": ["focused", "precise", "calculated", "methodical", "disciplin"],
     "Suspenseful": ["suspense", "uncertain", "back and forth", "seesaw"],
     "Melancholic": ["melanchol", "sad", "sorrow", "lost", "empty"],
     "Confident": ["confident", "swagger", "dominant", "command", "control"],
-    "Defiant": ["defiant", "refuse", "never give up", "comeback", "wouldn't quit", "phoenix"],
+    "Defiant": [
+        "defiant",
+        "refuse",
+        "never give up",
+        "comeback",
+        "wouldn't quit",
+        "phoenix",
+    ],
     "Chaotic": ["chaos", "chaotic", "wild", "reckless", "frantic", "mayhem"],
     "Nostalgic": ["nostalgic", "memory", "remember", "looking back"],
 }
@@ -332,9 +371,30 @@ MOOD_KEYWORDS = {
 THEME_KEYWORDS = {
     "Victory": ["win", "won", "victory", "champion", "triumph", "conquer"],
     "Defeat": ["loss", "lost", "defeat", "fell short", "wasn't enough"],
-    "Comeback": ["comeback", "came back", "down and rose", "phoenix", "refused to quit"],
-    "Solo Carry": ["solo", "alone", "carried", "one-man", "single-handed", "by themselves"],
-    "Teamwork": ["team", "together", "assist", "passing", "collaborat", "conductor", "orchestrat"],
+    "Comeback": [
+        "comeback",
+        "came back",
+        "down and rose",
+        "phoenix",
+        "refused to quit",
+    ],
+    "Solo Carry": [
+        "solo",
+        "alone",
+        "carried",
+        "one-man",
+        "single-handed",
+        "by themselves",
+    ],
+    "Teamwork": [
+        "team",
+        "together",
+        "assist",
+        "passing",
+        "collaborat",
+        "conductor",
+        "orchestrat",
+    ],
     "Resilience": ["resilience", "resilient", "endure", "survive", "fought", "grind"],
     "Celebration": ["celebrat", "party", "joy", "euphori"],
     "Redemption": ["redemption", "redeem", "atone", "make up for"],
@@ -353,10 +413,33 @@ def _infer_energy(analysis: dict) -> str:
 
     all_text = f"{archetype} {arc} {narrative} {direction}"
 
-    high_signals = ["intense", "explosive", "relentless", "chaos", "frenetic", "adrenaline",
-                    "army", "enforcer", "streak", "fire", "domina", "carry", "unstoppable"]
-    low_signals = ["quiet", "reflective", "subdued", "passenger", "troll", "empty",
-                   "contemplat", "melanchol", "gentle", "soft"]
+    high_signals = [
+        "intense",
+        "explosive",
+        "relentless",
+        "chaos",
+        "frenetic",
+        "adrenaline",
+        "army",
+        "enforcer",
+        "streak",
+        "fire",
+        "domina",
+        "carry",
+        "unstoppable",
+    ]
+    low_signals = [
+        "quiet",
+        "reflective",
+        "subdued",
+        "passenger",
+        "troll",
+        "empty",
+        "contemplat",
+        "melanchol",
+        "gentle",
+        "soft",
+    ]
 
     high_count = sum(1 for s in high_signals if s in all_text)
     low_count = sum(1 for s in low_signals if s in all_text)
@@ -370,12 +453,14 @@ def _infer_energy(analysis: dict) -> str:
 
 def _extract_moods(analysis: dict) -> list:
     """Extract mood labels by matching keywords against observations and emotional arc."""
-    text = " ".join([
-        analysis.get("emotional_arc", ""),
-        " ".join(analysis.get("key_observations", [])),
-        analysis.get("narrative", ""),
-        analysis.get("song_search_direction", ""),
-    ]).lower()
+    text = " ".join(
+        [
+            analysis.get("emotional_arc", ""),
+            " ".join(analysis.get("key_observations", [])),
+            analysis.get("narrative", ""),
+            analysis.get("song_search_direction", ""),
+        ]
+    ).lower()
 
     matched = []
     for mood, keywords in MOOD_KEYWORDS.items():
@@ -391,12 +476,14 @@ def _extract_moods(analysis: dict) -> list:
 
 def _extract_themes(analysis: dict) -> list:
     """Extract theme labels by matching keywords against narrative and archetype."""
-    text = " ".join([
-        analysis.get("narrative", ""),
-        analysis.get("player_archetype", ""),
-        " ".join(analysis.get("key_observations", [])),
-        analysis.get("song_search_direction", ""),
-    ]).lower()
+    text = " ".join(
+        [
+            analysis.get("narrative", ""),
+            analysis.get("player_archetype", ""),
+            " ".join(analysis.get("key_observations", [])),
+            analysis.get("song_search_direction", ""),
+        ]
+    ).lower()
 
     matched = []
     for theme, keywords in THEME_KEYWORDS.items():

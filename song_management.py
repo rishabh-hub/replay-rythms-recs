@@ -26,7 +26,7 @@ def load_song_database(agentic=None):
         db_file = SONG_DATABASE_FILE
 
     try:
-        with open(db_file, 'r', encoding='utf-8') as f:
+        with open(db_file, "r", encoding="utf-8") as f:
             songs = json.load(f)
         if not isinstance(songs, list):
             print(f"Error: Song database '{db_file}' should be a list of songs.")
@@ -46,12 +46,16 @@ def load_song_database(agentic=None):
         return songs
     except FileNotFoundError:
         if use_agentic:
-            print(f"Warning: '{db_file}' not found. Falling back to '{SONG_DATABASE_FILE}'.")
+            print(
+                f"Warning: '{db_file}' not found. Falling back to '{SONG_DATABASE_FILE}'."
+            )
             return load_song_database(agentic=False)
         print(f"Error: Song database file '{db_file}' not found.")
         return []
     except json.JSONDecodeError:
-        print(f"Error: Could not decode JSON from '{db_file}'. Check for syntax errors.")
+        print(
+            f"Error: Could not decode JSON from '{db_file}'. Check for syntax errors."
+        )
         return []
     except Exception as e:
         print(f"An unexpected error occurred while loading songs: {e}")

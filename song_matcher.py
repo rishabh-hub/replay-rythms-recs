@@ -1,4 +1,5 @@
-import re # For parsing BPM range
+import re  # For parsing BPM range
+
 
 def parse_bpm_range(bpm_value):
     """
@@ -6,7 +7,7 @@ def parse_bpm_range(bpm_value):
     Returns (min_bpm, max_bpm) or (None, None) if unknown.
     """
     if isinstance(bpm_value, str):
-        m = re.search(r'\((\d+)-(\d+)\)', bpm_value)
+        m = re.search(r"\((\d+)-(\d+)\)", bpm_value)
         if m:
             return int(m.group(1)), int(m.group(2))
     elif isinstance(bpm_value, (list, tuple)) and len(bpm_value) == 2:
@@ -29,8 +30,8 @@ def parse_bpm_range(bpm_value):
 #             matched_criteria.append(f"BPM ({song.get('bpm')}) in range [{min_bpm}-{max_bpm}]")
 #         # else:
 #             # Optional: Penalize or give fewer points for being slightly outside? For V1, keep it simple.
-#             # pass 
-    
+#             # pass
+
 #     # 2. Energy Matching
 #     desired_energy = desired_profile.get("energy")
 #     if desired_energy and song.get("energy") == desired_energy:
@@ -53,7 +54,7 @@ def parse_bpm_range(bpm_value):
 #     if common_themes:
 #         score += len(common_themes) * 10 # Points per common theme
 #         matched_criteria.append(f"Themes ({', '.join(common_themes)})")
-        
+
 #     return score, matched_criteria
 
 
@@ -84,7 +85,7 @@ def calculate_match_score(song, desired_profile):
 
     # Moods
     desired_moods = set(desired_profile.get("moods") or [])
-    song_moods    = set(song.get("moods")    or [])
+    song_moods = set(song.get("moods") or [])
     common = desired_moods & song_moods
     if common:
         score += 15 * len(common)
@@ -92,7 +93,7 @@ def calculate_match_score(song, desired_profile):
 
     # Themes
     desired_themes = set(desired_profile.get("themes") or [])
-    song_themes    = set(song.get("themes")    or [])
+    song_themes = set(song.get("themes") or [])
     common_t = desired_themes & song_themes
     if common_t:
         score += 10 * len(common_t)
@@ -119,6 +120,7 @@ def find_matching_songs(song_database, desired_profile, top_n=3):
 
     scored.sort(key=lambda x: x["match_score"], reverse=True)
     return scored[:top_n]
+
 
 # def find_matching_songs(song_database, desired_profile, top_n=3):
 #     """
@@ -152,5 +154,5 @@ def find_matching_songs(song_database, desired_profile, top_n=3):
 
 #     # Sort songs by score in descending order
 #     scored_songs.sort(key=lambda s: s['match_score'], reverse=True)
-    
+
 #     return scored_songs[:top_n]

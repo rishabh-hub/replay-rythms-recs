@@ -1,7 +1,7 @@
 # def determine_desired_song_attributes(
-#     intensity_category, 
-#     performance_category, 
-#     teamwork_category, 
+#     intensity_category,
+#     performance_category,
+#     teamwork_category,
 #     game_outcome_details, # This is the dict from calculate_game_outcome()
 #     closeness_category
 #     ):
@@ -71,16 +71,16 @@
 #             desired_attributes["energy"] = "Medium"
 #         else:
 #             desired_attributes["energy"] = "Low"
-            
+
 #     # Convert sets to lists for easier JSON serialization later if needed
 #     desired_attributes["mood"] = list(desired_attributes["mood"]) if desired_attributes["mood"] else None
 #     desired_attributes["theme"] = list(desired_attributes["theme"]) if desired_attributes["theme"] else None
-    
+
 #     return desired_attributes
 
 # Example Usage:
 # if extracted_data:
-    # ... (calculate metrics and categories as above)
+# ... (calculate metrics and categories as above)
 #     song_attrs = determine_desired_song_attributes(
 #         intensity_cat,
 #         performance_cat,
@@ -96,16 +96,16 @@ def determine_desired_song_attributes(
     performance_category,
     teamwork_category,
     game_outcome_details,
-    closeness_category
+    closeness_category,
 ):
     """
     Maps gameplay metrics to a desired song profile, using keys that match your songs.json.
     """
     desired = {
-        "bpm": None,          # e.g. "High (140-180)"
-        "energy": None,       # "High", "Medium", "Low"
-        "moods": [],          # list of desired song moods
-        "themes": []          # list of desired song themes
+        "bpm": None,  # e.g. "High (140-180)"
+        "energy": None,  # "High", "Medium", "Low"
+        "moods": [],  # list of desired song moods
+        "themes": [],  # list of desired song themes
     }
 
     # 1. Intensity → BPM range

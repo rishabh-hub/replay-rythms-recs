@@ -3,11 +3,13 @@ def calculate_game_intensity(player_stats, game_duration):
     Calculates the Game Intensity score.
     Formula: (total_distance / duration) + (supersonic_speed_percent * 2)
     """
-    if game_duration == 0: # Avoid division by zero
+    if game_duration == 0:  # Avoid division by zero
         return 0
 
     total_distance = player_stats.get("movement", {}).get("total_distance", 0)
-    supersonic_percent = player_stats.get("movement", {}).get("time_supersonic_speed_percent", 0)
+    supersonic_percent = player_stats.get("movement", {}).get(
+        "time_supersonic_speed_percent", 0
+    )
 
     # Assuming total_distance is in some unit that makes sense when divided by seconds.
     # If total_distance is very large (e.g., cm), you might want to scale it.
@@ -19,6 +21,7 @@ def calculate_game_intensity(player_stats, game_duration):
     # For now, sticking to your formula:
     intensity = (total_distance / game_duration) + (supersonic_percent * 2)
     return intensity
+
 
 def calculate_performance_score(player_stats):
     """
@@ -32,6 +35,7 @@ def calculate_performance_score(player_stats):
     performance = (goals * 100) + (saves * 50) + shooting_percentage
     return performance
 
+
 def calculate_teamwork_factor(player_stats, player_team_stats):
     """
     Calculates the Teamwork Factor.
@@ -42,9 +46,10 @@ def calculate_teamwork_factor(player_stats, player_team_stats):
 
     if total_team_goals == 0:
         return 0.0  # Or handle as per your preference (e.g., if player has assists but team goals is 0, this is weird)
-    
+
     teamwork = assists / total_team_goals
     return teamwork
+
 
 def calculate_game_outcome(player_team_stats, opponent_team_stats):
     """
@@ -53,23 +58,26 @@ def calculate_game_outcome(player_team_stats, opponent_team_stats):
     player_team_goals = player_team_stats.get("goals", 0)
     opponent_team_goals = opponent_team_stats.get("goals", 0)
 
-    score_differential = player_team_goals - opponent_team_goals # Positive if win, negative if loss
+    score_differential = (
+        player_team_goals - opponent_team_goals
+    )  # Positive if win, negative if loss
 
     if score_differential > 0:
         win_status = "win"
     elif score_differential < 0:
         win_status = "loss"
     else:
-        win_status = "draw" # Should not happen in Rocket League typical modes unless it's pre-overtime
+        win_status = "draw"  # Should not happen in Rocket League typical modes unless it's pre-overtime
 
     # We are interested in the absolute difference for "closeness"
     abs_score_differential = abs(score_differential)
-    
+
     return {
         "win_status": win_status,
-        "score_differential": score_differential, # Actual diff
-        "abs_score_differential": abs_score_differential # Absolute diff for closeness
+        "score_differential": score_differential,  # Actual diff
+        "abs_score_differential": abs_score_differential,  # Absolute diff for closeness
     }
+
 
 # Example of calculating all metrics:
 # if extracted_data:

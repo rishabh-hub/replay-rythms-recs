@@ -3,5 +3,6 @@
         "activityBar.background": "#0A2F4E",
         "titleBar.activeBackground": "#0E426E",
         "titleBar.activeForeground": "#F8FBFE"
-    }
+    },
+    "python-envs.defaultEnvManager": "ms-python.python:system"
 }

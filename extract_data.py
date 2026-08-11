@@ -37,12 +37,15 @@ def extract_player_and_game_data(replay_data, target_player_id):
         print(f"Error: Player with ID '{target_player_id}' not found.")
         return None
     if not player_team_stats:
-        print(f"Error: Team data for player '{target_player_id}' not found.") # Should not happen if player is found
+        print(
+            f"Error: Team data for player '{target_player_id}' not found."
+        )  # Should not happen if player is found
         return None
     if not opponent_team_stats:
-        print(f"Error: Opponent team data not found.") # Should not happen if player is found and teams exist
+        print(
+            "Error: Opponent team data not found."
+        )  # Should not happen if player is found and teams exist
         return None
-
 
     return {
         "player_stats": player_stats,
@@ -53,6 +56,7 @@ def extract_player_and_game_data(replay_data, target_player_id):
         "overtime_seconds": replay_data.get("overtime_seconds", 0),
         "map_name": replay_data.get("map_name", "Unknown"),
     }
+
 
 # Example Usage (assuming replay_data_sample is populated with your full sample):
 # target_player_id = "ce45140fcd644755b01660aa2dc6977b" # ZwyxerS

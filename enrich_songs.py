@@ -15,11 +15,12 @@ Requires in .env:
   OPENAI_API_KEY=sk-...
 """
 
+import argparse
 import json
 import os
 import sys
 import time
-import argparse
+
 import requests
 from dotenv import load_dotenv
 from openai import OpenAI
@@ -32,28 +33,37 @@ SONGS_INPUT = "songs.json"
 SONGS_OUTPUT = "enriched_songs.json"
 LASTFM_BASE_URL = "http://ws.audioscrobbler.com/2.0/"
 LASTFM_RATE_LIMIT = 0.25  # seconds between requests (safe for ~4 req/s)
-LLM_RATE_LIMIT = 0.3      # seconds between OpenAI calls
+LLM_RATE_LIMIT = 0.3  # seconds between OpenAI calls
 LLM_MODEL = "gpt-4.1-mini"
 
 
 # ─── Last.fm Enrichment ─────────────────────────────────────────────────────
 
-def fetch_lastfm_tags(artist: str, track: str, api_key: str, limit: int = 15) -> list[dict]:
+
+def fetch_lastfm_tags(
+    artist: str, track: str, api_key: str, limit: int = 15
+) -> list[dict]:
     """Fetch crowd-sourced tags from Last.fm's track.getTopTags endpoint."""
     try:
-        resp = requests.get(LASTFM_BASE_URL, params={
-            "method": "track.getTopTags",
-            "artist": artist,
-            "track": track,
-            "api_key": api_key,
-            "format": "json",
-        }, timeout=10)
+        resp = requests.get(
+            LASTFM_BASE_URL,
+            params={
+                "method": "track.getTopTags",
+                "artist": artist,
+                "track": track,
+                "api_key": api_key,
+                "format": "json",
+            },
+            timeout=10,
+        )
         resp.raise_for_status()
         data = resp.json()
 
         if "toptags" not in data or "tag" not in data["toptags"]:
             # Try without "ft." / "feat." in artist name (common mismatch)
-            clean_artist = artist.split(" ft.")[0].split(" feat.")[0].split(" &")[0].strip()
+            clean_artist = (
+                artist.split(" ft.")[0].split(" feat.")[0].split(" &")[0].strip()
+            )
             if clean_artist != artist:
                 return fetch_lastfm_tags(clean_artist, track, api_key, limit)
             return []
@@ -84,7 +94,7 @@ def enrich_with_lastfm(songs: list[dict], api_key: str) -> list[dict]:
     for i, song in enumerate(songs):
         title = song["title"]
         artist = song["artist"]
-        print(f"  [{i+1}/{total}] {title} — {artist}", end="")
+        print(f"  [{i + 1}/{total}] {title} — {artist}", end="")
 
         if song.get("lastfm_tags"):
             print(" (already enriched, skipping)")
@@ -149,7 +159,10 @@ def profile_song_with_llm(title: str, artist: str, client: OpenAI) -> dict | Non
             max_tokens=400,
             messages=[
                 {"role": "system", "content": "You output valid JSON only."},
-                {"role": "user", "content": LLM_PROMPT.format(title=title, artist=artist)},
+                {
+                    "role": "user",
+                    "content": LLM_PROMPT.format(title=title, artist=artist),
+                },
             ],
         )
         result = json.loads(response.choices[0].message.content)
@@ -177,7 +190,7 @@ def enrich_with_llm(songs: list[dict], api_key: str) -> list[dict]:
     for i, song in enumerate(songs):
         title = song["title"]
         artist = song["artist"]
-        print(f"  [{i+1}/{total}] {title} — {artist}", end="")
+        print(f"  [{i + 1}/{total}] {title} — {artist}", end="")
 
         if song.get("llm_moods"):
             print(" (already enriched, skipping)")
@@ -202,13 +215,14 @@ def enrich_with_llm(songs: list[dict], api_key: str) -> list[dict]:
         # Save progress every 10 songs (crash safety)
         if (i + 1) % 10 == 0:
             save_songs(songs, SONGS_OUTPUT)
-            print(f"  [checkpoint saved at {i+1}/{total}]")
+            print(f"  [checkpoint saved at {i + 1}/{total}]")
 
     print(f"\n  LLM: {success}/{total} songs profiled\n")
     return songs
 
 
 # ─── Utilities ───────────────────────────────────────────────────────────────
+
 
 def load_songs(path: str) -> list[dict]:
     """Load songs from JSON file."""
@@ -238,7 +252,7 @@ def print_summary(songs: list[dict]):
     for s in songs:
         e = s.get("llm_energy", "not profiled")
         energies[e] = energies.get(e, 0) + 1
-    print(f"\n  LLM Energy distribution:")
+    print("\n  LLM Energy distribution:")
     for e, count in sorted(energies.items()):
         print(f"    {e}: {count}")
 
@@ -248,7 +262,7 @@ def print_summary(songs: list[dict]):
         for m in s.get("llm_moods", []):
             mood_counts[m] = mood_counts.get(m, 0) + 1
     if mood_counts:
-        print(f"\n  Top 10 LLM moods:")
+        print("\n  Top 10 LLM moods:")
         for mood, count in sorted(mood_counts.items(), key=lambda x: -x[1])[:10]:
             print(f"    {mood}: {count}")
 
@@ -258,7 +272,7 @@ def print_summary(songs: list[dict]):
         for t in s.get("llm_themes", []):
             theme_counts[t] = theme_counts.get(t, 0) + 1
     if theme_counts:
-        print(f"\n  Top 10 LLM themes:")
+        print("\n  Top 10 LLM themes:")
         for theme, count in sorted(theme_counts.items(), key=lambda x: -x[1])[:10]:
             print(f"    {theme}: {count}")
 
@@ -267,13 +281,26 @@ def print_summary(songs: list[dict]):
 
 # ─── Main ────────────────────────────────────────────────────────────────────
 
+
 def main():
-    parser = argparse.ArgumentParser(description="Enrich songs.json with Last.fm tags and LLM profiles")
-    parser.add_argument("--lastfm-only", action="store_true", help="Only run Last.fm enrichment")
-    parser.add_argument("--llm-only", action="store_true", help="Only run LLM enrichment")
-    parser.add_argument("--dry-run", action="store_true", help="Load and summarize without enriching")
-    parser.add_argument("--input", default=SONGS_INPUT, help=f"Input file (default: {SONGS_INPUT})")
-    parser.add_argument("--output", default=SONGS_OUTPUT, help=f"Output file (default: {SONGS_OUTPUT})")
+    parser = argparse.ArgumentParser(
+        description="Enrich songs.json with Last.fm tags and LLM profiles"
+    )
+    parser.add_argument(
+        "--lastfm-only", action="store_true", help="Only run Last.fm enrichment"
+    )
+    parser.add_argument(
+        "--llm-only", action="store_true", help="Only run LLM enrichment"
+    )
+    parser.add_argument(
+        "--dry-run", action="store_true", help="Load and summarize without enriching"
+    )
+    parser.add_argument(
+        "--input", default=SONGS_INPUT, help=f"Input file (default: {SONGS_INPUT})"
+    )
+    parser.add_argument(
+        "--output", default=SONGS_OUTPUT, help=f"Output file (default: {SONGS_OUTPUT})"
+    )
     args = parser.parse_args()
 
     # Load songs — prefer enriched file if it exists (for re-runs)
@@ -296,7 +323,9 @@ def main():
     if run_lastfm:
         lastfm_key = os.getenv("LASTFM_API_KEY")
         if not lastfm_key:
-            print("WARNING: LASTFM_API_KEY not set in .env — skipping Last.fm enrichment")
+            print(
+                "WARNING: LASTFM_API_KEY not set in .env — skipping Last.fm enrichment"
+            )
             print("  Get a free key at: https://www.last.fm/api/account/create")
         else:
             songs = enrich_with_lastfm(songs, lastfm_key)
