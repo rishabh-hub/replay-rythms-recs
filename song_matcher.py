@@ -89,7 +89,7 @@ def calculate_match_score(song, desired_profile):
     common = desired_moods & song_moods
     if common:
         score += 15 * len(common)
-        matched.append(f"Moods {', '.join(common)}")
+        matched.append(f"Moods {', '.join(sorted(common))}")
 
     # Themes
     desired_themes = set(desired_profile.get("themes") or [])
