@@ -1,11 +1,10 @@
-## Create an app
-## check what all needs to be initialised in lifecycle
-## create routes : /health ,/ , /recommend , /recomend/test , /webhook/recommend 
-## See if there's an app error handler corollary in FastAPI too
-## run app on port 8001
+"""FastAPI application for the Replay Rhythms recommendation API.
+
+Routes only. The recommendation pipeline lives in recommendation_service.py,
+which also owns the USE_AGENTIC switch.
+"""
 
 import logging
-import os
 from datetime import datetime, timezone
 from typing import Any
 
@@ -14,16 +13,10 @@ from fastapi.exceptions import RequestValidationError
 from fastapi.responses import JSONResponse
 from pydantic import BaseModel
 
-# Import your existing modules
 from constants import FULL_REPLAY_DATA_SAMPLE
-
-USE_AGENTIC = os.getenv("USE_AGENTIC", "false").lower() == "true"
+from recommendation_service import get_song_recommendations
 
 logger = logging.getLogger(__name__)
-
-from recommendation_service import (
-    get_song_recommendations,
-)
 
 app = FastAPI(
     # Flask 404s on a trailing slash; Starlette would 307-redirect instead.

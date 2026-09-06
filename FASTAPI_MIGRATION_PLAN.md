@@ -1,185 +1,156 @@
-# Flask → FastAPI Migration Plan
+# Flask → FastAPI Migration
 
-## Progress
+**Status: complete.** FastAPI has been serving production since deploy
+`dep-daemvcdbedkc73dt8ou0` (commit `c39105f`, 2026-09-06).
 
-**Done**
-- Env consolidated on `replay-rythms/` (Python 3.13.0); stray `.venv/` deleted
-- `fastapi 0.141.1`, `uvicorn 0.52.3`, `pydantic 2.13.4` installed into it
-- `Dockerfile:2` bumped `python:3.11-slim` → `python:3.13-slim` (comment on line 1 fixed too)
+Verify which app is live without reading deploy logs — `GET /health`:
 
-**In progress**
-- Fixing the `matched_criteria` set-ordering bug in `song_matcher.py`
+| Response | App |
+|---|---|
+| `"timestamp":"…513709"`, keys alphabetical | Flask (`datetime.utcnow().isoformat()`) |
+| `"timestamp":"…513709+00:00"`, keys insertion-ordered | **FastAPI** (current) |
 
-**Next**
-- Write `main.py`
+## How it shipped
 
-**Not started**
-- `requirements.txt` still missing `fastapi`/`uvicorn`/`pydantic` — drifted from the venv
-- Nothing committed yet; last commit is `a7b1604`
-
-## Goal
-
-Convert the existing Flask API to FastAPI without changing observable behavior.
-
-## Scope: it's one file
-
-Measured, not assumed:
-
-| | Lines | Framework coupling |
+| Commit | Contents | Deploy |
 |---|---|---|
-| `app.py` | 471 | **only file importing flask** |
-| everything else | 2,214 | none — pure Python |
-| tests | 0 | — |
+| `428c4c1` | `main.py`, `constants.py`, `recommendation_service.py`; logic extracted out of `app.py` | not deployed alone |
+| `dbcefab` | deterministic `matched_criteria`; `fastapi`/`uvicorn`/`pydantic` recorded in `requirements.txt` | live 69s, **still serving Flask** — validated Python 3.13 + trixie + new deps in isolation |
+| `c39105f` | `Dockerfile` CMD → `-k uvicorn.workers.UvicornWorker main:app` | live 45s, **cutover** |
 
-Inside `app.py`:
-- lines 1–275 — plain functions (`get_song_recommendation_profile`, `get_agentic_recommendation_profile`, `get_song_recommendations`). Only two Flask touchpoints in the whole range, both `app.logger.error` inside `except` blocks (lines 201, 271).
-- lines 276–471 — routes and error handlers. **This is where the actual rewrite happens.**
+The split was deliberate: `dbcefab` changed the runtime and dependencies while
+`CMD` still pointed at `app:app`, so `main.py` shipped as dead code. A failure
+there could only have been the runtime. `c39105f` then changed exactly one
+thing — which app serves. Rollback for the cutover is redeploying `dbcefab`.
 
-The originally considered "new folder, migrate module by module" approach was **dropped**: there is only one module to migrate.
+## Architecture
 
-## Decision: `main.py` beside `app.py`
+`recommendation_service.py` holds `get_song_recommendation_profile`,
+`get_agentic_recommendation_profile` and `get_song_recommendations`. Both
+`app.py` and `main.py` import from it, so the two servers ran *identical*
+business logic during the migration and any observed difference was
+attributable to the web layer alone. This is what made the response diff a
+usable instrument.
 
-New FastAPI app goes in `main.py` at repo root. `app.py` stays untouched until cutover.
+## Verification method
 
-Not a new folder, and not an in-place edit of `app.py`.
-
-Reason: both servers must be runnable *at the same time* to compare responses.
-
-```
-gunicorn app:app --bind 0.0.0.0:8000     # Flask,   old
-uvicorn main:app --port 8001             # FastAPI, new
-```
-
-Editing `app.py` in place leaves only one of the two runnable at any moment, which makes every comparison a memory exercise.
-
-## Decision: handlers stay `def`, not `async def`
-
-`game_analyst.py:189` calls the **synchronous** OpenAI client on the `/recommend` path.
-
-FastAPI runs `def` handlers in a threadpool but `async def` handlers on the event loop. An `async def` handler calling that blocking client stalls the event loop for the whole LLM call — worse than Flask's current behavior.
-
-So: keep handlers as `def`. Only convert a handler to `async def` after the IO underneath it is genuinely awaitable (`AsyncOpenAI`). Async is not a win on its own.
-
-Other blocking IO (`requests` in `enrich_songs.py`, `spotify_url_fixer.py`) is in offline scripts, not the request path — not a concern for this migration.
-
-## Verification strategy: two-server response diff
-
-**Golden files are dropped.** Delete `golden/` and `generate_golden_tests.py`.
-
-The reasoning evolved twice, both times narrowing:
-
-1. First draft said golden-file every pure module. Over-broad — `extract_data.py` is pure dict passthrough and `metrics.py` is IEEE 754 float math. Neither is threatened by a 3.11 → 3.13 bump or a web-framework swap.
-2. Second draft narrowed to `app.py:143–275`, on the theory that rewritten code is where drift happens. But that range has only **two** Flask touchpoints (both `app.logger.error`). It isn't being rewritten — it's being copy-pasted with two logger lines swapped. Snapshotting a verbatim move is also ceremony.
-
-The instrument that actually matches the risk is the **two-server response diff**:
-
-```
-gunicorn app:app --bind 0.0.0.0:8000     # old
-uvicorn main:app --port 8001             # new
-# same request to both, diff the JSON
-```
-
-It is a strict superset of what goldens would have caught: everything the internal functions do, **plus** the route layer (`app.py:276–471`) that is genuinely being rewritten — request parsing, Pydantic models, error handlers, response serialization. Running both instruments would be pure cost.
-
-### What to compare, and what not to
-
-`USE_AGENTIC` (`app.py:231`) decides how deep the diff can go:
-
-| `USE_AGENTIC` | Path | Comparable |
-|---|---|---|
-| `false` | pure: extract → metrics → threshold → rule_engine → song_matcher | **full response body, exact diff** |
-| `true` | routes through `analyze_game()` → LLM | **contract only** — status code, JSON shape, required keys, error responses. Not which songs came back |
-
-Run the bulk of verification with `USE_AGENTIC=false`. That path is deterministic end-to-end and exercises nearly every pure module in the repo.
-
-Also worth pinning: a few fixed replay fixtures that land in *different* threshold buckets — a blowout win, a close loss, an overtime game. One replay only exercises one branch through `threshold.py`.
-
-## Blocker: nondeterministic `matched_criteria`
-
-Must be fixed **before** the two-server diff. This is load-bearing, not optional housekeeping.
+No test suite existed and `/recommend` is LLM-backed, so the instrument was a
+**response diff between both apps**, run in-process rather than against two
+servers:
 
 ```python
-# song_matcher.py:87-100
-desired_moods = set(desired_profile.get("moods") or [])
-song_moods   = set(song.get("moods") or [])
-common = desired_moods & song_moods
-matched.append(f"Moods {', '.join(common)}")     # ← joined in set-iteration order
+import app as flask_mod, main as fastapi_mod
+from fastapi.testclient import TestClient
+fc = flask_mod.app.test_client()
+ac = TestClient(fastapi_mod.app, raise_server_exceptions=False)   # flag is required
 ```
 
-Python randomizes string hashes per **process** (`PYTHONHASHSEED`, on by default since 3.3, a hash-collision DoS defense). Set iteration order follows hash order, so `', '.join(some_set)` yields a different string on every interpreter start. Demonstrated:
+Two traps that cost real time:
 
-```
-seed=0  -> Triumphant, Energetic, Intense, Uplifting
-seed=1  -> Energetic, Triumphant, Intense, Uplifting
-seed=2  -> Energetic, Triumphant, Uplifting, Intense
-```
+- **Flask sorts JSON keys and appends `\n`; Starlette does neither.** A
+  byte-level diff reports 100% divergence on identical data. Always
+  `json.loads` both sides.
+- **`raise_server_exceptions=False` is mandatory.** Starlette's
+  `ServerErrorMiddleware` re-raises after responding, so a default `TestClient`
+  crashes instead of returning the 500 you wanted to compare.
 
-**Severity: low on its own, blocking in context.** `match_score` is unaffected — it uses `len(common)`, which is order-independent, so ranking and recommendations are correct. Only the human-readable `matched_criteria` string varies. But:
+`USE_AGENTIC` decides how deep the diff can go: `false` makes the whole path
+deterministic and the full body comparable; `true` routes through the LLM and
+only the contract (status, shape, keys) can be asserted.
 
-- identical `/recommend` requests can return different response bodies today, in Flask, in production
-- **it breaks the only verification instrument in this plan.** Flask on :8000 and FastAPI on :8001 are two separate processes with two different hash seeds, so `matched_criteria` differs on *every* comparison — a false positive on every run, looking exactly like a migration bug
+Golden files were considered and **dropped**. First draft over-scoped them to
+every pure module; `extract_data.py` is dict passthrough and `metrics.py` is
+IEEE 754 float math, neither threatened by a 3.11→3.13 bump. Narrowing to
+`app.py:143–275` didn't survive either — that range had two Flask touchpoints
+(both `app.logger.error`), so it was a copy-paste, not a rewrite. The response
+diff is a strict superset: it covers the internals *and* the route layer that
+was genuinely rewritten.
 
-Affected sites: `song_matcher.py:92` and `song_matcher.py:100`. Verified to be the only two — every other `', '.join(...)` in the repo operates on a list from JSON, which is ordered.
+## Bug found and fixed en route
 
-### Ordering options
+`song_matcher.py` built `', '.join(some_set)`. Python randomizes string hashes
+per **process**, so set iteration order — and therefore the `matched_criteria`
+string — differed on every interpreter start. Identical requests returned
+different bodies in Flask, in production, before this migration existed.
 
-All one line, all deterministic, all fix the bug equally:
+It also would have made the diff useless: Flask and FastAPI run as separate
+processes with separate hash seeds, so every comparison would have shown a
+false positive. Fixed with `sorted()` at both sites (`:92` moods, `:100`
+themes).
 
-| Option | Code | Trade-off |
-|---|---|---|
-| **Alphabetical** *(recommended)* | `', '.join(sorted(common))` | Simplest, obviously correct. Ordering carries no meaning — "Aggressive" always precedes "Uplifting" for no reason |
-| Song's order | `[m for m in song.get("moods") or [] if m in common]` | Preserves the ordering the song data was authored in, likely most-characteristic-first. Two songs matching the same moods may list them differently |
-| Profile's order | `[m for m in desired_profile.get("moods") or [] if m in common]` | Reflects what the rule engine prioritized for *this* game. Most meaningful to a reader; consistent across all songs in one response |
+## Accepted behaviour changes
 
-Recommendation is alphabetical **for now** — not because it produces the best string (profile order does), but because of timing. This fix exists to unblock a migration diff. `sorted()` is a one-word change with no product semantics baked in; the other two change what the string *means*, which is a product decision riding along inside a migration commit. Ship determinism now, revisit semantics as its own change afterward.
+Deliberate deviations from "change nothing observable", all verified in
+production:
 
-`common` stays a set for `len(common)` scoring — order is imposed only at the point of display.
+| Input | Flask | FastAPI | Why accepted |
+|---|---|---|---|
+| `{"top_n": null}` | 200, returns **all 39 songs** | 400 | `scored[:None]` slicing the whole catalogue is an accident, not a contract. Matching it needs `top_n: Any` and would enshrine the bug |
+| `HEAD` / `OPTIONS` any route | 200 | 405 | FastAPI's `APIRoute` doesn't auto-add `HEAD`. Render's healthcheck uses GET; only matters for HEAD-based uptime probes |
+| `?player_id=a&player_id=b` | first value | last value | Starlette's `QueryParams.get` semantics. Silent wrong answer, low likelihood |
+| `NaN` / `Infinity` in results | 200 with invalid JSON | 500 | Reachable via crafted `replay_data`. FastAPI is arguably more correct — bare `NaN` is not valid JSON |
+| `?top_n=abc` | 500 | 400 | Pydantic rejects before the handler. Improved status class |
 
-## Change checklist beyond the route decorators
+Preserved on purpose: `/recommend/test` returns 200 even when
+`result["success"]` is false; `/webhook/recommend` wraps failures as
+`200 {"success":true,"result":{…}}`; `datetime.utcnow()` kept despite
+deprecation; the dead `callback_url` TODO kept.
 
-| File | Current | Needed |
-|---|---|---|
-| `Dockerfile:32` | `gunicorn ... app:app` | Plain gunicorn is WSGI-only and cannot boot an ASGI app. Needs `-k uvicorn.workers.UvicornWorker`, or switch to `uvicorn` |
-| `requirements.txt` | Flask, gunicorn, requests, dotenv, openai | **drifted** — `fastapi`/`uvicorn`/`pydantic` are in the venv but unrecorded, so `docker build` produces an image without them. Silent until deploy |
-| `render.yml` | `FLASK_ENV=production` | vestigial after cutover |
-| `docker-compose.yml` | `FLASK_ENV=production` | vestigial after cutover |
-| `app.py:448,465` | `@app.errorhandler` | → `@app.exception_handler` (different signature and return type) |
-| `app.py:201,271` | `app.logger.error(...)` | the only Flask coupling in lines 143–275; needs a non-Flask logger |
-| `app.py` routes | `request.get_json()`, manual dict validation | → Pydantic request models. This is the real work, not boilerplate |
+`callback_url` is typed `Any`, not `str | None` — Flask discarded it untyped,
+so a stricter type 422'd requests Flask answered 200.
 
-Endpoints to port: `GET /`, `GET /health`, `POST /recommend`, `GET /recommend/test`, `POST /webhook/recommend`.
+## Design decisions
 
-## Environment — DECIDED
+**Handlers are `def`, not `async def`.** `get_song_recommendations` does
+blocking file I/O (`song_management.py:29`) and, when `USE_AGENTIC=true`, a
+synchronous OpenAI call (`game_analyst.py:189`). FastAPI runs `def` handlers in
+a threadpool but `async def` on the event loop — `async` here would stall every
+concurrent request. `/` and `/health` are `async def`: no I/O, which is the
+exception the FastAPI docs carve out. Async is not a win until the I/O beneath
+it is awaitable.
 
-Standardize on **Python 3.13**, using `replay-rythms/`.
+**`FastAPI(redirect_slashes=False, docs_url=None, redoc_url=None,
+openapi_url=None)`.** Flask 404s on a trailing slash where Starlette would
+307-redirect, and Flask serves no docs routes. Under "change nothing
+observable", `/docs` and `/openapi.json` are observable.
 
-Install with `uv pip install "fastapi[standard]"`, keeping the `requirements.txt` workflow. `uv add` is not usable here — it requires a `pyproject.toml`, which this repo does not have. (If one is ever wanted, use `uv init --bare`; plain `uv init` scaffolds its own `main.py` and would collide with the file this plan creates.)
+**One `RequestValidationError` handler** returning Flask's
+`400 {"success": false, "error": "Request must be JSON"}`, rather than
+per-field workarounds. FastAPI validates before the handler runs, so Flask's
+hand-rolled 400s became 422s across the board; one handler restores the
+contract everywhere.
 
-Docker tag notes:
-- Base OS **verified** via `docker run --rm python:3.13-slim cat /etc/os-release` → `Debian GNU/Linux 13 (trixie)`, `DEBIAN_VERSION_FULL=13.6`
-- **No Debian major skip.** Digest comparison confirms the old `python:3.11-slim` was *already* trixie:
-  ```
-  3.11-slim         -> sha256:a630a63c...
-  3.11-slim-trixie  -> sha256:a630a63c...   ← identical
-  3.11-slim-bookworm-> sha256:2e32f7d3...
-  ```
-  Exactly one variable changed: Python 3.11 → 3.13.
-- The bare `-slim` suffix is a floating alias, tracking both the latest patch and the maintainers' current Debian default. Pin explicitly (`python:3.13.15-slim-trixie`) if reproducible builds matter later.
+**`JSONResponse` everywhere, not bare dicts.** Bare dicts go through
+`jsonable_encoder`, which silently coerces an unserializable object to `{}`;
+`JSONResponse` uses `json.dumps` and fails loudly like Flask. Mixing the two
+across endpoints meant identical failures behaved differently per route.
 
-## Open questions
+## Deployment notes
 
-- **`recommend.py` (496 lines)** — Vercel serverless handler duplicating much of `app.py`'s logic. In scope for this migration, or left alone? Decide deliberately rather than by omission.
-- **`working-recommend-fn/recommend.py`** — same question.
-- Cutover mechanics: how long both apps run in parallel, and what triggers deleting `app.py`.
+- `dockerCommand` is empty on the Render service, so the **Dockerfile `CMD`
+  governs** — no dashboard override to reconcile.
+- The exec-form `CMD` must be valid JSON. A missing comma silently degrades it
+  to shell form and the container won't start as intended.
+- `python:3.11-slim` was *already* trixie — digest comparison confirmed
+  `3.11-slim` == `3.11-slim-trixie`. The bump to 3.13 changed one variable, not
+  two.
+- Deploys are manual. `autoDeploy` reads `yes` but has never fired; production
+  sat on a February commit for seven months. Don't assume push means deploy.
+- Free plan, `numInstances: 1` — no blue/green. The in-process diff is the only
+  pre-deploy gate.
 
-## Order of work
+## Remaining cleanup
 
-1. ~~Consolidate venv / Python version~~ ✅
-2. ~~Install FastAPI deps~~ ✅
-3. **Fix the `matched_criteria` set-ordering bug** (`song_matcher.py:92,100`) ← in progress
-4. Delete `golden/` and `generate_golden_tests.py`
-5. Record deps in `requirements.txt`
-6. Write `main.py` — port endpoints with `def` handlers and Pydantic models
-7. Run both servers, diff responses (`USE_AGENTIC=false` for exact diffs)
-8. Update `Dockerfile` CMD / `docker-compose.yml` / `render.yml`
-9. Cutover, remove `app.py`
+- [x] Delete `app.py` — dead since `c39105f`. Also collapses the duplicate
+      `FULL_REPLAY_DATA_SAMPLE` in `app.py:18` / `constants.py:1`
+- [x] Drop `Flask` from `requirements.txt` (keep `gunicorn` — still the process manager)
+- [ ] Remove `FLASK_ENV=production` from `render.yml` and the dashboard
+- [x] Delete the stale scaffolding comment at `main.py:1-5` and the dead
+      `USE_AGENTIC` line (the live one is in `recommendation_service.py`)
+- [ ] Swap `uvicorn.workers.UvicornWorker` → the `uvicorn-worker` package to
+      clear the boot-time deprecation warning
+- [ ] `recommend.py` (496 lines, Vercel handler) and
+      `working-recommend-fn/recommend.py` still duplicate the pipeline —
+      never brought into scope, decide deliberately
+- [ ] `def` → `async def` once `game_analyst.py` uses `AsyncOpenAI`. That is
+      when FastAPI starts paying for itself

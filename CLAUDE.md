@@ -10,8 +10,9 @@ Replay Rhythms Recs is a song recommendation engine for Rocket League replays. I
 
 ### Run locally
 ```bash
-python app.py                    # Flask dev server on port 8000
-gunicorn --bind 0.0.0.0:8000 app:app  # Production server
+uvicorn main:app --reload --port 8000   # Dev server with autoreload
+gunicorn --bind 0.0.0.0:8000 --workers 2 --timeout 120 \
+  -k uvicorn.workers.UvicornWorker main:app   # Production server
 ```
 
 ### CLI testing
@@ -52,7 +53,7 @@ Replay JSON → extract_data.py → metrics.py → threshold.py → rule_engine.
    - Mood matches: +15 per match
    - Theme matches: +10 per match
 
-### API Endpoints (app.py)
+### API Endpoints (main.py)
 - `GET /` - API documentation
 - `GET /health` - Health check
 - `POST /recommend` - Main endpoint (requires `player_id`, optional `replay_data`, `top_n`)
@@ -62,7 +63,8 @@ Replay JSON → extract_data.py → metrics.py → threshold.py → rule_engine.
 ### Key Files
 - **songs.json**: Song database with BPM, energy, moods, themes, Spotify URLs
 - **recommend.py**: Vercel serverless handler + CLI interface
-- **app.py**: Flask server for Docker/Render deployment
+- **main.py**: FastAPI app served by uvicorn for Docker/Render deployment
+- **recommendation_service.py**: framework-agnostic pipeline orchestration
 
 ## Song Database Schema
 

@@ -1,9 +1,10 @@
 """
 Framework-agnostic recommendation logic.
 
-Shared by the Flask app (app.py) and the FastAPI app (main.py) so that both
-servers run identical business logic. Any difference observed between the two
-is therefore attributable to the web layer, not to drifting copies.
+Imported by the FastAPI app (main.py). Kept separate from the web layer so the
+recommendation pipeline stays framework-agnostic - this is what allowed the
+Flask and FastAPI apps to be diffed against identical logic during the
+migration.
 """
 
 import logging
