@@ -3,3 +3,6 @@ gunicorn==21.2.0
 requests==2.31.0
 python-dotenv==1.0.0
 openai>=1.0.0
+fastapi==0.141.1
+uvicorn==0.52.3
+pydantic==2.13.4
